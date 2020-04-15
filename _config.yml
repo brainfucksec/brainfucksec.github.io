@@ -1,5 +1,5 @@
-title: Brainfuck - Official Website
-description: "A website for computer geeks"
+title: Brainfuck - My Blog
+description: "My blog"
 author:
   name: "Brainfuck"
   email: "brainfucksec@pm.me"
@@ -10,7 +10,7 @@ baseurl: /
 source: .
 destination: ./_site
 permalink: /:title
-paginate: 3
+paginate: 10
 paginate_path: /page/:num/
 
 defaults:
@@ -30,3 +30,5 @@ plugins:
 # Custom variables
 owner : "Brainfuck"
 year : "2020"
+
+remote_theme: tocttou/hacker-blog
