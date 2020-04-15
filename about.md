@@ -6,7 +6,7 @@ title: About
 ## Brainfuck
 
 
-### Knowledge || skills
+### Knowledge || Skills
 
     * Systems and Networks Security
     * Programming
@@ -15,7 +15,7 @@ title: About
 
 ### About Me
 
-I am Hacker, not for skills, I definitely have a long way to go, but I am a Hacker because I try to understand how things work, and I try to improve them, whether it is an operating system, a program or an object that I usually use.
+I am a Hacker, not for skills, I definitely have a long way to go, but I am a Hacker because I try to understand how things work, and I try to improve them, whether it is an operating system, a program or an object that I usually use.
 This not only for the technical things but also for the world around me, yes, sometimes it's very exhausting, but nothing is achieved without sacrifice and devotion.
 I opened a door and decided to go through it, and now I don't want and I can't go back, knowledge is power but it has a price, a price that I'm gladly to pay.
 
