@@ -2,7 +2,7 @@ title: Brainfuck - My Blog
 description: "My blog"
 author:
   name: "Brainfuck"
-  email: "brainfucksec@pm.me"
+  email: ""
   url: "https://brainfucksec.github.io"
 
 baseurl: /

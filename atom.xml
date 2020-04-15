@@ -10,7 +10,7 @@ layout: null
     <atom:link href="{{ site.url }}/feed.xml" rel="self" type="application/rss+xml" />
     <author>
       <name>{{ site.author.name }}</name>
-      <email>{{ site.author.email }}</email>
+      <!-- <email>{{ site.author.email }}</email> -->
       <uri>{{ site.author.url }}</uri>
     </author>
     {% for post in site.posts limit:10 %}
