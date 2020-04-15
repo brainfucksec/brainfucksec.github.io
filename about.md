@@ -24,4 +24,4 @@ I use Kali Linux for pentesting, another project I've been following for a long 
 
 Since 3 years my studies are mainly about Networking, I have a particular interest in alternative and decentralized networks such as Tor and P2P networks, because I think that the Internet as we know it today is no longer sustainable and we need an alternative solution.
 I'm a supporter of Free Open Source Software, of course there are exceptions but the basic concept is that if you can't read the code of an application you can't know how it behaves once started.
-As for the rest, being a Hacker, anything about a 0 and a 1 catches my attention.
+As for the rest, being a Hacker, anything about 0 and 1 catches my attention.
