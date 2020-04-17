@@ -9,7 +9,7 @@ title: About
 ### Knowledge || Skills
 
     * Systems and Networks Security
-    * Programming
+    * Programming (mainly Python, C, Bash-Scripting)
     * Digital Forensics
     * Internet Privacy
 
