@@ -1,9 +1,9 @@
 ---
 layout: page
-title: Projects
+title: Projects | brainfuck
 ---
 
-### These are my projects that you can find on [Github](https://github.com/brainfucksec?tab=repositories).
+### These are my projects that you can find on my [Github profile](https://github.com/brainfucksec?tab=repositories).
 
 
 [kalitorify](https://github.com/brainfucksec/kalitorify) >> Transparent proxy through Tor for Kali Linux OS
