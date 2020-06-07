@@ -9,6 +9,7 @@ title: About | brainfuck
 ### Knowledge || Skills
 
     * Systems and Networks Security
+    * Networking
     * Programming: Python, C, Bash-Scripting
     * Digital Forensics
     * Internet Privacy
