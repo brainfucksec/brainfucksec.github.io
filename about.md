@@ -9,6 +9,7 @@ title: About | brainfuck
 ### Knowledge || Skills
 
     * Security of Operating Systems and Networks
+    * Computer Forensics
     * Networking
     * Programming
 
