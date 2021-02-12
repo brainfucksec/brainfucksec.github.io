@@ -5,7 +5,6 @@ title: Projects | brainfuck
 
 ### These are my projects that you can find on my [Github repositories](https://github.com/brainfucksec?tab=repositories).
 
-
 [kalitorify](https://github.com/brainfucksec/kalitorify) >> Transparent proxy through Tor for Kali Linux OS
 
 [archtorify](https://github.com/brainfucksec/archtorify) >> Transparent proxy through Tor for Arch Linux OS
@@ -18,3 +17,5 @@ title: Projects | brainfuck
 
 [wal.vim](https://github.com/brainfucksec/wal.vim) >> [pywal](https://github.com/dylanaraps/pywal) module: colorscheme for vim and neovim
 
+
+#### and these are my [gists](https://gist.github.com/brainfucksec).
