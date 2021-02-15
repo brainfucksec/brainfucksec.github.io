@@ -8,7 +8,7 @@ date: 2021-02-15
 
 ### Checking support for KVM
 
-#### Hardware support
+**Hardware support**
 
 Checking hardware support for KVM (named VT-x for Intel and AMD-V for AMD CPUs):
 
@@ -27,7 +27,7 @@ If nothing is displayed after running either command, then your processor does *
 **Note:** You may need to enable virtualization support in your BIOS. All x86_64 processors manufactured by AMD and Intel in the last 10 years support virtualization. If it looks like your processor does not support virtualization, it's almost certainly turned off in the BIOS.
 
 
-#### Kernel support
+**Kernel support**
 
 Check if the necessary modules: `kvm` and either `kvm_amd` or `kvm_intel`, are available in the kernel:
 
@@ -61,7 +61,7 @@ If the command returns nothing, the module needs to be loaded manually, see: [Ke
 
 ### Para-virtualization with Virtio
 
-#### Kernel Support
+**Kernel Support**
 
 Check if the VIRTIO modules are available in the kernel inside the virtual machine:
 
