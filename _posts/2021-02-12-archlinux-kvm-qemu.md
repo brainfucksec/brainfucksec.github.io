@@ -1,14 +1,14 @@
 ---
 layout: post
-title: "Arch Linux - Install KVM/QEMU and virt-manager"
+title: "Arch Linux - Install and setup KVM/QEMU"
 date: 2021-02-15
 ---
 
+<br>
 
----
-## Checking support for KVM
+### Checking support for KVM
 
-### Hardware support
+#### Hardware support
 
 Checking hardware support for KVM (named VT-x for Intel and AMD-V for AMD CPUs):
 
@@ -27,7 +27,7 @@ If nothing is displayed after running either command, then your processor does *
 **Note:** You may need to enable virtualization support in your BIOS. All x86_64 processors manufactured by AMD and Intel in the last 10 years support virtualization. If it looks like your processor does not support virtualization, it's almost certainly turned off in the BIOS.
 
 
-### Kernel support
+#### Kernel support
 
 Check if the necessary modules: `kvm` and either `kvm_amd` or `kvm_intel`, are available in the kernel:
 
@@ -57,10 +57,11 @@ If the command returns nothing, the module needs to be loaded manually, see: [Ke
 
 **Note:** If modprobing `kvm_intel` or `kvm_amd` fails but modprobing `kvm succeeds`, and `lscpu` claims that hardware acceleration is supported, check the BIOS settings. Some vendors, especially laptop vendors, disable these processor extensions by default. To determine whether there is no hardware support or whether the extensions are disabled in BIOS, the output from `dmesg` after having failed to modprobe will tell.
 
----
-## Para-virtualization with Virtio
+<br>
 
-### Kernel Support
+### Para-virtualization with Virtio
+
+#### Kernel Support
 
 Check if the VIRTIO modules are available in the kernel inside the virtual machine:
 
@@ -76,8 +77,9 @@ lsmod | grep virtio
 
 Also here, if the above commands return nothing, you need to load the kernel modules manually.
 
----
-## Install qemu, libvirt, virt-manager and other packages needed
+<br>
+
+### Install qemu, libvirt, virt-manager and other packages needed
 
 ```bash
 sudo pacman -S libvirt qemu virt-manager ebtables dnsmasq bridge-utils
@@ -91,17 +93,18 @@ For complete information about packages and other utilities and settings see:
 
 [libvirt clients](https://wiki.archlinux.org/index.php/Libvirt#Client)
 
----
-## Set user Group
+<br>
+
+### Set user Group
 
 Add user to `libvirt` Group:
 
 ```bash
 sudo usermod -aG libvirt <username>
 ```
+<br>
 
----
-## Systemctl Service libvirtd
+### Systemctl Service libvirtd
 
 Start the `libvirtd.service` service:
 
@@ -120,9 +123,7 @@ Start `virt-manager`:
 ```bash
 virt-manager
 ```
-
 See: [Virtual Machine Manager](https://virt-manager.org/)
-
 
 ---
 
