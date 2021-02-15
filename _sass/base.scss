@@ -12,7 +12,7 @@ $blockquote-border: $dove-grey !default;
 body {
   margin: 0;
   padding: 0;
-  background: $body-background url("../assets/bkg.png") 0 0;
+  background: $body-background url("../assets/img/bkg.png") 0 0;
   color: $body-foreground;
   font-size: 16px;
   line-height: 1.5;
@@ -138,7 +138,7 @@ dt {
 }
 
 ul li {
-  list-style-image:url('../assets/bullet.png');
+  list-style-image:url('../assets/img/bullet.png');
 }
 
 blockquote {
