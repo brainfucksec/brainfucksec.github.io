@@ -18,4 +18,4 @@ title: Projects | brainfuck
 [wal.vim](https://github.com/brainfucksec/wal.vim) >> [pywal](https://github.com/dylanaraps/pywal) module: colorscheme for vim and neovim
 
 
-#### and these are my [gists](https://gist.github.com/brainfucksec).
+### and these are my [gists](https://gist.github.com/brainfucksec).
