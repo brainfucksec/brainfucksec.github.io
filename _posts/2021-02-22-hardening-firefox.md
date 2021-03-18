@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Hardening Firefox"
-date: 2021-02-22
+date: 2021-03-18
 ---
 
 <br>
@@ -277,6 +277,12 @@ On the search bar insert: `about:config`, sets the values for the parameters as 
     `privacy.clearOnShutdown.sessions` = `true`
 
     `privacy.clearOnShutdown.sitesettings` = `false`
+
+**User-Agent**
+
+* Create new `string` value and assign the preferred user-agent:
+
+    `general.useragent.override` = `Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:87.0) Gecko/20100101 Firefox/87.0`
 
 ### Add-ons
 
