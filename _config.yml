@@ -29,7 +29,7 @@ plugins:
 
 # Custom variables
 owner : "Brainfuck"
-year : "2020"
+year : "2021"
 
 # thanks tocttou for this theme
 remote_theme: tocttou/hacker-blog
