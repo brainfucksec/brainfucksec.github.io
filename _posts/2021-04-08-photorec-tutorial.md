@@ -1,27 +1,36 @@
 ---
 layout: post
 title: "PhotoRec - Recover deleted files"
-date: 2021-04-06
+date: 2021-04-08
 ---
 
 <br>
 
+## Introduction
+
 A tool that I prefer to recover deleted files or to analyze a memory in search of evidence is [Photorec](https://www.cgsecurity.org/wiki/PhotoRec) by CGSecurity.
-As explained on the program website: PhotoRec is file data recovery software designed to recover lost files including video, documents and archives from hard disks, CD-ROMs, and lost pictures (thus the Photo Recovery name) from digital camera memory. PhotoRec ignores the file system and goes after the underlying data, so it will still work even if your media's file system has been severely damaged or reformatted.
-PhotoRec is a companion program to [TestDisk](https://www.cgsecurity.org/wiki/TestDisk), an application for recovering lost partitions on a wide variety of file systems and making non-bootable disks bootable again. For lost/deleted partitions or deleted files from a FAT or NTFS file system, try TestDisk first - it's usually faster and TestDisk can retrieved the original file names.
+
+As explained on the program website: 
+
+*PhotoRec is file data recovery software designed to recover lost files including video, documents and archives from hard disks, CD-ROMs, and lost pictures (thus the Photo Recovery name) from digital camera memory. PhotoRec ignores the file system and goes after the underlying data, so it will still work even if your media's file system has been severely damaged or reformatted.
+PhotoRec is a companion program to [TestDisk](https://www.cgsecurity.org/wiki/TestDisk), an application for recovering lost partitions on a wide variety of file systems and making non-bootable disks bootable again. For lost/deleted partitions or deleted files from a FAT or NTFS file system, try TestDisk first - it's usually faster and TestDisk can retrieved the original file names.*
 
 For more information about the supported file types and how PhotoRec works you can consult the relevant paragraphs on the main page of the website:
 
-https://www.cgsecurity.org/wiki/PhotoRec
+<https://www.cgsecurity.org/wiki/PhotoRec>
 
-See: "Known file formats" and "How PhotoRec works".
+See: **Known file formats** and **How PhotoRec works**.
 
 There is also an excellent [manual](https://www.cgsecurity.org/testdisk.pdf) about data recovery using TestDisk & PhotoRec and other tools.
 
 PhotoRec can also be used to [recover data from an iPhone](https://www.cgsecurity.org/wiki/Recover_data_from_an_iPhone) :) (Jailbroken).
 
+## Download
+
 The program is available for different platforms, in GNU/Linux distros it can generally be installed through the preferred package manager, for example on Kali Linux I installed the package `testdisk`, while on Windows you can install and run the executable, also TestDisk and PhotoRec can be run as portable executables or from LiveCD.
 For more information about program installation and running, consult the related page: [TestDisk Download](https://www.cgsecurity.org/wiki/TestDisk_Download)
+
+## How to
 
 Now that we are familiar with this program, let's see how to use it to recover files, for this demonstration I used a USB flash drive as the target memory. The program offers an interactive shell that is very easy to use, the steps necessary for the procedure are well explained on the website: [PhotoRec Step by Step](https://www.cgsecurity.org/wiki/PhotoRec_Step_By_Step)
 
@@ -107,15 +116,17 @@ A more advanced script is available that gives you more options on file sorting:
 
 ## Some tips
 
-1 - If you are looking for a specific file you can check the date/time attribute, PhotoRec uses time information (metadata) when available in the file header to set the file modification time:
+* If you are looking for a specific file you can check the date/time attribute, PhotoRec uses time information (metadata) when available in the file header to set the file modification time:
 
-![alt text](assets/img/posts/photorec-tutorial/17-datetime-sort.png)
+    ![alt text](assets/img/posts/photorec-tutorial/17-datetime-sort.png)
 
-2 - With .JPEG files you can use [exiftool](https://exiftool.org/) to view the image metadata for additional information about the file:
+* With .JPEG files you can use [exiftool](https://exiftool.org/) to view the image metadata for additional information about the file:
 
-![alt text](assets/img/posts/photorec-tutorial/18-exiftool-example.png)
+    ![alt text](assets/img/posts/photorec-tutorial/18-exiftool-example.png)
 
-3 - Thumbnails of the images found are saved as t*.jpg
+* Thumbnails of the images found are saved as "t*.jpg"
+
+* If you have chosen to keep corrupted files/file fragments, their filenames will beginning by the letter "b" (broken).
 
 ---
 
