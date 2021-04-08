@@ -64,15 +64,15 @@ In this demonstration I will delete the files present and then format the USB fl
 
 ![alt text](assets/img/posts/photorec-tutorial/5-start-photorec.png)
 
-2 - Select the disk to analyze, in this case `/dev/sda`:
+2 - Select the disk to analyze, in my case it's `/dev/sda`:
 
 ![alt text](assets/img/posts/photorec-tutorial/6-select-disk.png)
 
-3 - Select the partition, in this case it's the FAT32 partition labeled with the "P" letter:
+3 - Select the partition, for this device, it's the FAT32 partition labeled with the "P" letter:
 
 ![alt text](assets/img/posts/photorec-tutorial/7-select-partition.png)
 
-4 - Select the correct filesystem for the partition, generally PhotoRec recognizes the filesystem by itself, in this case the highlighted option `Other` is fine:
+4 - Select the correct filesystem for the partition, generally PhotoRec recognizes the filesystem by itself, Unless it is an ext2/ext3/ext4 filesystem, choose `Other`:
 
 ![alt text](assets/img/posts/photorec-tutorial/8-select-filesystem.png)
 
