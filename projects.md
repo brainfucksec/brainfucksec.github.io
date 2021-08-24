@@ -15,7 +15,9 @@ title: Projects | brainfuck
 
 [pomodoro](https://github.com/brainfucksec/pomodoro) >> Pomodoro technique counter for study sessions
 
-[wal.vim](https://github.com/brainfucksec/wal.vim) >> [pywal](https://github.com/dylanaraps/pywal) module: colorscheme for vim and neovim
+[wal.vim](https://github.com/brainfucksec/wal.vim) >> [pywal](https://github.com/dylanaraps/pywal) module: Colorscheme for vim and neovim
+
+[neovim-lua](https://github.com/brainfucksec/neovim-lua) >> My Neovim configuration with Lua
 
 
 ### and these are my [gists](https://gist.github.com/brainfucksec).
