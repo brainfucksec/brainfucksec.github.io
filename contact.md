@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Contact | brainfuck
+title: Contact | brainf+ck
 ---
 
 ## Contact Me

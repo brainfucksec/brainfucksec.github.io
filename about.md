@@ -1,6 +1,6 @@
 ---
 layout: page
-title: About | brainfuck
+title: About | brainf+ck
 ---
 
 ## Security Consultant

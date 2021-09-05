@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Archive | brainfuck
+title: Archive | brainf+ck
 ---
 
 <section>

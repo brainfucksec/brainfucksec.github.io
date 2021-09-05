@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Projects | brainfuck
+title: Projects | brainf+ck
 ---
 
 ### These are my projects that you can find on my [Github repositories](https://github.com/brainfucksec?tab=repositories).

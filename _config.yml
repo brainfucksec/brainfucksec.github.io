@@ -1,7 +1,7 @@
-title: Brainfuck
+title: Brainf+ck
 description: "blog"
 author:
-  name: "Brainfuck"
+  name: "Brainf+ck"
   email: ""
   url: "https://brainfucksec.github.io"
 
@@ -28,7 +28,7 @@ plugins:
   - jekyll-sitemap
 
 # Custom variables
-owner : "Brainfuck"
+owner : "Brainf+ck"
 year : "2021"
 
 # thanks tocttou for this theme
