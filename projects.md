@@ -9,15 +9,14 @@ title: Projects | brainf+ck
 
 [archtorify](https://github.com/brainfucksec/archtorify) >> Transparent proxy through Tor for Arch Linux OS
 
-[rbackup](https://github.com/brainfucksec/rbackup) >> Shell script for encrypted backups with rsync and GPG
+[neovim-lua](https://github.com/brainfucksec/neovim-lua) >> My Neovim configuration with Lua
 
-[strongpass](https://github.com/brainfucksec/strongpass) >> Generate strong random passwords
+[rbackup](https://github.com/brainfucksec/rbackup) >> Shell script for encrypted backups with rsync and GPG
 
 [pomodoro](https://github.com/brainfucksec/pomodoro) >> Pomodoro technique counter for study sessions
 
-[wal.vim](https://github.com/brainfucksec/wal.vim) >> [pywal](https://github.com/dylanaraps/pywal) module: Colorscheme for vim and neovim
+[strongpass](https://github.com/brainfucksec/strongpass) >> Generate strong random passwords - (Archived)
 
-[neovim-lua](https://github.com/brainfucksec/neovim-lua) >> My Neovim configuration with Lua
-
+[wal.vim](https://github.com/brainfucksec/wal.vim) >> [pywal](https://github.com/dylanaraps/pywal) module: Colorscheme for vim and neovim - (Archived)
 
 ### and these are my [gists](https://gist.github.com/brainfucksec).

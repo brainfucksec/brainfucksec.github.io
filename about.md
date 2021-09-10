@@ -8,10 +8,15 @@ title: About | brainf+ck
 
 ### Knowledge || Skills
 
-    * Security of Operating Systems and Networks
+    * Operating Systems and Networks Security
     * Computer Forensics
     * Networking
-    * Programming
+    * Programming:
+        * Python
+        * Bash Scripting
+        * C-C++
+        * JavaScript and HTML/CSS
+
 
 ### About Me
 
