@@ -24,7 +24,7 @@ when "xxxxxxxx" is the ID of your profile.
 
 See: [Back up and restore information in Firefox profiles](https://support.mozilla.org/en-US/kb/back-and-restore-information-firefox-profiles)
 
-If you want to create new profile see: [Create, remove or switch Firefox profiles](https://support.mozilla.org/en-US/kb/profile-manager-create-remove-switch-firefox-profiles?redirectslug=profile-manager-create-and-remove-firefox-profiles&redirectlocale=en-US) (also, see [Multiple profiles](#multiple-profiles) downward).
+If you want to create new profile see: [Create, remove or switch Firefox profiles](https://support.mozilla.org/en-US/kb/profile-manager-create-remove-switch-firefox-profiles?redirectslug=profile-manager-create-and-remove-firefox-profiles&redirectlocale=en-US) (also, see [Multiple profiles](#multiple_profiles) downward).
 
 
 ## Firefox Preferences
@@ -204,7 +204,7 @@ On the search bar insert: `about:config`, sets the values for the parameters as 
 
 * Disable DNS prefetching:
 
-    `network.dns.disablePrefetch` = `false`
+    `network.dns.disablePrefetch` = `true`
 
 * Disable predictor:
 
