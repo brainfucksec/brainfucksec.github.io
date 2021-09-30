@@ -24,7 +24,7 @@ when "xxxxxxxx" is the ID of your profile.
 
 See: [Back up and restore information in Firefox profiles](https://support.mozilla.org/en-US/kb/back-and-restore-information-firefox-profiles)
 
-If you want to create new profile see: [Create, remove or switch Firefox profiles](https://support.mozilla.org/en-US/kb/profile-manager-create-remove-switch-firefox-profiles?redirectslug=profile-manager-create-and-remove-firefox-profiles&redirectlocale=en-US) (also, see [Multiple profiles](#multiple_profiles) downward).
+If you want to create new profile see: [Create, remove or switch Firefox profiles](https://support.mozilla.org/en-US/kb/profile-manager-create-remove-switch-firefox-profiles?redirectslug=profile-manager-create-and-remove-firefox-profiles&redirectlocale=en-US) (also, see [Multiple profiles](#multiple-profiles) downward).
 
 
 ## Firefox Preferences
@@ -204,7 +204,7 @@ On the search bar insert: `about:config`, sets the values for the parameters as 
 
 * Disable DNS prefetching:
 
-    `network.dns.disablePrefetch` = `true`
+    `network.dns.disablePrefetch` = `false`
 
 * Disable predictor:
 
@@ -344,10 +344,14 @@ On the search bar insert: `about:config`, sets the values for the parameters as 
     * Ads:
         * EasyList
     * Privacy:
+        * AdGuard Tracking Protection
+        * AdGuard URL Tracking Protection
         * EasyPrivacy
     * Malware Domains:
+        * Online Malicious URL Blocklist
         * Spam404
     * Annoyances:
+        * Anti-Facebook
         * uBlock filters - Annoyances
 
 For more information about uBlock usage see the [Wiki](https://github.com/gorhill/uBlock/wiki) on Github.
@@ -359,7 +363,7 @@ Go to `Edit -> Settings -> General -> Network Settings`, click on `Settings`, se
 
 You can find some good DNS providers at: [privacyguides.org/providers/dns](https://privacyguides.org/providers/dns/)
 
-Note: If you use a VPN that has its own DNS servers you can use those.
+For more information about DoH see: [Privacy Guides - DNS definitions](https://privacyguides.org/providers/dns/#dns-definitions)
 
 
 ## Multiple profiles
