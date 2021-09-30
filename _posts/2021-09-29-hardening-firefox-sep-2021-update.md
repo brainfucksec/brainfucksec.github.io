@@ -204,7 +204,7 @@ On the search bar insert: `about:config`, sets the values for the parameters as 
 
 * Disable DNS prefetching:
 
-    `network.dns.disablePrefetch` = `false`
+    `network.dns.disablePrefetch` = `true`
 
 * Disable predictor:
 
