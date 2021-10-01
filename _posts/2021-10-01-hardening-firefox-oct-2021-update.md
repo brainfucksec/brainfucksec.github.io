@@ -576,7 +576,7 @@ user_pref("network.http.referer.XOriginPolicy", 2);
 user_pref("media.peerconnection.enabled", false);
 
 // limit WebRTC IP leaks if using it
-user_pref("media.peerconnection.ice.default_address_only", false);
+user_pref("media.peerconnection.ice.default_address_only", true);
 user_pref("media.peerconnection.ice.no_host", true);
 user_pref("media.peerconnection.ice.proxy_only_if_behind_proxy", true);
 
