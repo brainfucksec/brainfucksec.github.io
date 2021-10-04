@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Hardening Firefox - v0.1 - 2021-10-03"
-date: 2021-10-03
+title: "Hardening Firefox - v0.2"
+date: 2021-10-04
 ---
 
 Tested on Firefox: Version 92.0.1 (Linux)
@@ -21,6 +21,7 @@ Tested on Firefox: Version 92.0.1 (Linux)
 * [Multiple profiles and Containers](#multiple-profiles-and-containers)
 * [Browser Leak Test](#browser-leak-test)
 
+<br>
 
 ## Introduction
 
@@ -34,11 +35,9 @@ When you visit a web page, your browser voluntarily sends information about its 
 
 This is my personal configuration for **hardening Mozilla Firefox while maintaining usability**, this mean that some options that help protect against fingerprinting are not enabled by default, for more information see: [Disabled Options](#disabled-options).
 
-This configuration is for a "day-by-day" browsing, whit my Browser I need to work and develop (in these days), then if you want a better browser for your anonymity see: [Tor Browser](https://www.torproject.org/).
+This configuration is for a "day-by-day" browsing, with my Browser I need to work, or study/develop (and listen music and watch movies :), then I try to setup a Browser for better security but without breaking many things, then if you want greater anonymity and privacy see: [Tor Browser](https://www.torproject.org/).
 
 There is no anonymous and 100% secure setup, what you can do though, is reduce the amount of data collected by entities like Google, Facebook etc. etc.. and reduce attack vectors for enhanced security.
-
-<br>
 
 ## Backup Firefox profile
 
@@ -54,7 +53,6 @@ See: [Back up and restore information in Firefox profiles](https://support.mozil
 
 If you want to create new profile see: [Create, remove or switch Firefox profiles](https://support.mozilla.org/en-US/kb/profile-manager-create-remove-switch-firefox-profiles?redirectslug=profile-manager-create-and-remove-firefox-profiles&redirectlocale=en-US) (also, see [Multiple profiles and Containers](#multiple-profiles-and-containers) section.
 
-
 ## Firefox Preferences
 
 **Download folder location**
@@ -68,7 +66,6 @@ If you want to create new profile see: [Create, remove or switch Firefox profile
 * Go to `Search -> Default Search Engine`, select `DuckDuckGo`, then to `Search -> Search Shortcuts`, select `DuckDuckGo`
 
 * Remove all other search engines
-
 
 ## about:config
 
@@ -368,10 +365,11 @@ Note: The parameters are indicated with the format `option = value` for the sake
 
     To enable this feature go to `Edit -> Settings -> Privacy & Security -> HTTPS-Only Mode` then select `Enable HTTPS-Only Mode in all windows`
 
-
 ## Disabled Options
 
 Compared to other similar configurations such as [pyllyukko](https://github.com/pyllyukko/user.js)  or [arkenfox](https://github.com/arkenfox/user.js) user.js, there are several options disabled, some of these are commented in the various sections of the [user.js](#user.js) file.
+
+These are the options you can activate for greater protection, but they disable some basic functionality like audio/video libraries or other things you need, so be careful.
 
 
 ## user.js
@@ -691,7 +689,6 @@ user_pref("webgl.disabled", true);
 
 For more information about uBlock usage see the [Wiki](https://github.com/gorhill/uBlock/wiki) on Github.
 
-
 ## DoH (DNS over HTTPS)
 
 DNS-over-HTTPS, DNS-over-TLS, and DNSCrypt resolvers will not make you anonymous. Using Anonymized DNSCrypt hides only your DNS traffic from your Internet Service Provider. However, using any of these protocols will prevent DNS hijacking, and make your DNS requests harder for third parties to eavesdrop on and tamper with.
@@ -701,13 +698,11 @@ If you want to set DoH on Firefox:
 
 Go to `Edit -> Settings -> General -> Network Settings`, click on `Settings`, select `Enable DNS over HTTPS`, in `Use Provider` window, select `Custom` and insert your DoH provider.
 
-
 ## Multiple profiles and Containers
 
 A good practice is to use multiple profiles for different purposes, e.g. (work, streaming, personal, finance), read [here](https://support.mozilla.org/en-US/kb/profile-manager-create-remove-switch-firefox-profiles?redirectslug=profile-manager-create-and-remove-firefox-profiles&redirectlocale=en-US) how to manage profiles in Firefox.
 
 In the latest versions of Firefox you can create [Containers](https://support.mozilla.org/en-US/kb/containers), Firefox Multi-Account Containers lets you keep parts of your online life separated into color-coded tabs that preserve your privacy. Cookies are separated by container, allowing you to use the web with multiple identities or accounts simultaneously.
-
 
 ## Browser Leak Tests
 
@@ -720,7 +715,6 @@ There are come resources where you can test your browser to see how unique it is
 [https://browserleaks.com/](https://browserleaks.com/)
 
 [https://arkenfox.github.io/TZP/tzp.html](https://arkenfox.github.io/TZP/tzp.html)
-
 
 ## Use Your Head and Get Informed
 
