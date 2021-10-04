@@ -443,7 +443,7 @@ user_pref("browser.aboutConfig.showWarning", false);
 
 // set startup page
 // 0=blank, 1=home, 2=last visited page, 3=resume previous session
-user_pref("browser.startup.page",  1`);
+user_pref("browser.startup.page",  1);
 user_pref("browser.startup.homepage", "start.duckduckgo.com");
 
 // if you want only a home blank page
