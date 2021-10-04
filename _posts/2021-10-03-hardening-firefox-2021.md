@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Hardening Firefox - v0.2"
+title: "Hardening Firefox - v0.3"
 date: 2021-10-04
 ---
 
@@ -193,6 +193,8 @@ Note: The parameters are indicated with the format `option = value` for the sake
 
     `browser.ping-centre.telemetry = false`
 
+    `beacon.enabled = false`
+
 **Studies**
 
 * Disable studies:
@@ -237,7 +239,7 @@ Note: The parameters are indicated with the format `option = value` for the sake
 
     `browser.safebrowsing.downloads.remote.url = ""`
 
-**Prefetching**
+**Network**
 
 * Disable link prefetching:
 
@@ -251,7 +253,9 @@ Note: The parameters are indicated with the format `option = value` for the sake
 
     `network.predictor.enabled = false`
 
-**Network**
+* Disable GIO protocols:
+
+    `network.gio.supported-protocols = ""`
 
 * Disable IPv6:
 
@@ -367,7 +371,7 @@ Note: The parameters are indicated with the format `option = value` for the sake
 
 ## Disabled Options
 
-Compared to other similar configurations such as [pyllyukko](https://github.com/pyllyukko/user.js)  or [arkenfox](https://github.com/arkenfox/user.js) user.js, there are several options disabled, some of these are commented in the various sections of the [user.js](#user.js) file.
+Compared to other similar configurations such as [pyllyukko](https://github.com/pyllyukko/user.js)  or [arkenfox](https://github.com/arkenfox/user.js) user.js, there are several options disabled, some of these are commented in the various sections of this [user.js](#user.js) file.
 
 These are the options you can activate for greater protection, but they disable some basic functionality like audio/video libraries or other things you need, so be careful.
 
@@ -389,13 +393,13 @@ This my user.js file with settings of this article. To install it:
 2. Copy paste the following code, also you can download file directly from [here](https://brainfucksec.github.io/uploads/user.js):
 
 ```javascript
-/***********************************************************
+/*********************************************************************
 *
 * Mozilla Firefox configuration file `user.js`
 *
 * name: user.js
-* date: 2021-10-02
-* version: 0.2
+* date: 2021-10-04
+* version: 0.3
 * maintainer: Brainf+ck
 *
 * info: Set preferences for the profile when Firefox start.
@@ -405,16 +409,18 @@ This my user.js file with settings of this article. To install it:
 * For more information how to use this file see:
 * https://github.com/arkenfox/user.js/wiki/1.1-Overview
 *
-***********************************************************/
+* For "about:config" entries see:
+* https://searchfox.org/mozilla-release/source/modules/libpref/init/all.js
+*
+* OPTION FORMAT:
+* user_pref("<entry>", <boolean> || <number> || "<string">);
+*
+* Note: Commented preferences are those disabled by default,
+* some preferences conflict with others if enabled.
+* So check what you enable/disable.
+*
+**********************************************************************/
 
-
-/***
- * For detailed information about these entries see:
- * [FIREFOX DOCS URL HERE]
- *
- * PREF FORMAT:
- * user_pref("<entry>", <boolean> || <number> || "<string">);
- */
 
 /***
  * BEGIN SECTIONS
@@ -432,10 +438,17 @@ user_pref("browser.aboutConfig.showWarning", false);
  * StartUp Settings:
  */
 
+// disable check if Firefox is your default browser
+//user_pref("browser.shell.checkDefaultBrowser", false);
+
 // set startup page
 // 0=blank, 1=home, 2=last visited page, 3=resume previous session
-user_pref("browser.startup.page",  1);
+user_pref("browser.startup.page",  1`);
 user_pref("browser.startup.homepage", "start.duckduckgo.com");
+
+// if you want only a home blank page
+//user_pref("browser.startup.page", 0);
+//user_pref("browser.startup.homepage", "about:blank");
 
 // disable activity and telemetry on new tab pages
 user_pref("browser.newtabpage.enabled", false);
@@ -508,6 +521,9 @@ user_pref("toolkit.coverage.opt-out", true); //Hidden Pref
 user_pref("toolkit.coverage.endpoint.base.", "");
 user_pref("browser.ping-centre.telemetry", false);
 
+// disable sending additional analytics to web servers
+user_pref("beacon.enabled", false);
+
 
 /***
  * Studies:
@@ -521,13 +537,27 @@ user_pref("app.normandy.enabled", false);
 user_pref("app.normandy.api_url", "");
 
 
-/**
+/***
+ * Crash Reports
+ */
+
+// disable crash reports
+user_pref("breakpad.reportURL", "");
+user_pref("browser.tabs.crashReporting.sendReport", false);
+user_pref("browser.crashReports.unsubmittedCheck.enabled ", false);
+user_pref("browser.crashReports.autoSubmit2 ", false);
+
+
+/***
  * Captive Portal Detection / Network Checks:
  */
 
 // disable captive portal detection
-user_pref("captivedetect.canonicalURL", "");
+user_pref("captivedetect.canonicalURL", "")
 user_pref("network.captive-portal-service.enabled", false);
+
+// disable network connections checks
+user_pref("network.connectivity-service.enabled", false);
 
 
 /***
@@ -540,7 +570,7 @@ user_pref("browser.safebrowsing.downloads.remote.url", "");
 
 
 /***
- * Prefetching:
+ * Network (DNS / Proxy / IPv6):
  */
 
 // disable link prefetching
@@ -552,10 +582,8 @@ user_pref("network.dns.disablePrefetch", true);
 // disable predictor
 user_pref("network.predictor.enabled", false);
 
-
-/***
- * Network:
- */
+// disable "GIO" protocols as a potential proxy bypass vectors
+user_pref("network.gio.supported-protocols", ""); //Hidden pref
 
 // disable IPv6
 user_pref("network.dns.disableIPv6", true);
@@ -596,7 +624,7 @@ user_pref("browser.sessionstore.interval", 30000);
  * Headers / Referers:
  */
 
-/**
+/*
  * control when to send a referer:
  *    0=always (default)
  *    1=only if base domains match
@@ -604,9 +632,17 @@ user_pref("browser.sessionstore.interval", 30000);
  */
 user_pref("network.http.referer.XOriginPolicy", 2);
 
+/*
+ * control amount of information to send:
+ *    0=send full URI (default)
+ *    1=scheme+host+port+path
+ *    2=scheme+host+port
+ */
+user_pref("network.http.referer.XOriginTrimmingPolicy ", 2);
+
 
 /***
- * WebRTC:
+ * Media / WebRTC:
  */
 
 // disable WebRTC
@@ -616,6 +652,9 @@ user_pref("media.peerconnection.enabled", false);
 user_pref("media.peerconnection.ice.default_address_only", true);
 user_pref("media.peerconnection.ice.no_host", true);
 user_pref("media.peerconnection.ice.proxy_only_if_behind_proxy", true);
+
+// disable autoplay of HTML5 media
+//user_pref("media.autoplay.blocking_policy", 2);
 
 
 /***
@@ -648,6 +687,23 @@ user_pref("privacy.clearOnShutdown.sitesettings", true);
 
 // disable WebGL
 user_pref("webgl.disabled", true);
+
+
+/***
+ * Fingerprinting:
+ */
+
+/*
+ * RFP can cause some website breakage: mainly canvas, use a site
+ * exception via the urlbar.
+ * RFP also has a few side effects: mainly timezone is UTC0, and
+ *  websites will prefer light theme.
+ * [1] https://bugzilla.mozilla.org/418986
+ *
+ * See: https://support.mozilla.org/en-US/kb/firefox-protection-against-fingerprinting
+ */
+//user_pref("privacy.resistFingerprinting", true);
+
 ```
 
 ## Add-ons
