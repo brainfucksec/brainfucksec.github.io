@@ -1,10 +1,10 @@
 ---
 layout: post
 title: "Hardening Firefox - v0.3"
-date: 2021-10-04
+date: 2021-10-06
 ---
 
-Tested on Firefox: Version 92.0.1 (Linux)
+Tested on: `Firefox Version 93.0 (Linux)`
 
 <br>
 
@@ -787,6 +787,5 @@ Credits:
 * [uBlock Origin](https://ublockorigin.com/)
 
 * A special thanks goes to Reddit [/r/privacytoolsIO](https://old.reddit.com/r/privacytoolsIO/) and [/r/PrivacyGuides](https://old.reddit.com/r/PrivacyGuides/) communities that helped me to improve this article.
-
 ---
 
