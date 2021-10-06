@@ -242,6 +242,23 @@ a:active, a:focus {
   -moz-outline-style: none
 }
 
+/* Center Logo */
+.main-logo {
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Banner */
+.banner {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  margin-top: 70px;
+}
+
 /* Clearfix */
 .cf:before, .cf:after {
   content:"";
@@ -255,15 +272,6 @@ a:active, a:focus {
 .cf {
   zoom:1;
 }
-
-.banner {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-  margin-top: 70px;
-}
-
 
 /* Make footer stick to bottom */
 .pagination, footer {
