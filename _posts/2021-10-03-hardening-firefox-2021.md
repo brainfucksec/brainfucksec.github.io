@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "Hardening Firefox - v0.3"
-date: 2021-10-06
+title: "Hardening Firefox - v0.4"
+date: 2021-10-08
 ---
 
-Tested on: `Firefox Version 93.0 (Linux)`
+Tested on Firefox: `Version 93.0 (Linux)`
 
 <br>
 
@@ -61,11 +61,11 @@ If you want to create new profile see: [Create, remove or switch Firefox profile
 
 * Go to `General -> Files and Applications`, select `Always ask you where to save files`
 
-**Search Engine preferences**
+**Search Preferences**
 
 * Go to `Search -> Default Search Engine`, select `DuckDuckGo`, then to `Search -> Search Shortcuts`, select `DuckDuckGo`
 
-* Remove all other search engines
+* Remove Google, Bing, eBay, Amazon. Wikipedia search engines.
 
 ## about:config
 
@@ -300,16 +300,16 @@ Note: The parameters are indicated with the format `option = value` for the sake
 **Headers / Referers**
 
 * Control when to send a referer:
-    * 0=always (default)
-    * 1=only if base domains match
-    * 2=only if hosts match
+    * 0 = always (default)
+    * 1 = only if base domains match
+    * 2 = only if hosts match
 
     `network.http.referer.XOriginPolicy = 2`
 
 * Control the amount of information to send:
-    * 0=send full URI (default)
-    * 1=scheme+host+port+path
-    * 2=scheme+host+port
+    * 0 = send full URI (default)
+    * 1 = scheme+host+port+path
+    * 2 = scheme+host+port
 
     `network.http.referer.XOriginTrimmingPolicy = 2`
 
@@ -330,6 +330,12 @@ Note: The parameters are indicated with the format `option = value` for the sake
 **Cookies**
 
 * Disable 3rd-party cookies and site-data:
+    * 0 = Accept cookies and site data
+    * 1 = (Block) All third-party cookies
+    * 2 = (Block) All cookies
+    * 3 = (Block) Cookies from unvisited websites
+    * 4 = (Block) Cross-site tracking cookies (default)
+    * 5 = (Isolate All) Cross-site cookies (TCP: Total Cookie Protection / dFPI: dynamic FPI
 
     `network.cookie.cookieBehavior = 1`
 
@@ -398,8 +404,8 @@ This my user.js file with settings of this article. To install it:
 * Mozilla Firefox configuration file `user.js`
 *
 * name: user.js
-* date: 2021-10-04
-* version: 0.3
+* date: 2021-10-08
+* version: 0.4
 * maintainer: Brainf+ck
 *
 * info: Set preferences for the profile when Firefox start.
@@ -626,17 +632,17 @@ user_pref("browser.sessionstore.interval", 30000);
 
 /*
  * control when to send a referer:
- *    0=always (default)
- *    1=only if base domains match
- *    2=only if hosts match
+ *    0 = always (default)
+ *    1 = only if base domains match
+ *    2 = only if hosts match
  */
 user_pref("network.http.referer.XOriginPolicy", 2);
 
 /*
  * control amount of information to send:
- *    0=send full URI (default)
- *    1=scheme+host+port+path
- *    2=scheme+host+port
+ *    0 = send full URI (default)
+ *    1 = scheme+host+port+path
+ *    2 = scheme+host+port
  */
 user_pref("network.http.referer.XOriginTrimmingPolicy ", 2);
 
@@ -661,7 +667,15 @@ user_pref("media.peerconnection.ice.proxy_only_if_behind_proxy", true);
  * Cookies:
  */
 
-// disable 3rd-party cookies and site-data
+/*
+ * disable 3rd-party cookies and site-data:
+ *   0 = Accept cookies and site data
+ *   1 = (Block) All third-party cookies
+ *   2 = (Block) All cookies
+ *   3 = (Block) Cookies from unvisited websites
+ *   4 = (Block) Cross-site tracking cookies (default)
+ *   5 = (Isolate All) Cross-site cookies (TCP: Total Cookie Protection / dFPI: dynamic FPI
+ */
 user_pref("network.cookie.cookieBehavior", 1);
 user_pref("browser.contentblocking.category", "custom");
 

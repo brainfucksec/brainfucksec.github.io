@@ -1,10 +1,10 @@
 /*********************************************************************
 *
-* Mozilla Firefox configuration file `user.js`
+* Mozilla Firefox configuration file: `user.js`
 *
 * name: user.js
-* date: 2021-10-04
-* version: 0.3
+* date: 2021-10-08
+* version: 0.4
 * maintainer: Brainf+ck
 *
 * info: Set preferences for the profile when Firefox start.
@@ -231,17 +231,17 @@ user_pref("browser.sessionstore.interval", 30000);
 
 /*
  * control when to send a referer:
- *    0=always (default)
- *    1=only if base domains match
- *    2=only if hosts match
+ *    0 = always (default)
+ *    1 = only if base domains match
+ *    2 = only if hosts match
  */
 user_pref("network.http.referer.XOriginPolicy", 2);
 
 /*
  * control amount of information to send:
- *    0=send full URI (default)
- *    1=scheme+host+port+path
- *    2=scheme+host+port
+ *    0 = send full URI (default)
+ *    1 = scheme+host+port+path
+ *    2 = scheme+host+port
  */
 user_pref("network.http.referer.XOriginTrimmingPolicy ", 2);
 
@@ -266,7 +266,15 @@ user_pref("media.peerconnection.ice.proxy_only_if_behind_proxy", true);
  * Cookies:
  */
 
-// disable 3rd-party cookies and site-data
+/*
+ * disable 3rd-party cookies and site-data:
+ *   0 = Accept cookies and site data
+ *   1 = (Block) All third-party cookies
+ *   2 = (Block) All cookies
+ *   3 = (Block) Cookies from unvisited websites
+ *   4 = (Block) Cross-site tracking cookies (default)
+ *   5 = (Isolate All) Cross-site cookies (TCP: Total Cookie Protection / dFPI: dynamic FPI
+ */
 user_pref("network.cookie.cookieBehavior", 1);
 user_pref("browser.contentblocking.category", "custom");
 
