@@ -801,5 +801,5 @@ Credits:
 * [uBlock Origin](https://ublockorigin.com/)
 
 * A special thanks goes to Reddit [/r/privacytoolsIO](https://old.reddit.com/r/privacytoolsIO/) and [/r/PrivacyGuides](https://old.reddit.com/r/PrivacyGuides/) communities that helped me to improve this article.
----
+
 
