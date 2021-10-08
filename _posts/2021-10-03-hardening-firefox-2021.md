@@ -398,6 +398,7 @@ This my user.js file with settings of this article. To install it:
 
 2. Copy paste the following code, also you can download file directly from [here](https://brainfucksec.github.io/uploads/user.js):
 
+{{{
 ```javascript
 /*********************************************************************
 *
@@ -719,6 +720,7 @@ user_pref("webgl.disabled", true);
 //user_pref("privacy.resistFingerprinting", true);
 
 ```
+}}}
 
 ## Add-ons
 
@@ -792,7 +794,7 @@ As always, use **Your Head** to avoid intrusions, browser security depends large
 
 ---
 
-Credits:
+## Credits:
 
 * [arkenfox user.js](https://github.com/arkenfox/user.js)
 
