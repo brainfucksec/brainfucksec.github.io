@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Hardening Firefox - v0.4"
-date: 2021-10-08
+title: "Hardening Firefox - v0.5"
+date: 2021-10-09
 ---
 
 Tested on Firefox: `Version 93.0 (Linux)`
@@ -59,13 +59,29 @@ If you want to create new profile see: [Create, remove or switch Firefox profile
 
 * Click on `Edit -> Settings`
 
-* Go to `General -> Files and Applications`, select `Always ask you where to save files`
+* Go to `General -> Files and Applications`: select `Always ask you where to save files`
 
 **Search Preferences**
 
-* Go to `Search -> Default Search Engine`, select `DuckDuckGo`, then to `Search -> Search Shortcuts`, select `DuckDuckGo`
+* Go to `Search`:
 
-* Remove Google, Bing, eBay, Amazon. Wikipedia search engines.
+    * `Default Search Engine`: select `DuckDuckGo`
+
+    * `Search Suggestions`: If you want search suggestions select only `Show search suggestions in address bas results`
+
+        * `Change settings for other address bar suggestions`: uncheck  `Browsing history` and `Contextual suggestions` [1]
+
+    * `Search Shortcuts`: Select `DuckDuckGo`, remove Google, Bing, eBay, Amazon, Wikipedia search engines [2]
+
+[1] Contextual suggestions is a new Firefox feature included in the [93.0 release](https://www.mozilla.org/en-US/firefox/93.0/releasenotes/), when contextual suggestions are enabled, Firefox Suggest uses your city location and search keywords to make contextual suggestions from Firefox and our partners.
+
+[2] Note: You can add/select your favorite search engines or restore the default settings, see: [Add or remove a search engine in Firefox](https://support.mozilla.org/en-US/kb/add-or-remove-search-engine-firefox)
+
+More information:
+
+[Firefox’s address bar has ads now, but you can disable them](https://www.theverge.com/2021/10/7/22715179/firefox-suggest-search-ads-browser)
+
+[Navigate the Web faster with Firefox Suggest](https://support.mozilla.org/en-US/kb/navigate-web-faster-firefox-suggest?as=u&utm_source=inproduct)
 
 ## about:config
 
