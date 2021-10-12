@@ -242,12 +242,21 @@ a:active, a:focus {
   -moz-outline-style: none
 }
 
-/* Center Logo */
+/* Main logo */
 .main-logo {
   margin-left: auto;
   margin-right: auto;
-  width: 40%;
+  width: 50%;
   -webkit-font-smoothing: antialiased;
+}
+
+/* Card logo */
+.card-logo {
+  margin-left: 70px;
+  margin-right: auto;
+  margin-top: 30px;
+  width: 150px;
+  height: 150px;
 }
 
 /* Banner */
