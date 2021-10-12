@@ -3,7 +3,7 @@ layout: page
 title: Projects | brainf+ck
 ---
 
-### These are my projects that you can find on my [Github repositories](https://github.com/brainfucksec?tab=repositories).
+### These are my projects that you can find on my [Github profile](https://github.com/brainfucksec?tab=repositories):
 
 [kalitorify](https://github.com/brainfucksec/kalitorify) >> Transparent proxy through Tor for Kali Linux OS
 
@@ -15,8 +15,10 @@ title: Projects | brainf+ck
 
 [pomodoro](https://github.com/brainfucksec/pomodoro) >> Pomodoro technique counter for study sessions
 
-[strongpass](https://github.com/brainfucksec/strongpass) >> Generate strong random passwords - (Archived)
+### Archived repositories, a bit old but always useful:
 
-[wal.vim](https://github.com/brainfucksec/wal.vim) >> [pywal](https://github.com/dylanaraps/pywal) module: Colorscheme for vim and neovim - (Archived)
+[strongpass](https://github.com/brainfucksec/strongpass) >> Generate strong random passwords
+
+[wal.vim](https://github.com/brainfucksec/wal.vim) >> [pywal](https://github.com/dylanaraps/pywal) module: Colorscheme for vim and neovim
 
 ### and these are my [gists](https://gist.github.com/brainfucksec).
