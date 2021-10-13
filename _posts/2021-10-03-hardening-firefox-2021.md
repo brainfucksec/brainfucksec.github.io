@@ -412,7 +412,7 @@ This my user.js file with settings of this article. To install it:
 
 1. Create a new file with name `user.js` and copy it in the profile folder, i.e. `~/.mozilla/firefox/xxxxxxxx.my_settings`, where `xxxxxxxx.my_settings` is the name of the new profile for use with the `user.js`.
 
-2. Copy paste the following code, also you can download file directly from [here](https://brainfucksec.github.io/uploads/user.js):
+2. Copy paste the following code, also you can download file directly from [here](https://brainfuck.github.io/uploads/user.js):
 
 
 ```javascript
