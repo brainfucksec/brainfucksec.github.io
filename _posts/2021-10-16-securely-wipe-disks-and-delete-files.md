@@ -294,8 +294,6 @@ As for me I try to use any electronic device until his death, but in this case i
 Furthermore, we understand that with Flash memories the procedures for deleting files are more complex and are often ineffective.
 So for SSDs, USB pendrive, microSD etc. [destroy the device!](https://piped.kavin.rocks/watch?v=sAxbn6DgNjU).
 
-For a demonstration on recovering deleted data from a device you can start from [this guide](https://brainfucksec.github.io/photorec-tutorial)
-
 ---
 
 ## Credits:
