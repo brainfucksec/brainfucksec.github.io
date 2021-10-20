@@ -4,11 +4,13 @@
 *
 * name: user.js
 * date: 2021-10-21
-* version: 0.5.0
+* version: 0.5.1
 * maintainer: Brainf+ck
 *
-* info: Set preferences for the profile when Firefox start.
-* Copy this file on the folder:
+* info: Set preferences for the selected profile when Firefox start.
+* Copy this file on Firefox Profile folder.  You should create a
+* new profile to insert this file:
+*
 * `$HOME/.mozilla/firefox/<profile-ID.name>`
 *
 * For more information how to use this file see:
@@ -18,11 +20,12 @@
 * https://searchfox.org/mozilla-release/source/modules/libpref/init/all.js
 *
 * OPTION FORMAT:
-* user_pref("<entry>", <boolean> || <number> || "<string">);
+* user_pref("<entry>", <boolean> || <number> || "<string>");
 *
-* Note: Commented preferences are those disabled by default,
-* some preferences conflict with others if enabled.
-* So check what you enable/disable.
+* NOTE: Commented preferences are those disabled by default, some
+* conflict with others if enabled, and some disable some basic
+* features like audio/video libraries or other things you need.
+* So be careful and check what you enable/disable.
 *
 **********************************************************************/
 
@@ -31,9 +34,9 @@
  * BEGIN SECTIONS
  *********************************************************************/
 
-/***
+/*********************************************************************
  * about:config warning
- */
+ *********************************************************************/
 
 // disable about:config warning
 user_pref("browser.aboutConfig.showWarning", false);
