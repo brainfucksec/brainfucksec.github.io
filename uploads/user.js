@@ -3,8 +3,8 @@
 * Mozilla Firefox configuration file: `user.js`
 *
 * name: user.js
-* date: 2021-10-08
-* version: 0.4
+* date: 2021-10-21
+* version: 0.4.1
 * maintainer: Brainf+ck
 *
 * info: Set preferences for the profile when Firefox start.
@@ -110,7 +110,7 @@ user_pref("extensions.htmlaboutaddons.recommendations.enabled", false);
  */
 
 // disable telemetry
-user_pref("datareporting.policy.dataSubmissionEnable", false);
+user_pref("datareporting.policy.dataSubmissionEnabled", false);
 user_pref("datareporting.healthreport.uploadEnabled", false);
 user_pref("toolkit.telemetry.enabled", false); //as default
 user_pref("toolkit.telemetry.unified", false);

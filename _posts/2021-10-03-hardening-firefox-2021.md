@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Hardening Firefox - v0.5"
-date: 2021-10-09
+title: "Hardening Firefox - v0.6"
+date: 2021-10-21
 ---
 
 Tested on Firefox: `Version 93.0 (Linux)`
@@ -421,8 +421,8 @@ This my user.js file with settings of this article. To install it:
 * Mozilla Firefox configuration file `user.js`
 *
 * name: user.js
-* date: 2021-10-08
-* version: 0.4
+* date: 2021-10-21
+* version: 0.4.1
 * maintainer: Brainf+ck
 *
 * info: Set preferences for the profile when Firefox start.
@@ -528,7 +528,7 @@ user_pref("extensions.htmlaboutaddons.recommendations.enabled", false);
  */
 
 // disable telemetry
-user_pref("datareporting.policy.dataSubmissionEnable", false);
+user_pref("datareporting.policy.dataSubmissionEnabled", false);
 user_pref("datareporting.healthreport.uploadEnabled", false);
 user_pref("toolkit.telemetry.enabled", false); //as default
 user_pref("toolkit.telemetry.unified", false);
