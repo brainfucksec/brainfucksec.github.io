@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Hardening Firefox - v0.6"
+title: "Hardening Firefox - v0.7"
 date: 2021-10-21
 ---
 
@@ -255,7 +255,7 @@ Note: The parameters are indicated with the format `option = value` for the sake
 
     `browser.safebrowsing.downloads.remote.url = ""`
 
-**Network**
+**Network (DNS / Proxy / IPv6)**
 
 * Disable link prefetching:
 
@@ -329,7 +329,7 @@ Note: The parameters are indicated with the format `option = value` for the sake
 
     `network.http.referer.XOriginTrimmingPolicy = 2`
 
-**WebRTC**
+**Audio/Video (WebRTC, WebGL)**
 
 * Disable WebRTC:
 
@@ -342,6 +342,10 @@ Note: The parameters are indicated with the format `option = value` for the sake
     `media.peerconnection.ice.no_host = true`
 
     `media.peerconnection.ice.proxy_only_if_behind_proxy = true`
+
+* Disable WebGL:
+
+    `webgl.disabled = true`
 
 **Cookies**
 
@@ -378,12 +382,6 @@ Note: The parameters are indicated with the format `option = value` for the sake
     `privacy.clearOnShutdown.sessions = true`
 
     `privacy.clearOnShutdown.sitesettings = false`
-
-**WebGL (Web Graphics Library)**
-
-* Disable WebGL:
-
-    `webgl.disabled = true`
 
 **HTTPS**
 

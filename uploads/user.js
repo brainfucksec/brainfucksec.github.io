@@ -4,7 +4,7 @@
 *
 * name: user.js
 * date: 2021-10-21
-* version: 0.4.1
+* version: 0.5.0
 * maintainer: Brainf+ck
 *
 * info: Set preferences for the profile when Firefox start.
@@ -27,9 +27,9 @@
 **********************************************************************/
 
 
-/***
+/*********************************************************************
  * BEGIN SECTIONS
- */
+ *********************************************************************/
 
 /***
  * about:config warning
@@ -39,9 +39,9 @@
 user_pref("browser.aboutConfig.showWarning", false);
 
 
-/***
+/*********************************************************************
  * StartUp Settings:
- */
+ *********************************************************************/
 
 // disable check if Firefox is your default browser
 //user_pref("browser.shell.checkDefaultBrowser", false);
@@ -69,9 +69,9 @@ user_pref("browser.newtabpage.activity-stream.showSponsoredTopSites", false);
 user_pref("browser.newtabpage.activity-stream.default.sites", "");
 
 
-/***
+/*********************************************************************
  * Geolocation:
- */
+ *********************************************************************/
 
 // use Mozilla geolocation service instead of Google if permission is granted
 user_pref("geo.provider.network.url", "https://location.services.mozilla.com/v1/geolocate?key=%MOZILLA_API_KEY%");
@@ -86,28 +86,31 @@ user_pref("browser.region.network.url", "");
 user_pref("browser.region.update.enabled", false);
 
 
-/***
+/*********************************************************************
  * Language / Locale:
- */
+ *********************************************************************/
 
 // set language for displaying web pages:
 user_pref("intl.accept_languages", "en-US, en");
-user_pref("javascript.use_us_english_locale", true); //Hidden Pref
+user_pref("javascript.use_us_english_locale", true); //Hidden pref
 
-/** Auto-updates and Recommendations **/
+
+/*********************************************************************
+ * Auto-updates and Recommendations
+ *********************************************************************/
 
 // disable auto-installing Firefox updates
 //user_pref("app.update.background.scheduling.enabled", false); //Windows
 user_pref("app.update.auto", false); //Non-Windows
 
 // disable addons recommendations (use Google Analytics)
-user_pref("extensions.getAddons.showPane", false); //Hidden Pref
+user_pref("extensions.getAddons.showPane", false); //Hidden pref
 user_pref("extensions.htmlaboutaddons.recommendations.enabled", false);
 
 
-/***
+/*********************************************************************
  * Telemetry:
- */
+ *********************************************************************/
 
 // disable telemetry
 user_pref("datareporting.policy.dataSubmissionEnabled", false);
@@ -121,8 +124,8 @@ user_pref("toolkit.telemetry.shutdownPingSender.enabled", false);
 user_pref("toolkit.telemetry.updatePing.enabled", false);
 user_pref("toolkit.telemetry.bhrPing.enabled", false);
 user_pref("toolkit.telemetry.firstShutdownPing.enabled", false);
-user_pref("toolkit.telemetry.coverage.opt-out", true); //Hidden Pref
-user_pref("toolkit.coverage.opt-out", true); //Hidden Pref
+user_pref("toolkit.telemetry.coverage.opt-out", true); //Hidden pref
+user_pref("toolkit.coverage.opt-out", true); //Hidden pref
 user_pref("toolkit.coverage.endpoint.base.", "");
 user_pref("browser.ping-centre.telemetry", false);
 
@@ -130,9 +133,9 @@ user_pref("browser.ping-centre.telemetry", false);
 user_pref("beacon.enabled", false);
 
 
-/***
+/*********************************************************************
  * Studies:
- */
+ *********************************************************************/
 
 // disable studies
 user_pref("app.shield.optoutstudies.enabled", false);
@@ -142,9 +145,9 @@ user_pref("app.normandy.enabled", false);
 user_pref("app.normandy.api_url", "");
 
 
-/***
+/*********************************************************************
  * Crash Reports
- */
+ *********************************************************************/
 
 // disable crash reports
 user_pref("breakpad.reportURL", "");
@@ -153,9 +156,9 @@ user_pref("browser.crashReports.unsubmittedCheck.enabled ", false);
 user_pref("browser.crashReports.autoSubmit2 ", false);
 
 
-/***
+/*********************************************************************
  * Captive Portal Detection / Network Checks:
- */
+ *********************************************************************/
 
 // disable captive portal detection
 user_pref("captivedetect.canonicalURL", "")
@@ -165,18 +168,18 @@ user_pref("network.captive-portal-service.enabled", false);
 user_pref("network.connectivity-service.enabled", false);
 
 
-/***
+/*********************************************************************
  * Safe Browsing:
- */
+ *********************************************************************/
 
 // disable safe browsing service
 user_pref("browser.safebrowsing.downloads.remote.enabled", false);
 user_pref("browser.safebrowsing.downloads.remote.url", "");
 
 
-/***
+/*********************************************************************
  * Network (DNS / Proxy / IPv6):
- */
+ *********************************************************************/
 
 // disable link prefetching
 user_pref("network.prefetch-next", false);
@@ -194,9 +197,9 @@ user_pref("network.gio.supported-protocols", ""); //Hidden pref
 user_pref("network.dns.disableIPv6", true);
 
 
-/***
+/*********************************************************************
  * Search Bar / Autofill:
- */
+ *********************************************************************/
 
 // display all parts of the url in the bar
 user_pref("browser.urlbar.trimURLs", false);
@@ -211,9 +214,9 @@ user_pref("extensions.formautofill.heuristics.enabled", false);
 user_pref("signon.autofillForms", false);
 
 
-/***
+/*********************************************************************
  * Cache / Memory:
- */
+ *********************************************************************/
 
 // disable disk cache
 user_pref("browser.cache.disk.enable", false);
@@ -225,9 +228,9 @@ user_pref("browser.sessionstore.privacy_level", 2);
 user_pref("browser.sessionstore.interval", 30000);
 
 
-/***
+/*********************************************************************
  * Headers / Referers:
- */
+ *********************************************************************/
 
 /*
  * control when to send a referer:
@@ -246,9 +249,9 @@ user_pref("network.http.referer.XOriginPolicy", 2);
 user_pref("network.http.referer.XOriginTrimmingPolicy ", 2);
 
 
-/***
- * Media / WebRTC:
- */
+/*********************************************************************
+ * Audio/Video (WebRTC, WebGL):
+ *********************************************************************/
 
 // disable WebRTC
 user_pref("media.peerconnection.enabled", false);
@@ -258,13 +261,19 @@ user_pref("media.peerconnection.ice.default_address_only", true);
 user_pref("media.peerconnection.ice.no_host", true);
 user_pref("media.peerconnection.ice.proxy_only_if_behind_proxy", true);
 
+// disable Web Audio API
+//user_pref("dom.webaudio.enabled", false);
+
+// disable WebGL (Web Graphics Library):
+user_pref("webgl.disabled", true);
+
 // disable autoplay of HTML5 media
 //user_pref("media.autoplay.blocking_policy", 2);
 
 
-/***
+/*********************************************************************
  * Cookies:
- */
+ *********************************************************************/
 
 /*
  * disable 3rd-party cookies and site-data:
@@ -279,9 +288,9 @@ user_pref("network.cookie.cookieBehavior", 1);
 user_pref("browser.contentblocking.category", "custom");
 
 
-/***
+/*********************************************************************
  * Shutdown:
- */
+ *********************************************************************/
 
 // clear history when Firefox closes
 user_pref("privacy.clearOnShutdown.cache", true);
@@ -294,17 +303,9 @@ user_pref("privacy.clearOnShutdown.sessions", true);
 user_pref("privacy.clearOnShutdown.sitesettings", true);
 
 
-/***
- * WebGL (Web Graphics Library):
- */
-
-// disable WebGL
-user_pref("webgl.disabled", true);
-
-
-/***
+/*********************************************************************
  * Fingerprinting:
- */
+ *********************************************************************/
 
 /*
  * RFP can cause some website breakage: mainly canvas, use a site
@@ -316,3 +317,5 @@ user_pref("webgl.disabled", true);
  * See: https://support.mozilla.org/en-US/kb/firefox-protection-against-fingerprinting
  */
 //user_pref("privacy.resistFingerprinting", true);
+//user_pref("privacy.resistFingerprinting.block_mozAddonManager", true); //Hidden pref
+//user_pref("privacy.resistFingerprinting.letterboxing", true); //Hidden pref
