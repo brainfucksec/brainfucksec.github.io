@@ -244,19 +244,11 @@ a:active, a:focus {
 
 /* Main logo */
 .main-logo {
+  display: block;
   margin-left: auto;
   margin-right: auto;
   width: 60%;
   -webkit-font-smoothing: antialiased;
-}
-
-/* Card logo */
-.card-logo {
-  margin-left: 70px;
-  margin-right: auto;
-  margin-top: 30px;
-  width: 150px;
-  height: 150px;
 }
 
 /* Banner */
