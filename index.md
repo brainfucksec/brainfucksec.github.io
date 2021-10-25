@@ -5,7 +5,9 @@ title: home | brainf+ck
 
 ### Brainf+ck | brainfucksec
 
-[~]
+```bash
+~/
+```
 
 [posts](/posts)
 
