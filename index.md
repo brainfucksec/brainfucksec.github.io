@@ -8,3 +8,12 @@ title: Home | brainf+ck
 ```term
 127.0.0.1
 ```
+
+[posts](/archive)
+
+[whoami](/about)
+
+[dev](/projects)
+
+[contact](/contact)
+
