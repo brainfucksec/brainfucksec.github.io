@@ -3,6 +3,8 @@ layout: page
 title: Projects | brainf+ck
 ---
 
+### Dev / Projects
+
 ### These are my projects that you can find on my [Github profile](https://github.com/brainfucksec?tab=repositories):
 
 [kalitorify](https://github.com/brainfucksec/kalitorify) >> Transparent proxy through Tor for Kali Linux OS
@@ -21,4 +23,4 @@ title: Projects | brainf+ck
 
 [wal.vim](https://github.com/brainfucksec/wal.vim) >> [pywal](https://github.com/dylanaraps/pywal) module: Colorscheme for vim and neovim
 
-### and these are my [gists](https://gist.github.com/brainfucksec).
+...and these are my [gists](https://gist.github.com/brainfucksec).
