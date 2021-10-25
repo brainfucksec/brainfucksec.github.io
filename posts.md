@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Archive | brainf+ck
+title: posts | brainf+ck
 ---
 
 <section>

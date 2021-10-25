@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Projects | brainf+ck
+title: dev | brainf+ck
 ---
 
 ### Dev / Projects

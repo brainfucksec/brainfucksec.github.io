@@ -1,19 +1,19 @@
 ---
 layout: page
-title: Home | brainf+ck
+title: home | brainf+ck
 ---
 
 ### Brainf+ck | brainfucksec
 
-```term
-127.0.0.1
+```bash
+/home
 ```
 
-[posts](/archive)
+[posts](/posts)
 
-[whoami](/about)
+[whoami](/whoami)
 
-[dev](/projects)
+[dev](/dev)
 
-[contact](/contact)
+[contacts](/contacts)
 

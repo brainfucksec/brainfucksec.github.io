@@ -1,12 +1,12 @@
 ---
 layout: page
-title: About | brainf+ck
+title: whoami | brainf+ck
 ---
 
 ### whoami
 
 ```
-Security Consultant and Pentester
+Security Consultant - Pentester
 ```
 
 ### Knowledge || Skills
