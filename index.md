@@ -6,7 +6,7 @@ title: home | brainf+ck
 ### Brainf+ck | brainfucksec
 
 ```bash
-/home
+[~]
 ```
 
 [posts](/posts)
