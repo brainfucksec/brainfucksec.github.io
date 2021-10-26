@@ -5,10 +5,6 @@ title: contacts | brainf+ck
 
 ### Contact Me
 
-```term
-email
-```
-
-I can be contacted via email using the following address:
+I can be contacted on email at the following address:
 
 `brainfucksec@pm.me`
