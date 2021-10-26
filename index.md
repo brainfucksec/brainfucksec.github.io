@@ -7,4 +7,4 @@ title: home | brainf+ck
 
 ```bash
 ~/
-``
+```
