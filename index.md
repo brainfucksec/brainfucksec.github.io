@@ -7,6 +7,4 @@ title: home | brainf+ck
 
 ```bash
 ~/
-```
-
-Computer Hacker
+``
