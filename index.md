@@ -9,4 +9,4 @@ title: home | brainf+ck
 ~/
 ```
 
-Computer Hacker - KISS adept
+Computer Hacker
