@@ -3,7 +3,9 @@ layout: page
 title: contacts | brainf+ck
 ---
 
-### Contact Me
+```term
+contact me
+```
 
 I can be contacted on email at the following address:
 
