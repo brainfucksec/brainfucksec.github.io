@@ -12,13 +12,13 @@ date: 2021-02-15
 
 Checking hardware support for KVM (named VT-x for Intel and AMD-V for AMD CPUs):
 
-```bash
+```term
 LC_ALL=C lscpu | grep Virtualization
 ```
 
 Or:
 
-```bash
+```term
 grep -E --color=auto 'vmx|svm|0xc0f' /proc/cpuinfo
 ```
 
@@ -31,7 +31,7 @@ If nothing is displayed after running either command, then your processor does *
 
 Check if the necessary modules: `kvm` and either `kvm_amd` or `kvm_intel`, are available in the kernel:
 
-```bash
+```term
 zgrep CONFIG_KVM /proc/config.gz
 ```
 
@@ -39,12 +39,13 @@ You must see the module set either to `y` or `m`.
 
 Then ensure that kernel modules are automatically loaded at boot:
 
-```bash
+```term
 lsmod | grep kvm
 ```
 
 Output example:
-```
+
+```term
 kvm_intel             245760  0
 kvmgt                  28672  0
 mdev                   20480  2 kvmgt,vfio_mdev
@@ -65,13 +66,13 @@ If the command returns nothing, the module needs to be loaded manually, see: [Ke
 
 Check if the VIRTIO modules are available in the kernel inside the virtual machine:
 
-```bash
+```term
 zgrep VIRTIO /proc/config.gz
 ```
 
 Then, check if kernel modules are automatically loaded at boot:
 
-```bash
+```term
 lsmod | grep virtio
 ```
 
@@ -81,7 +82,7 @@ Also here, if the above commands return nothing, you need to load the kernel mod
 
 ### Install qemu, libvirt, virt-manager and other packages needed
 
-```bash
+```term
 sudo pacman -S libvirt qemu virt-manager ebtables dnsmasq bridge-utils
 ```
 
@@ -99,7 +100,7 @@ For complete information about packages and other utilities and settings see:
 
 Add user to `libvirt` Group:
 
-```bash
+```term
 sudo usermod -aG libvirt <username>
 ```
 <br>
@@ -108,25 +109,25 @@ sudo usermod -aG libvirt <username>
 
 Start the `libvirtd.service` service:
 
-```bash
+```term
 sudo systemctl start libvirtd.service
 ```
 
 Enable `libvirt.service` service at boot:
 
-```bash
+```term
 sudo systemctl enable libvirtd.service
 ```
 
 Start `virt-manager`:
 
-```bash
+```term
 virt-manager
 ```
 See: [Virtual Machine Manager](https://virt-manager.org/)
 
 ---
 
-by Brainfuck
+by Brainf+ck
 
 Source: [KVM - ArchWiki](https://wiki.archlinux.org/index.php/KVM)
