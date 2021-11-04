@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "Hardening Firefox - v0.7"
-date: 2021-10-21
+title: "Hardening Firefox - v0.8"
+date: 2021-11-04
 ---
 
-Tested on Firefox: `Version 93.0 (Linux)`
+Tested on Firefox: `Version 94.0 (Linux)`
 
 <br>
 
@@ -16,7 +16,7 @@ Tested on Firefox: `Version 93.0 (Linux)`
 * [about:config](#aboutconfig)
 * [user.js](#userjs)
 * [Disabled Options](#disabled-options)
-* [Add-ons](#add-ons)
+* [uBlock Origin](#ublock-origin)
 * [DoH (DNS over HTTPS)](#doh-dns-over-https)
 * [Multiple profiles and Containers](#multiple-profiles-and-containers)
 * [Browser Leak Test](#browser-leak-test)
@@ -35,7 +35,7 @@ When you visit a web page, your browser voluntarily sends information about its 
 
 This is my personal configuration for **hardening Mozilla Firefox while maintaining usability**, this mean that some options that help protect against fingerprinting are not enabled by default, for more information see: [Disabled Options](#disabled-options).
 
-This configuration is for a "day-by-day" browsing, with my Browser I need to work, or study/develop (and listen music and watch movies :), then I try to setup a Browser for better security but without breaking many things, then if you want greater anonymity and privacy see: [Tor Browser](https://www.torproject.org/).
+This configuration is for a "day-by-day" browsing,, I try to setup a Browser for better security but without breaking many things, then if you want greater anonymity and privacy see: [Tor Browser](https://www.torproject.org/).
 
 There is no anonymous and 100% secure setup, what you can do though, is reduce the amount of data collected by entities like Google, Facebook etc. etc.. and reduce attack vectors for enhanced security.
 
@@ -55,12 +55,6 @@ If you want to create new profile see: [Create, remove or switch Firefox profile
 
 ## Firefox Preferences
 
-**Download folder location**
-
-* Click on `Edit -> Settings`
-
-* Go to `General -> Files and Applications`: select `Always ask you where to save files`
-
 **Search Preferences**
 
 * Go to `Search`:
@@ -69,19 +63,11 @@ If you want to create new profile see: [Create, remove or switch Firefox profile
 
     * `Search Suggestions`: If you want search suggestions select only `Show search suggestions in address bas results`
 
-        * `Change settings for other address bar suggestions`: uncheck  `Browsing history` and `Contextual suggestions` [1]
+        * `Change settings for other address bar suggestions`: uncheck  `Browsing history`
 
-    * `Search Shortcuts`: Select `DuckDuckGo`, remove Google, Bing, eBay, Amazon, Wikipedia search engines [2]
+    * `Search Shortcuts`: Select `DuckDuckGo`, remove Google, Bing, eBay, Amazon, Wikipedia search engines
 
-[1] Contextual suggestions is a new Firefox feature included in the [93.0 release](https://www.mozilla.org/en-US/firefox/93.0/releasenotes/), when contextual suggestions are enabled, Firefox Suggest uses your city location and search keywords to make contextual suggestions from Firefox and our partners.
-
-[2] Note: You can add/select your favorite search engines or restore the default settings, see: [Add or remove a search engine in Firefox](https://support.mozilla.org/en-US/kb/add-or-remove-search-engine-firefox)
-
-More information:
-
-[Firefox’s address bar has ads now, but you can disable them](https://www.theverge.com/2021/10/7/22715179/firefox-suggest-search-ads-browser)
-
-[Navigate the Web faster with Firefox Suggest](https://support.mozilla.org/en-US/kb/navigate-web-faster-firefox-suggest?as=u&utm_source=inproduct)
+Note: You can add/select your favorite search engines or restore the default settings, see: [Add or remove a search engine in Firefox](https://support.mozilla.org/en-US/kb/add-or-remove-search-engine-firefox)
 
 ## about:config
 
@@ -91,13 +77,13 @@ On the search bar digit: `about:config` and set the parameters as follows:
 
 Note: The parameters are indicated with the format `option = value` for the sake of clarity, see [user.js](#userjs) section for the JavaScript code.
 
-**about:config warning**
+### about:config warning
 
 * Disable about:config warning:
 
     `browser.aboutConfig.showWarning = false`
 
-**StartUp Settings**
+### StartUp Settings
 
 * Set startup home page:
     * 0=blank
@@ -133,7 +119,7 @@ Note: The parameters are indicated with the format `option = value` for the sake
 
     `browser.newtabpage.activity-stream.default.sites = ""`
 
-**Geolocation**
+### Geolocation
 
 * Use Mozilla geolocation service instead of Google if permission is granted:
 
@@ -153,7 +139,7 @@ Note: The parameters are indicated with the format `option = value` for the sake
 
     `browser.region.update.enabled = false`
 
-**Language / Locale**
+### Language / Locale
 
 * Set language for displaying web pages:
 
@@ -161,7 +147,7 @@ Note: The parameters are indicated with the format `option = value` for the sake
 
     `javascript.use_us_english_locale = true` (Hidden Pref)
 
-**Auto-updates and Recommendations**
+### Auto-updates and Recommendations
 
 * Disable auto-INSTALLING Firefox updates:
 
@@ -175,7 +161,7 @@ Note: The parameters are indicated with the format `option = value` for the sake
 
     `extensions.htmlaboutaddons.recommendations.enabled = false`
 
-**Telemetry**
+### Telemetry
 
 * Disable telemetry:
 
@@ -211,7 +197,7 @@ Note: The parameters are indicated with the format `option = value` for the sake
 
     `beacon.enabled = false`
 
-**Studies**
+### Studies
 
 * Disable studies:
 
@@ -223,7 +209,7 @@ Note: The parameters are indicated with the format `option = value` for the sake
 
     `app.normandy.api_url = ""`
 
-**Crash Reports**
+### Crash Reports
 
 * Disable crash reports:
 
@@ -231,11 +217,11 @@ Note: The parameters are indicated with the format `option = value` for the sake
 
     `browser.tabs.crashReporting.sendReport = false`
 
-    `browser.crashReports.unsubmittedCheck.enabled = false`
+    `browser.crashReports.unsubmittedCheck.enabled = false` (as default)
 
     `browser.crashReports.unsubmittedCheck.autoSubmit2 = false`
 
-**Captive Portal Detection / Network Checks**
+### Captive Portal Detection / Network Checks
 
 * Disable captive portal detection:
 
@@ -247,7 +233,7 @@ Note: The parameters are indicated with the format `option = value` for the sake
 
     `network.connectivity-service.enabled = false`
 
-**Safe Browsing**
+### Safe Browsing
 
 * Disable Safe Browsing service:
 
@@ -255,7 +241,7 @@ Note: The parameters are indicated with the format `option = value` for the sake
 
     `browser.safebrowsing.downloads.remote.url = ""`
 
-**Network (DNS / Proxy / IPv6)**
+### Network (DNS / Proxy / IPv6)
 
 * Disable link prefetching:
 
@@ -269,15 +255,15 @@ Note: The parameters are indicated with the format `option = value` for the sake
 
     `network.predictor.enabled = false`
 
-* Disable GIO protocols:
-
-    `network.gio.supported-protocols = ""`
-
 * Disable IPv6:
 
     `network.dns.disableIPv6 = true`
 
-**Search Bar / Autofill**
+* Disable GIO protocols:
+
+    `network.gio.supported-protocols = ""`
+
+### Search Bar: Suggestions / Autofill
 
 * Display all parts of the url in the bar:
 
@@ -299,7 +285,13 @@ Note: The parameters are indicated with the format `option = value` for the sake
 
     `signon.autofillForms = false`
 
-**Cache / Memory**
+*  Disable location bar contextual suggestions:
+
+    `browser.urlbar.suggest.quicksuggest = false`
+
+    `browser.urlbar.suggest.quicksuggest.sponsored = false`
+
+### Cache / Memory
 
 * Disable disk cache:
 
@@ -313,7 +305,7 @@ Note: The parameters are indicated with the format `option = value` for the sake
 
     `browser.sessionstore.interval = 30000`
 
-**Headers / Referers**
+### Headers / Referers
 
 * Control when to send a referer:
     * 0 = always (default)
@@ -329,7 +321,7 @@ Note: The parameters are indicated with the format `option = value` for the sake
 
     `network.http.referer.XOriginTrimmingPolicy = 2`
 
-**Audio/Video (WebRTC, WebGL)**
+### Audio/Video (WebRTC, WebGL)
 
 * Disable WebRTC:
 
@@ -347,7 +339,17 @@ Note: The parameters are indicated with the format `option = value` for the sake
 
     `webgl.disabled = true`
 
-**Cookies**
+### Downloads
+
+* Always ask you where to save files:
+
+    `browser.download.useDownloadDir = false`
+
+* Disable adding downloads to system's "recent documents" list:
+
+    `browser.download.manager.addToRecentDocs = false`
+
+### Cookies
 
 * Disable 3rd-party cookies and site-data:
     * 0 = Accept cookies and site data
@@ -361,7 +363,7 @@ Note: The parameters are indicated with the format `option = value` for the sake
 
     `browser.contentblocking.category = "custom"`
 
-**Shutdown**
+### Shutdown
 
 * Clear history when Firefox closes:
 
@@ -383,18 +385,21 @@ Note: The parameters are indicated with the format `option = value` for the sake
 
     `privacy.clearOnShutdown.sitesettings = false`
 
-**HTTPS**
+### HTTPS
 
-* Set "HTTPS-only mode":
+* Enable HTTPS-Only mode in all windows:
 
-    To enable this feature go to `Edit -> Settings -> Privacy & Security -> HTTPS-Only Mode` then select `Enable HTTPS-Only Mode in all windows`
+    `dom.security.https_only_mode = true`
+
+* Disable sending HTTP request for checking HTTPS support by the server:
+
+    `dom.security.https_only_mode_send_http_background_request = false`
 
 ## Disabled Options
 
 Compared to other similar configurations such as [pyllyukko](https://github.com/pyllyukko/user.js)  or [arkenfox](https://github.com/arkenfox/user.js) user.js, there are several options disabled, some of these are commented in the various sections of this [user.js](#user.js) file.
 
 These are the options you can activate for greater protection, but they disable some basic functionality like audio/video libraries or other things you need, so be careful.
-
 
 ## user.js
 
@@ -410,7 +415,7 @@ This my user.js file with settings of this article. To install it:
 
 1. Create a new file with name `user.js` and copy it in the profile folder, i.e. `~/.mozilla/firefox/xxxxxxxx.my_settings`, where `xxxxxxxx.my_settings` is the name of the new profile for use with the `user.js`.
 
-2. Copy paste the following code, also you can download file directly from [here](https://brainfucksec.github.io/uploads/user.js):
+2. Copy paste the following code, also you can download directly my gist [here](https://gist.github.com/brainfucksec/68e79da1c965aeaa4782914afd8f7fa2):
 
 
 ```javascript
@@ -419,8 +424,8 @@ This my user.js file with settings of this article. To install it:
 * Mozilla Firefox configuration file: `user.js`
 *
 * name: user.js
-* date: 2021-10-21
-* version: 0.5.1
+* date: 2021-11-04
+* version: 0.6.0
 * maintainer: Brainf+ck
 *
 * info: Set preferences for the selected profile when Firefox start.
@@ -571,7 +576,6 @@ user_pref("app.normandy.api_url", "");
 // disable crash reports
 user_pref("breakpad.reportURL", "");
 user_pref("browser.tabs.crashReporting.sendReport", false);
-user_pref("browser.crashReports.unsubmittedCheck.enabled ", false);
 user_pref("browser.crashReports.autoSubmit2 ", false);
 
 
@@ -609,15 +613,15 @@ user_pref("network.dns.disablePrefetch", true);
 // disable predictor
 user_pref("network.predictor.enabled", false);
 
-// disable "GIO" protocols as a potential proxy bypass vectors
-user_pref("network.gio.supported-protocols", ""); //Hidden pref
-
 // disable IPv6
 user_pref("network.dns.disableIPv6", true);
 
+// disable "GIO" protocols as a potential proxy bypass vectors
+user_pref("network.gio.supported-protocols", ""); //Hidden pref
+
 
 /*********************************************************************
- * Search Bar / Autofill:
+ * Search Bar: Suggestions / Autofill:
  *********************************************************************/
 
 // display all parts of the url in the bar
@@ -631,6 +635,10 @@ user_pref("extensions.formautofill.creditCards.available", false);
 user_pref("extensions.formautofill.creditCards.enabled", false);
 user_pref("extensions.formautofill.heuristics.enabled", false);
 user_pref("signon.autofillForms", false);
+
+// disable location bar contextual suggestions:
+user_pref("browser.urlbar.suggest.quicksuggest", false);
+user_pref("browser.urlbar.suggest.quicksuggest.sponsored", false);
 
 
 /*********************************************************************
@@ -689,6 +697,16 @@ user_pref("webgl.disabled", true);
 // disable autoplay of HTML5 media
 //user_pref("media.autoplay.blocking_policy", 2);
 
+/*********************************************************************
+ * Downloads:
+ *********************************************************************/
+
+// always ask you where to save files:
+user_pref("browser.download.useDownloadDir", false);
+
+// disable adding downloads to recent documents list
+user_pref("browser.download.manager.addToRecentDocs", false);
+
 
 /*********************************************************************
  * Cookies:
@@ -723,6 +741,17 @@ user_pref("privacy.clearOnShutdown.sitesettings", true);
 
 
 /*********************************************************************
+ * HTTPS:
+ *********************************************************************/
+
+// enable HTTPS-Only mode in all windows
+user_pref("dom.security.https_only_mode", true);
+
+// disable sending HTTP request for checking HTTPS support by the server
+user_pref("dom.security.https_only_mode_send_http_background_request", false);
+
+
+/*********************************************************************
  * Fingerprinting:
  *********************************************************************/
 
@@ -738,9 +767,10 @@ user_pref("privacy.clearOnShutdown.sitesettings", true);
 //user_pref("privacy.resistFingerprinting", true);
 //user_pref("privacy.resistFingerprinting.block_mozAddonManager", true); //Hidden pref
 //user_pref("privacy.resistFingerprinting.letterboxing", true); //Hidden pref
+
 ```
 
-## Add-ons
+## uBlock Origin
 
 [uBlock Origin](https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/)
 
@@ -770,7 +800,7 @@ user_pref("privacy.clearOnShutdown.sitesettings", true);
 
     * Malware Domains:
         * Online Malicious URL Blocklist
-        * Spam404
+        * Phishing URL Blocklist
 
     * Annoyances:
         * Anti-Facebook
