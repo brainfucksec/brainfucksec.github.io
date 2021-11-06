@@ -37,8 +37,6 @@ _Wiping a disk is done by writing new data over every single bit._
 
 [ArchWiki:Data remanence](https://wiki.archlinux.org/title/Securely_wipe_disk#Data_remanence)
 
-However, in the guide there are several methods for safely deleting files from a volume that may be helpful :)
-
 **Note:** These operations should be performed in an isolated environment such as a Live Operating System or a virtual environment (VirtualBox, VMWare, QEMU, etc...).  The utilities and commands shown in the examples are mostly in the GNU/Linux environment but you can also find some examples for Windows :)
 
 # Wipe Disk
