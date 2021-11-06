@@ -7,7 +7,9 @@ title: contacts | brainf+ck
 contact me
 ```
 
-If you need to contact me, you can reach me via email at: `brainfucksec@pm.me`
+If you need to contact me, you can reach me via email at:
+
+`brainfucksec@pm.me`
 
 Also you can find Me on:
 
