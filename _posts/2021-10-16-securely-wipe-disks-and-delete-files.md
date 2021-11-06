@@ -290,7 +290,7 @@ However, if you need to clean a disk, you can encrypt the disk, throw away the k
 
 As for me I try to use any electronic device until his death, but in this case if we want to be 100% sure of the deletion of the data then we have to destroy the device.
 Furthermore, we understand that with Flash memories the procedures for deleting files are more complex and are often ineffective.
-So for SSDs, USB pendrive, microSD etc. [destroy the device!](https://piped.kavin.rocks/watch?v=sAxbn6DgNjU).
+So [destroy the device!](https://piped.kavin.rocks/watch?v=sAxbn6DgNjU).
 
 ---
 
