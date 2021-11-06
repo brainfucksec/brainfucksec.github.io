@@ -7,6 +7,11 @@ title: contacts | brainf+ck
 contact me
 ```
 
-I can be contacted on email at the following address:
+If you need to contact me, you can reach me via email at: `brainfucksec@pm.me`
 
-`brainfucksec@pm.me`
+Also you can find Me on:
+
+GitHub: [brainfucksec](https://github.com/brainfucksec)
+
+reddit: `_brainfuck`
+
