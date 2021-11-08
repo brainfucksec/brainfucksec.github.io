@@ -17,3 +17,5 @@ GitHub: [brainfucksec](https://github.com/brainfucksec)
 
 reddit: `_brainfuck`
 
+Arch Linux: `brainfucksec`
+
