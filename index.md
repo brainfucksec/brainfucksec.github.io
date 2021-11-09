@@ -4,5 +4,5 @@ title: home | brainf+ck
 ---
 
 ```term
-brainfuck@host:~$ hellofriend
+brainfuck@host:~$ ./hellofriend
 ```
