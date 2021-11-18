@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Hardening Firefox - v0.8"
-date: 2021-11-04
+title: "Hardening Firefox - v0.9"
+date: 2021-11-18
 ---
 
 Tested on Firefox: `Version 94.0 (Linux)`
@@ -261,7 +261,7 @@ Note: The parameters are indicated with the format `option = value` for the sake
 
 * Disable GIO protocols:
 
-    `network.gio.supported-protocols = ""`
+    `network.gio.supported-protocols = ""` (Hidden Pref)
 
 ### Search Bar: Suggestions / Autofill
 
@@ -385,6 +385,8 @@ Note: The parameters are indicated with the format `option = value` for the sake
 
     `privacy.clearOnShutdown.sitesettings = false`
 
+    `privacy.sanitize.timeSpan = 0`
+
 ### HTTPS
 
 * Enable HTTPS-Only mode in all windows:
@@ -424,8 +426,8 @@ This my user.js file with settings of this article. To install it:
 * Mozilla Firefox configuration file: `user.js`
 *
 * name: user.js
-* date: 2021-11-04
-* version: 0.6.0
+* date: 2021-11-18
+* version: 0.6.1
 * maintainer: Brainf+ck
 *
 * info: Set preferences for the selected profile when Firefox start.
@@ -576,7 +578,7 @@ user_pref("app.normandy.api_url", "");
 // disable crash reports
 user_pref("breakpad.reportURL", "");
 user_pref("browser.tabs.crashReporting.sendReport", false);
-user_pref("browser.crashReports.autoSubmit2 ", false);
+user_pref("browser.crashReports.unsubmittedCheck.autoSubmit2", false);
 
 
 /*********************************************************************
@@ -704,7 +706,7 @@ user_pref("webgl.disabled", true);
 // always ask you where to save files:
 user_pref("browser.download.useDownloadDir", false);
 
-// disable adding downloads to recent documents list
+// disable adding downloads to system's "recent documents" list
 user_pref("browser.download.manager.addToRecentDocs", false);
 
 
@@ -730,6 +732,7 @@ user_pref("browser.contentblocking.category", "custom");
  *********************************************************************/
 
 // clear history when Firefox closes
+user_pref("privacy.sanitize.sanitizeOnShutdown", true);
 user_pref("privacy.clearOnShutdown.cache", true);
 user_pref("privacy.clearOnShutdown.cookies", true);
 user_pref("privacy.clearOnShutdown.downloads", true);
@@ -738,6 +741,7 @@ user_pref("privacy.clearOnShutdown.history", true);
 user_pref("privacy.clearOnShutdown.offlineApps", true);
 user_pref("privacy.clearOnShutdown.sessions", true);
 user_pref("privacy.clearOnShutdown.sitesettings", true);
+user_pref("privacy.sanitize.timeSpan", 0);
 
 
 /*********************************************************************
