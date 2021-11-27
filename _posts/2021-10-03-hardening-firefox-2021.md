@@ -1,10 +1,10 @@
 ---
 layout: post
 title: "Hardening Firefox - v0.9"
-date: 2021-11-18
+date: 2021-11-27
 ---
 
-Tested on Firefox: `Version 94.0 (Linux)`
+Tested on Firefox: `Version 94.0.2 (Linux)`
 
 <br>
 
