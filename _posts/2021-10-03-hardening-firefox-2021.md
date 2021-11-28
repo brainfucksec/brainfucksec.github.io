@@ -1,10 +1,10 @@
 ---
 layout: post
 title: "Hardening Firefox - v0.9"
-date: 2021-11-27
+date: 2021-11-28
 ---
 
-Tested on Firefox: `Version 94.0.2 (Linux)`
+Tested on Firefox: `Version 94.0 (Linux)`
 
 <br>
 
@@ -816,7 +816,7 @@ For more information about uBlock usage see the [Wiki](https://github.com/gorhil
 ## DoH (DNS over HTTPS)
 
 DNS-over-HTTPS, DNS-over-TLS, and DNSCrypt resolvers will not make you anonymous. Using Anonymized DNSCrypt hides only your DNS traffic from your Internet Service Provider. However, using any of these protocols will prevent DNS hijacking, and make your DNS requests harder for third parties to eavesdrop on and tamper with.
-For more information about DNS and DoH see: [PrivacyGuides.org - Encrypted DNS Resolvers](https://privacyguides.org/providers/dns/)
+For more information about DNS and DoH see: [Wikipedia - DNS over HTTPS](https://en.wikipedia.org/wiki/DNS_over_HTTPS)
 
 If you want to set DoH on Firefox:
 
@@ -850,10 +850,5 @@ As always, use **Your Head** to avoid intrusions, browser security depends large
 
 * [arkenfox user.js](https://github.com/arkenfox/user.js)
 
-* [PrivacyGuides.org](https://privacyguides.org/)
-
 * [uBlock Origin](https://ublockorigin.com/)
-
-* A special thanks goes to Reddit [/r/privacytoolsIO](https://old.reddit.com/r/privacytoolsIO/) and [/r/PrivacyGuides](https://old.reddit.com/r/PrivacyGuides/) communities that helped me to improve this article.
-
 
