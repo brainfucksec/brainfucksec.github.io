@@ -15,7 +15,4 @@ Also you can find Me on:
 
 GitHub: [brainfucksec](https://github.com/brainfucksec)
 
-reddit: `_brainfuck`
-
 Arch Linux: `brainfucksec`
-
