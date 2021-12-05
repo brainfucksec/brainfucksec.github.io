@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "Hardening Firefox - v0.9"
-date: 2021-11-28
+title: "Hardening Firefox - v0.9.1"
+date: 2021-12-05
 ---
 
-Tested on Firefox: `Version 94.0 (Linux)`
+Tested on Firefox: `Version 94.0.2 (Linux)`
 
 <br>
 
@@ -35,9 +35,9 @@ When you visit a web page, your browser voluntarily sends information about its 
 
 This is my personal configuration for **hardening Mozilla Firefox while maintaining usability**, this mean that some options that help protect against fingerprinting are not enabled by default, for more information see: [Disabled Options](#disabled-options).
 
-This configuration is for a "day-by-day" browsing,, I try to setup a Browser for better security but without breaking many things, then if you want greater anonymity and privacy see: [Tor Browser](https://www.torproject.org/).
+With this configuration I try to setup a Browser for better security but without breaking many things, then if you want greater anonymity and privacy see: [Tor Browser](https://www.torproject.org/).
 
-There is no anonymous and 100% secure setup, what you can do though, is reduce the amount of data collected by entities like Google, Facebook etc. etc.. and reduce attack vectors for enhanced security.
+There is no anonymous and 100% secure broser setup, what you can do though, is reduce the amount of data collected by entities like Google, Facebook etc. etc. and reduce attack vectors for enhanced security.
 
 ## Backup Firefox profile
 
@@ -425,9 +425,8 @@ This my user.js file with settings of this article. To install it:
 *
 * Mozilla Firefox configuration file: `user.js`
 *
-* name: user.js
-* date: 2021-11-18
-* version: 0.6.1
+* date: 2021-12-05
+* version: 0.6.2
 * maintainer: Brainf+ck
 *
 * info: Set preferences for the selected profile when Firefox start.
@@ -771,7 +770,6 @@ user_pref("dom.security.https_only_mode_send_http_background_request", false);
 //user_pref("privacy.resistFingerprinting", true);
 //user_pref("privacy.resistFingerprinting.block_mozAddonManager", true); //Hidden pref
 //user_pref("privacy.resistFingerprinting.letterboxing", true); //Hidden pref
-
 ```
 
 ## uBlock Origin
@@ -846,7 +844,7 @@ As always, use **Your Head** to avoid intrusions, browser security depends large
 
 ---
 
-## Credits:
+## Resources:
 
 * [arkenfox user.js](https://github.com/arkenfox/user.js)
 
