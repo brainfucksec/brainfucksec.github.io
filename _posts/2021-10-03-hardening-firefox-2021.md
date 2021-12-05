@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Hardening Firefox - v0.9.1"
+title: "Hardening Firefox - v0.9.2"
 date: 2021-12-05
 ---
 
@@ -37,7 +37,7 @@ This is my personal configuration for **hardening Mozilla Firefox while maintain
 
 With this configuration I try to setup a Browser for better security but without breaking many things, then if you want greater anonymity and privacy see: [Tor Browser](https://www.torproject.org/).
 
-There is no anonymous and 100% secure broser setup, what you can do though, is reduce the amount of data collected by entities like Google, Facebook etc. etc. and reduce attack vectors for enhanced security.
+There is no anonymous and 100% secure setup, what you can do though, is reduce the amount of data collected by entities like Google, Facebook etc. etc. and reduce attack vectors for enhanced security.
 
 ## Backup Firefox profile
 
