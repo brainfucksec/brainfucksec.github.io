@@ -11,8 +11,6 @@ If you need to contact me, you can reach me via email at:
 
 `brainfucksec@pm.me`
 
-Also you can find Me on:
+Also you can find me on:
 
 GitHub: [brainfucksec](https://github.com/brainfucksec)
-
-Arch Linux: `brainfucksec`
