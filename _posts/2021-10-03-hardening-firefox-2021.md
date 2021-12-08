@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "Hardening Firefox - v0.9.2"
-date: 2021-12-05
+title: "Hardening Firefox 2021 - v0.10.0"
+date: 2021-12-08
 ---
 
-Tested on Firefox: `Version 94.0.2 (Linux)`
+Tested on Firefox: `Version 95.0 (Linux)`
 
 <br>
 
@@ -402,6 +402,8 @@ Note: The parameters are indicated with the format `option = value` for the sake
 Compared to other similar configurations such as [pyllyukko](https://github.com/pyllyukko/user.js)  or [arkenfox](https://github.com/arkenfox/user.js) user.js, there are several options disabled, some of these are commented in the various sections of this [user.js](#user.js) file.
 
 These are the options you can activate for greater protection, but they disable some basic functionality like audio/video libraries or other things you need, so be careful.
+
+Also I excluded several `default` entries
 
 ## user.js
 
