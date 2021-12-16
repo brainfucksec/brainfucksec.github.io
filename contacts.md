@@ -7,10 +7,8 @@ title: contacts | brainf+ck
 contact me
 ```
 
-If you need to contact me, you can reach me via email at:
+Email:  `brainfucksec@pm.me`
 
-`brainfucksec@pm.me`
+XMPP:   `brainfucksec@0day.im`
 
-Also you can find me on:
-
-GitHub: [brainfucksec](https://github.com/brainfucksec)
+Also you can find me on GitHub: [brainfucksec](https://github.com/brainfucksec)
