@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "Hardening Firefox 2021 - v0.10.0"
-date: 2021-12-08
+title: "Hardening Firefox 2021 - v0.11.0"
+date: 2021-12-20
 ---
 
-Tested on Firefox: `Version 95.0 (Linux)`
+Tested on Firefox: `Version 95.0.x (Linux)`
 
 <br>
 
@@ -37,7 +37,7 @@ This is my personal configuration for **hardening Mozilla Firefox while maintain
 
 With this configuration I try to setup a Browser for better security but without breaking many things, then if you want greater anonymity and privacy see: [Tor Browser](https://www.torproject.org/).
 
-There is no anonymous and 100% secure setup, what you can do though, is reduce the amount of data collected by entities like Google, Facebook etc. etc. and reduce attack vectors for enhanced security.
+In Computer security the "100% secure setup" does not exist, what you can do though, is reduce the amount of data collected by entities like Google, Facebook etc. and reduce attack vectors.
 
 ## Backup Firefox profile
 
@@ -792,26 +792,29 @@ user_pref("dom.security.https_only_mode_send_http_background_request", false);
 
 ```text
 
-    My uBlock Origin blocklists:
+My uBlock Origin blocklists:
 
-    * Ads:
-        * EasyList
+* Ads:
+    * EasyList
 
-    * Privacy:
-        * AdGuard Tracking Protection
-        * AdGuard URL Tracking Protection
-        * EasyPrivacy
+* Privacy:
+    * AdGuard Tracking Protection
+    * AdGuard URL Tracking Protection
+    * EasyPrivacy
 
-    * Malware Domains:
-        * Online Malicious URL Blocklist
-        * Phishing URL Blocklist
+* Malware Domains:
+    * Online Malicious URL Blocklist
+    * Phishing URL Blocklist
 
-    * Annoyances:
-        * Anti-Facebook
-        * uBlock filters - Annoyances
+* Annoyances:
+    * Anti-Facebook
+    * uBlock filters - Annoyances
+
+* Multipurpose:
+    * Peter Lowe's Ad and tracking server list
 ```
 
-For more information about uBlock usage see the [Wiki](https://github.com/gorhill/uBlock/wiki) on Github.
+For more information about uBlock usage see the [Wiki](https://github.com/gorhill/uBlock/wiki) on GitHub, check the [Blocking mode: Medium mode](https://github.com/gorhill/uBlock/wiki/Blocking-mode:-medium-mode) on the Wiki, is very powerful :)
 
 ## DoH (DNS over HTTPS)
 
