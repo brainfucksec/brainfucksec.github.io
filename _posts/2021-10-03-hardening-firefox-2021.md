@@ -814,7 +814,7 @@ My uBlock Origin blocklists:
     * Peter Lowe's Ad and tracking server list
 ```
 
-For more information about uBlock usage see the [Wiki](https://github.com/gorhill/uBlock/wiki) on GitHub, check the [Blocking mode: Medium mode](https://github.com/gorhill/uBlock/wiki/Blocking-mode:-medium-mode) on the Wiki, is very powerful :)
+For more information about uBlock usage see the [Wiki](https://github.com/gorhill/uBlock/wiki) on GitHub, check the [Blocking mode: Medium mode](https://github.com/gorhill/uBlock/wiki/Blocking-mode:-medium-mode) is very powerful :).
 
 ## DoH (DNS over HTTPS)
 
