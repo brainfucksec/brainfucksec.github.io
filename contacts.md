@@ -7,8 +7,8 @@ title: contacts | brainf+ck
 contact me
 ```
 
-Email:  `brainfucksec@pm.me`
+Email:  `brainfucksec[at]pm.me`
 
-XMPP:   `brainfucksec@0day.im`
+XMPP:   `brainfucksec[at]0day.im`
 
 Also you can find me on GitHub: [brainfucksec](https://github.com/brainfucksec)
