@@ -7,7 +7,7 @@ title: whoami | brainf+ck
 whoami
 ```
 
-Hi, I am `Brainf+ck` and I am a Hacker, not for skills, I definitely have a long way to go, but I am a Hacker because I try to understand how things work, and I try to improve them, whether it is an operating system, a program or an object that I use everyday.
+Hi, I am `brainf+ck` and I am a Hacker, not for skills, I definitely have a long way to go, but I am a Hacker because I try to understand how things work, and I try to improve them, whether it is an operating system, a program or an object that I use everyday.
 
 My studies are mainly about Operating Systems, Penetration Testing and Networking, I like to study an operating system, or a system in general, and solve its security problems.
 

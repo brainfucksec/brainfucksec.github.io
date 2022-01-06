@@ -1,7 +1,7 @@
-title: Brainf+ck
-description: "Hacking - Cyber Security and Privacy"
+title: brainfucksec
+description: "Hacking|Cyber Security|Privacy|Blog"
 author:
-  name: "Brainf+ck"
+  name: "brainfucksec"
   email: ""
   url: "https://brainfucksec.github.io"
 
@@ -28,8 +28,8 @@ plugins:
   - jekyll-sitemap
 
 # Custom variables
-owner : "Brainf+ck"
-year : "2021"
+owner : "brainf+ck"
+year : "2022"
 
 # thanks tocttou for this theme
 remote_theme: tocttou/hacker-blog
