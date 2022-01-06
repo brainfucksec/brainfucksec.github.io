@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Hardening Firefox 2022 - v0.12.0"
+title: "Hardening Firefox 2022 - v0.12.1"
 date: 2022-01-06
 ---
 
@@ -77,13 +77,11 @@ On the search bar digit: `about:config` and set the parameters as follows:
 
 Note: The parameters are indicated with the format `option = value` for the sake of clarity, see [user.js](#userjs) section for the JavaScript code.
 
-### about:config warning
+### StartUp Settings
 
 * Disable about:config warning:
 
     `browser.aboutConfig.showWarning = false`
-
-### StartUp Settings
 
 * Set startup home page:
     * 0=blank
@@ -425,7 +423,7 @@ This my user.js file with settings of this article. To install it:
 * Mozilla Firefox configuration file: `user.js`
 *
 * date: 2022-01-06
-* version: 0.7.0_rev1
+* version: 0.8.0
 * maintainer: Brainf+ck
 *
 * info: Set preferences for the selected profile when Firefox start.
@@ -452,20 +450,37 @@ This my user.js file with settings of this article. To install it:
 
 
 /*********************************************************************
- * BEGIN SECTIONS
+ *
+ * SECTIONS:
+ *    - StartUp Settings
+ *    - Geolocation
+ *    - Language / Locale
+ *    - Auto-updates / Recommendations
+ *    - Telemetry
+ *    - Studies
+ *    - Crash Reports
+ *    - Captive Portal Detection / Network Checks
+ *    - Safe Browsing
+ *    - Network: DNS / Proxy / IPv6
+ *    - Search Bar: Suggestions / Autofill
+ *    - Disk Cache / Memory
+ *    - Headers / Referers
+ *    - Audio/Video (WebRTC, WebGL)
+ *    - Downloads
+ *    - Cookies
+ *    - Shutdown Settings
+ *    - HTTPS
+ *    - Fingerprinting
+ *
  *********************************************************************/
-
-/*********************************************************************
- * about:config warning
- *********************************************************************/
-
-// disable about:config warning
-user_pref("browser.aboutConfig.showWarning", false);
 
 
 /*********************************************************************
  * StartUp Settings:
  *********************************************************************/
+
+// disable about:config warning
+user_pref("browser.aboutConfig.showWarning", false);
 
 // disable check if Firefox is your default browser
 //user_pref("browser.shell.checkDefaultBrowser", false);
@@ -520,7 +535,7 @@ user_pref("javascript.use_us_english_locale", true); //Hidden pref
 
 
 /*********************************************************************
- * Auto-updates and Recommendations
+ * Auto-updates / Recommendations:
  *********************************************************************/
 
 // disable auto-installing Firefox updates
@@ -601,7 +616,7 @@ user_pref("browser.safebrowsing.downloads.remote.url", "");
 
 
 /*********************************************************************
- * Network (DNS / Proxy / IPv6):
+ * Network: DNS / Proxy / IPv6:
  *********************************************************************/
 
 // disable link prefetching
@@ -624,7 +639,7 @@ user_pref("network.IDN_show_punycode", true);
 
 
 /*********************************************************************
- * Search Bar: Suggestions / Autofill:
+ * Search Bar: Suggestions / Autofill
  *********************************************************************/
 
 // display all parts of the url in the bar
@@ -729,7 +744,7 @@ user_pref("browser.contentblocking.category", "strict");
 
 
 /*********************************************************************
- * Shutdown:
+ * Shutdown Settings:
  *********************************************************************/
 
 // clear history when Firefox closes
@@ -763,12 +778,11 @@ user_pref("dom.security.https_only_mode_send_http_background_request", false);
 /*
  * RFP (Resist Fingerptinting):
  *
- *
  * can cause some website breakage: mainly canvas, use a site
  * exception via the urlbar.
  *
  * RFP also has a few side effects: mainly timezone is UTC0, and
- *  websites will prefer light theme.
+ * websites will prefer light theme.
  * [1] https://bugzilla.mozilla.org/418986
  *
  * See: https://support.mozilla.org/en-US/kb/firefox-protection-against-fingerprinting
