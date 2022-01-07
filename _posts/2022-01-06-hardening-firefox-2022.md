@@ -73,8 +73,6 @@ Notes:
 
 ## about:config
 
-[user.js](#userjs)
-
 The parameters are divided into "Sections" and are indicated with the format `option = value` for the sake of clarity.
 You can use the file [user.js](#userjs) to set all the parameters automatically at Firefox startup.
 
