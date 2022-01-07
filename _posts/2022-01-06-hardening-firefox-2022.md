@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Hardening Firefox 2022 - v0.12.1"
-date: 2022-01-06
+title: "Hardening Firefox 2022 - v0.13.0"
+date: 2022-01-07
 ---
 
 Tested on Firefox: `Version 95.0.x (Linux)`
@@ -61,21 +61,24 @@ If you want to create new profile see: [Create, remove or switch Firefox profile
 
     * `Default Search Engine`: select `DuckDuckGo`
 
-    * `Search Suggestions`: If you want search suggestions select only `Show search suggestions in address bas results`
+    * `Search Shortcuts`: select `DuckDuckGo`, remove Google, Bing, eBay, Amazon, Wikipedia search engines
 
-        * `Change settings for other address bar suggestions`: uncheck  `Browsing history`
+    * Click on `Change settings for other address bar suggestions`: uncheck `Shortcuts`
 
-    * `Search Shortcuts`: Select `DuckDuckGo`, remove Google, Bing, eBay, Amazon, Wikipedia search engines
+Notes:
 
-Note: You can add/select your favorite search engines or restore the default settings, see: [Add or remove a search engine in Firefox](https://support.mozilla.org/en-US/kb/add-or-remove-search-engine-firefox)
+* The other Search settings are managed through the [about:config](#aboutconfig) parameters.
+
+* You can add/select your favorite search engines or restore the default settings, see: [Add or remove a search engine in Firefox](https://support.mozilla.org/en-US/kb/add-or-remove-search-engine-firefox)
 
 ## about:config
 
-If you already know these parameters you can go directly to the [user.js](#userjs) section, otherwise I suggest you keep reading.
+[user.js](#userjs)
+
+The parameters are divided into "Sections" and are indicated with the format `option = value` for the sake of clarity.
+You can use the file [user.js](#userjs) to set all the parameters automatically at Firefox startup.
 
 On the search bar digit: `about:config` and set the parameters as follows:
-
-Note: The parameters are indicated with the format `option = value` for the sake of clarity, see [user.js](#userjs) section for the JavaScript code.
 
 ### StartUp Settings
 
@@ -93,7 +96,7 @@ Note: The parameters are indicated with the format `option = value` for the sake
 
     `browser.startup.homepage = "start.duckduckgo.com"`
 
-* Disable activity and telemetry on new tab pages:
+* Disable Activity Stream on new windows and tab pages:
 
     `browser.newtabpage.enabled = false`
 
@@ -201,7 +204,7 @@ Note: The parameters are indicated with the format `option = value` for the sake
 
     `app.shield.optoutstudies.enabled = false`
 
-* Disable normandy/shield:
+* Disable Normandy/Shield:
 
     `app.normandy.enabled = false`
 
@@ -213,9 +216,7 @@ Note: The parameters are indicated with the format `option = value` for the sake
 
     `breakpad.reportURL = ""`
 
-    `browser.tabs.crashReporting.sendReport = false` (Default: false)
-
-    `browser.crashReports.unsubmittedCheck.autoSubmit2 = false` (Default: false)
+    `browser.tabs.crashReporting.sendReport = false`
 
 ### Captive Portal Detection / Network Checks
 
@@ -237,7 +238,7 @@ Note: The parameters are indicated with the format `option = value` for the sake
 
     `browser.safebrowsing.downloads.remote.url = ""`
 
-### Network (DNS / Proxy / IPv6)
+### Network: (DNS / Proxy / IPv6)
 
 * Disable link prefetching:
 
@@ -394,411 +395,19 @@ Note: The parameters are indicated with the format `option = value` for the sake
 
 ## Disabled Options
 
-Compared to other similar configurations such as [pyllyukko](https://github.com/pyllyukko/user.js)  or [arkenfox](https://github.com/arkenfox/user.js) user.js, there are several options disabled, some of these are commented in the various sections of this [user.js](#user.js) file.
-
-These are the options you can activate for greater protection, but they disable some basic functionality like audio/video libraries or other things you need, so be careful.
-
-Also I excluded several `default` entries
+Compared to other similar configurations such as [pyllyukko](https://github.com/pyllyukko/user.js) or [arkenfox](https://github.com/arkenfox/user.js) user.js.
+There are several options disabled, some of these are commented in the various sections of the [user.js](#user.js) file, these are the options you can activate for greater protection, but they disable some basic functionality like audio/video libraries or other things you need, so be careful. Also I excluded the `default` entries.
 
 ## user.js
 
-If you want you can use the `user.js` file with these or with your preferred settings, it is recommended to create a new profile for this purpose.
-
+If you want you can use the `user.js` file with the settings of this guide or with your preferred settings, it is recommended to create a new profile for this purpose.
 Before using the file check the entries and modify/add them according to your preferences, don't copy/paste without know what you are doing.
+
+Download the `user.js` template from my GitHub gist [here](https://gist.github.com/brainfucksec/68e79da1c965aeaa4782914afd8f7fa2):
 
 More information about Firefox user.js:
 
  * [arkenfox/user.js - Wiki](https://github.com/arkenfox/user.js/wiki/1.1-Overview)
-
-This my user.js file with settings of this article. To install it:
-
-1. Create a new file with name `user.js` and copy it in the profile folder, i.e. `~/.mozilla/firefox/xxxxxxxx.my_settings`, where `xxxxxxxx.my_settings` is the name of the new profile for use with the `user.js`.
-
-2. Copy paste the following code, also you can download directly my gist [here](https://gist.github.com/brainfucksec/68e79da1c965aeaa4782914afd8f7fa2):
-
-
-```javascript
-/*********************************************************************
-*
-* Mozilla Firefox configuration file: `user.js`
-*
-* date: 2022-01-06
-* version: 0.8.0
-* maintainer: Brainf+ck
-*
-* info: Set preferences for the selected profile when Firefox start.
-* Copy this file on Firefox Profile folder.  You should create a
-* new profile to insert this file:
-*
-* `$HOME/.mozilla/firefox/<profile-ID.name>`
-*
-* For more information how to use this file see:
-* https://github.com/arkenfox/user.js/wiki/1.1-Overview
-*
-* For "about:config" entries see:
-* https://searchfox.org/mozilla-release/source/modules/libpref/init/all.js
-*
-* OPTION FORMAT:
-* user_pref("<entry>", <boolean> || <number> || "<string>");
-*
-* NOTE: Commented preferences are those disabled by default, some
-* conflict with others if enabled, and some disable some basic
-* features like audio/video libraries or other things you need.
-* So be careful and check what you enable/disable.
-*
-**********************************************************************/
-
-
-/*********************************************************************
- *
- * SECTIONS:
- *    - StartUp Settings
- *    - Geolocation
- *    - Language / Locale
- *    - Auto-updates / Recommendations
- *    - Telemetry
- *    - Studies
- *    - Crash Reports
- *    - Captive Portal Detection / Network Checks
- *    - Safe Browsing
- *    - Network: DNS / Proxy / IPv6
- *    - Search Bar: Suggestions / Autofill
- *    - Disk Cache / Memory
- *    - Headers / Referers
- *    - Audio/Video (WebRTC, WebGL)
- *    - Downloads
- *    - Cookies
- *    - Shutdown Settings
- *    - HTTPS
- *    - Fingerprinting
- *
- *********************************************************************/
-
-
-/*********************************************************************
- * StartUp Settings:
- *********************************************************************/
-
-// disable about:config warning
-user_pref("browser.aboutConfig.showWarning", false);
-
-// disable check if Firefox is your default browser
-//user_pref("browser.shell.checkDefaultBrowser", false);
-
-// set startup page
-// 0=blank, 1=home, 2=last visited page, 3=resume previous session
-user_pref("browser.startup.page",  1);
-user_pref("browser.startup.homepage", "start.duckduckgo.com");
-
-// if you want only a home blank page
-//user_pref("browser.startup.page", 0);
-//user_pref("browser.startup.homepage", "about:blank");
-
-// disable activity and telemetry on new tab pages
-user_pref("browser.newtabpage.enabled", false);
-user_pref("browser.newtab.preload", false);
-user_pref("browser.newtabpage.activity-stream.feeds.telemetry", false);
-user_pref("browser.newtabpage.activity-stream.telemetry", false);
-user_pref("browser.newtabpage.activity-stream.feeds.snippets", false);
-user_pref("browser.newtabpage.activity-stream.section.topstories", false);
-user_pref("browser.newtabpage.activity-stream.section.highlights.includePocket", false);
-user_pref("browser.newtabpage.activity-stream.showSponsored", false);
-user_pref("browser.newtabpage.activity-stream.feeds.discoverystreamfeed", false);
-user_pref("browser.newtabpage.activity-stream.showSponsoredTopSites", false);
-user_pref("browser.newtabpage.activity-stream.default.sites", "");
-
-
-/*********************************************************************
- * Geolocation:
- *********************************************************************/
-
-// use Mozilla geolocation service instead of Google if permission is granted
-user_pref("geo.provider.network.url", "https://location.services.mozilla.com/v1/geolocate?key=%MOZILLA_API_KEY%");
-
-// disable using the OS’s geolocation service
-//user_pref("geo.provider.ms-windows-location", false); //Windows
-//user_pref("geo.provider.use_corelocation", false); //macOS
-user_pref("geo.provider.use_gpsd", false); //Linux
-
-// disable region updates
-user_pref("browser.region.network.url", "");
-user_pref("browser.region.update.enabled", false);
-
-
-/*********************************************************************
- * Language / Locale:
- *********************************************************************/
-
-// set language for displaying web pages:
-user_pref("intl.accept_languages", "en-US, en");
-user_pref("javascript.use_us_english_locale", true); //Hidden pref
-
-
-/*********************************************************************
- * Auto-updates / Recommendations:
- *********************************************************************/
-
-// disable auto-installing Firefox updates
-//user_pref("app.update.background.scheduling.enabled", false); //Windows
-user_pref("app.update.auto", false); //Non-Windows
-
-// disable addons recommendations (use Google Analytics)
-user_pref("extensions.getAddons.showPane", false); //Hidden pref
-user_pref("extensions.htmlaboutaddons.recommendations.enabled", false);
-
-
-/*********************************************************************
- * Telemetry:
- *********************************************************************/
-
-// disable telemetry
-user_pref("datareporting.policy.dataSubmissionEnabled", false);
-user_pref("datareporting.healthreport.uploadEnabled", false);
-user_pref("toolkit.telemetry.enabled", false); //Default: false
-user_pref("toolkit.telemetry.unified", false);
-user_pref("toolkit.telemetry.server", "data:,");
-user_pref("toolkit.telemetry.archive.enabled", false);
-user_pref("toolkit.telemetry.newProfilePing.enabled", false);
-user_pref("toolkit.telemetry.shutdownPingSender.enabled", false);
-user_pref("toolkit.telemetry.updatePing.enabled", false);
-user_pref("toolkit.telemetry.bhrPing.enabled", false);
-user_pref("toolkit.telemetry.firstShutdownPing.enabled", false);
-user_pref("toolkit.telemetry.coverage.opt-out", true); //Hidden pref
-user_pref("toolkit.coverage.opt-out", true); //Hidden pref
-user_pref("toolkit.coverage.endpoint.base.", "");
-user_pref("browser.ping-centre.telemetry", false);
-
-// disable sending additional analytics to web servers
-user_pref("beacon.enabled", false);
-
-
-/*********************************************************************
- * Studies:
- *********************************************************************/
-
-// disable studies
-user_pref("app.shield.optoutstudies.enabled", false);
-
-// disable normandy/shield
-user_pref("app.normandy.enabled", false);
-user_pref("app.normandy.api_url", "");
-
-
-/*********************************************************************
- * Crash Reports
- *********************************************************************/
-
-// disable crash reports
-user_pref("breakpad.reportURL", "");
-user_pref("browser.tabs.crashReporting.sendReport", false); //Default: false
-user_pref("browser.crashReports.unsubmittedCheck.autoSubmit2", false); //Default: false
-
-
-/*********************************************************************
- * Captive Portal Detection / Network Checks:
- *********************************************************************/
-
-// disable captive portal detection
-user_pref("captivedetect.canonicalURL", "")
-user_pref("network.captive-portal-service.enabled", false);
-
-// disable network connections checks
-user_pref("network.connectivity-service.enabled", false);
-
-
-/*********************************************************************
- * Safe Browsing:
- *********************************************************************/
-
-// disable safe browsing service
-user_pref("browser.safebrowsing.downloads.remote.enabled", false);
-user_pref("browser.safebrowsing.downloads.remote.url", "");
-
-
-/*********************************************************************
- * Network: DNS / Proxy / IPv6:
- *********************************************************************/
-
-// disable link prefetching
-user_pref("network.prefetch-next", false);
-
-// disable DNS prefetching
-user_pref("network.dns.disablePrefetch", true);
-
-// disable predictor
-user_pref("network.predictor.enabled", false);
-
-// disable IPv6
-user_pref("network.dns.disableIPv6", true);
-
-// disable "GIO" protocols as a potential proxy bypass vectors
-user_pref("network.gio.supported-protocols", ""); //Hidden pref
-
-// use Punycode in Internationalized Domain Names to eliminate possible spoofing
-user_pref("network.IDN_show_punycode", true);
-
-
-/*********************************************************************
- * Search Bar: Suggestions / Autofill
- *********************************************************************/
-
-// display all parts of the url in the bar
-user_pref("browser.urlbar.trimURLs", false);
-
-// disable form autofill
-user_pref("browser.formfill.enable", false);
-user_pref("extensions.formautofill.addresses.enabled", false);
-user_pref("extensions.formautofill.available", "off");
-user_pref("extensions.formautofill.creditCards.available", false);
-user_pref("extensions.formautofill.creditCards.enabled", false);
-user_pref("extensions.formautofill.heuristics.enabled", false);
-user_pref("signon.autofillForms", false); //login and passwords
-
-// disable location bar contextual suggestions:
-user_pref("browser.urlbar.suggest.quicksuggest.nonsponsored", false);
-user_pref("browser.urlbar.suggest.quicksuggest.sponsored", false);
-
-
-/*********************************************************************
- * Disk Cache / Memory:
- *********************************************************************/
-
-// disable disk cache
-user_pref("browser.cache.disk.enable", false);
-
-/*
- * disable storing extra session data:
- *    0 = everywhere
- *    1 = unencrypted sites
- *    2 = nowhere
- */
-user_pref("browser.sessionstore.privacy_level", 2);
-
-// disable resuming session from crash
-user_pref("browser.sessionstore.resume_from_crash", false);
-
-
-/*********************************************************************
- * Headers / Referers:
- *********************************************************************/
-
-/*
- * control when to send a referer:
- *    0 = always (default)
- *    1 = only if base domains match
- *    2 = only if hosts match
- */
-user_pref("network.http.referer.XOriginPolicy", 2);
-
-/*
- * control amount of information to send:
- *    0 = send full URI (default)
- *    1 = scheme+host+port+path
- *    2 = scheme+host+port
- */
-user_pref("network.http.referer.XOriginTrimmingPolicy ", 2);
-
-
-/*********************************************************************
- * Audio/Video (WebRTC, WebGL):
- *********************************************************************/
-
-// disable WebRTC
-user_pref("media.peerconnection.enabled", false);
-
-// limit WebRTC IP leaks if using it
-user_pref("media.peerconnection.ice.default_address_only", true);
-user_pref("media.peerconnection.ice.no_host", true);
-user_pref("media.peerconnection.ice.proxy_only_if_behind_proxy", true);
-
-// disable Web Audio API
-//user_pref("dom.webaudio.enabled", false);
-
-// disable WebGL (Web Graphics Library):
-user_pref("webgl.disabled", true);
-
-// disable autoplay of HTML5 media
-//user_pref("media.autoplay.blocking_policy", 2);
-
-/*********************************************************************
- * Downloads:
- *********************************************************************/
-
-// always ask you where to save files:
-user_pref("browser.download.useDownloadDir", false);
-
-// disable adding downloads to system's "recent documents" list
-user_pref("browser.download.manager.addToRecentDocs", false);
-
-
-/*********************************************************************
- * Cookies:
- *********************************************************************/
-
-/*
- * enable ETP (Enhanced Tracking Protection)
- * ETP strict mode enables Total Cookie Protection (TCP)
- */
-user_pref("browser.contentblocking.category", "strict");
-//user_pref("privacy.partition.serviceWorkers", true); //FF 96+
-
-
-/*********************************************************************
- * Shutdown Settings:
- *********************************************************************/
-
-// clear history when Firefox closes
-user_pref("privacy.sanitize.sanitizeOnShutdown", true);
-user_pref("privacy.clearOnShutdown.cache", true);
-user_pref("privacy.clearOnShutdown.cookies", true);
-user_pref("privacy.clearOnShutdown.downloads", true);
-user_pref("privacy.clearOnShutdown.formdata", true);
-user_pref("privacy.clearOnShutdown.history", true);
-user_pref("privacy.clearOnShutdown.offlineApps", true);
-user_pref("privacy.clearOnShutdown.sessions", true);
-user_pref("privacy.clearOnShutdown.sitesettings", true);
-user_pref("privacy.sanitize.timeSpan", 0);
-
-
-/*********************************************************************
- * HTTPS:
- *********************************************************************/
-
-// enable HTTPS-Only mode in all windows
-user_pref("dom.security.https_only_mode", true);
-
-// disable sending HTTP request for checking HTTPS support by the server
-user_pref("dom.security.https_only_mode_send_http_background_request", false);
-
-
-/*********************************************************************
- * Fingerprinting:
- *********************************************************************/
-
-/*
- * RFP (Resist Fingerptinting):
- *
- * can cause some website breakage: mainly canvas, use a site
- * exception via the urlbar.
- *
- * RFP also has a few side effects: mainly timezone is UTC0, and
- * websites will prefer light theme.
- * [1] https://bugzilla.mozilla.org/418986
- *
- * See: https://support.mozilla.org/en-US/kb/firefox-protection-against-fingerprinting
- */
-//user_pref("privacy.resistFingerprinting", true);
-
-// set new window size rounding max values
-//user_pref("privacy.window.maxInnerWidth", 1600);
-//user_pref("privacy.window.maxInnerHeight", 900);
-
-// disable mozAddonManager Web API
-//user_pref("privacy.resistFingerprinting.block_mozAddonManager", true); //Hidden pref
-
-// disable using system colors
-//user_pref("browser.display.use_system_colors", false); //Default: false (Non-Windows)
-```
 
 ## uBlock Origin
 
