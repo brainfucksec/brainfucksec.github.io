@@ -1,6 +1,6 @@
 ---
 layout: page
-title: dev | brainf+ck
+title: dev | brainfucksec
 ---
 
 ```term

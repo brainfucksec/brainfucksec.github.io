@@ -1,6 +1,6 @@
 ---
 layout: page
-title: contacts | brainf+ck
+title: contacts | brainfucksec
 ---
 
 ```term

@@ -1,6 +1,6 @@
 ---
 layout: page
-title: posts | brainf+ck
+title: posts | brainfucksec
 ---
 
 <section>
