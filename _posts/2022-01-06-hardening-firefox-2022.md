@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Hardening Firefox 2022 - v0.13.0"
+title: "Hardening Firefox 2022 - v0.13.1"
 date: 2022-01-07
 ---
 
@@ -72,6 +72,8 @@ Notes:
 * You can add/select your favorite search engines or restore the default settings, see: [Add or remove a search engine in Firefox](https://support.mozilla.org/en-US/kb/add-or-remove-search-engine-firefox)
 
 ## about:config
+
+[user.js](#userjs)
 
 The parameters are divided into "Sections" and are indicated with the format `option = value` for the sake of clarity.
 You can use the file [user.js](#userjs) to set all the parameters automatically at Firefox startup.
@@ -357,9 +359,15 @@ On the search bar digit: `about:config` and set the parameters as follows:
 
     `browser.contentblocking.category = "strict"`
 
-### Shutdown
+* Delete cookies and site data on exit:
 
-* Clear history when Firefox closes:
+    `network.cookie.lifetimePolicy = 2`
+
+### Shutdown Settings
+
+* Clear history, cookies and site data when Firefox closes:
+
+    `network.cookie.lifetimePolicy = 2`
 
     `privacy.sanitize.sanitizeOnShutdown = true`
 
