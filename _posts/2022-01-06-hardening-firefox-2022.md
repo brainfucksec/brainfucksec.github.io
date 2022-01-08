@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Hardening Firefox 2022 - v0.13.1"
-date: 2022-01-07
+title: "Hardening Firefox 2022 - v0.13.2"
+date: 2022-01-08
 ---
 
 Tested on Firefox: `Version 95.0.x (Linux)`
@@ -72,8 +72,6 @@ Notes:
 * You can add/select your favorite search engines or restore the default settings, see: [Add or remove a search engine in Firefox](https://support.mozilla.org/en-US/kb/add-or-remove-search-engine-firefox)
 
 ## about:config
-
-[user.js](#userjs)
 
 The parameters are divided into "Sections" and are indicated with the format `option = value` for the sake of clarity.
 You can use the file [user.js](#userjs) to set all the parameters automatically at Firefox startup.
@@ -367,8 +365,6 @@ On the search bar digit: `about:config` and set the parameters as follows:
 
 * Clear history, cookies and site data when Firefox closes:
 
-    `network.cookie.lifetimePolicy = 2`
-
     `privacy.sanitize.sanitizeOnShutdown = true`
 
     `privacy.clearOnShutdown.cache = true`
@@ -412,6 +408,8 @@ Before using the file check the entries and modify/add them according to your pr
 Download the `user.js` template from my GitHub gist [here](https://gist.github.com/brainfucksec/68e79da1c965aeaa4782914afd8f7fa2):
 
 More information about Firefox user.js:
+
+ * [mozillaZine - User.js file](https://kb.mozillazine.org/User.js_file)
 
  * [arkenfox/user.js - Wiki](https://github.com/arkenfox/user.js/wiki/1.1-Overview)
 
