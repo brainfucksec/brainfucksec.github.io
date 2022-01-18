@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Hardening Firefox 2022 - v0.13.2"
-date: 2022-01-08
+title: "Hardening Firefox 2022 - v0.14.0"
+date: 2022-01-18
 ---
 
 Tested on Firefox: `Version 96.0.x (Linux)`
@@ -357,6 +357,8 @@ On the search bar digit: `about:config` and set the parameters as follows:
 
     `browser.contentblocking.category = "strict"`
 
+    `privacy.partition.serviceWorkers = true`
+
 * Delete cookies and site data on exit:
 
     `network.cookie.lifetimePolicy = 2`
@@ -405,7 +407,7 @@ There are several options disabled, some of these are commented in the various s
 If you want you can use the `user.js` file with the settings of this guide or with your preferred settings, it is recommended to create a new profile for this purpose.
 Before using the file check the entries and modify/add them according to your preferences, don't copy/paste without know what you are doing.
 
-Download the `user.js` template from my GitHub gist [here](https://gist.github.com/brainfucksec/68e79da1c965aeaa4782914afd8f7fa2):
+Download the `user.js` template from my GitHub gist [here](https://gist.github.com/brainfucksec/68e79da1c965aeaa4782914afd8f7fa2)
 
 More information about Firefox user.js:
 
@@ -437,6 +439,7 @@ My uBlock Origin blocklists:
     * EasyList
 
 * Privacy:
+    * AdGuard URL Tracking Protection
     * EasyPrivacy
 
 * Malware Domains:
