@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Hardening Firefox 2022 - v0.14.0"
-date: 2022-01-18
+title: "Hardening Firefox 2022 - v0.15.0"
+date: 2022-01-20
 ---
 
 Tested on Firefox: `Version 96.0.x (Linux)`
@@ -75,6 +75,30 @@ Notes:
 
 The parameters are divided into "Sections" and are indicated with the format `option = value` for the sake of clarity.
 You can use the file [user.js](#userjs) to set all the parameters automatically at Firefox startup.
+
+### Sections:
+
+* StartUp Settings
+* Geolocation
+* Language / Locale
+* Auto-updates / Recommendations
+* Telemetry
+* Studies
+* Crash Reports
+* Captive Portal Detection / Network Checks
+* Safe Browsing
+* Network: DNS / Proxy / IPv6
+* Search Bar: Suggestions / Autofill
+* Disk Cache / Memory
+* HTTPS
+* Headers / Referers
+* Audio/Video (WebRTC, WebGL)
+* Downloads
+* Cookies
+* UI Features
+* Shutdown Settings
+* Fingerprinting //disabled
+
 
 On the search bar digit: `about:config` and set the parameters as follows:
 
@@ -307,6 +331,17 @@ On the search bar digit: `about:config` and set the parameters as follows:
 
     `browser.sessionstore.resume_from_crash = false`
 
+### HTTPS
+
+* Enable HTTPS-Only mode in all windows:
+
+    `dom.security.https_only_mode = true`
+
+* Disable sending HTTP request for checking HTTPS support by the server:
+
+    `dom.security.https_only_mode_send_http_background_request = false`
+
+
 ### Headers / Referers
 
 * Control when to send a referer:
@@ -363,6 +398,16 @@ On the search bar digit: `about:config` and set the parameters as follows:
 
     `network.cookie.lifetimePolicy = 2`
 
+### UI Features
+
+* Disable Pocket extension:
+
+    `extensions.pocket.enabled = false`
+
+* Disable Screenshots extension
+
+    `extensions.Screenshots.disabled = true`
+
 ### Shutdown Settings
 
 * Clear history, cookies and site data when Firefox closes:
@@ -386,16 +431,6 @@ On the search bar digit: `about:config` and set the parameters as follows:
     `privacy.clearOnShutdown.sitesettings = false`
 
     `privacy.sanitize.timeSpan = 0`
-
-### HTTPS
-
-* Enable HTTPS-Only mode in all windows:
-
-    `dom.security.https_only_mode = true`
-
-* Disable sending HTTP request for checking HTTPS support by the server:
-
-    `dom.security.https_only_mode_send_http_background_request = false`
 
 ## Disabled Options
 
