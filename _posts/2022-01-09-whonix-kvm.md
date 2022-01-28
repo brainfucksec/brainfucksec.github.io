@@ -70,7 +70,7 @@ sudo pacman -S libvirt qemu virt-manager ebtables dnsmasq bridge-utils
 
 Add your user to KVM groups:
 
-```
+```term
 sudo usermod -aG kvm "$(whoami)"
 sudo usermod -aG libvirt "$(whoami)"
 ```
@@ -80,8 +80,6 @@ A reboot is required after the installation of qemu, libvirt packages:
 ```term
 sudo reboot
 ```
-
-
 
 ---
 
@@ -109,7 +107,7 @@ gpg --keyid-format long --import --import-options show-only --with-fingerprint h
 Key fingerprint = 04EF 2F66 6D36 C354 058B  9DD4 50C7 8B6F 9FF2 EC85
 ```
 
-Original source: [Whonix wiki - KVM: Download the OpenPGP Key](https://www.whonix.org/wiki/KVM/Project_Signing_Key#Download_the_OpenPGP_Key)
+Original fingerprint: [Whonix wiki - KVM: Download the OpenPGP Key](https://www.whonix.org/wiki/KVM/Project_Signing_Key#Download_the_OpenPGP_Key)
 
 If you see this message:
 
@@ -345,7 +343,6 @@ ArchWiki KVM:
 [KVM](https://wiki.archlinux.org/title/KVM)
 
 [libvirt](https://wiki.archlinux.org/title/Libvirt)
-
 
 ### Credits:
 
