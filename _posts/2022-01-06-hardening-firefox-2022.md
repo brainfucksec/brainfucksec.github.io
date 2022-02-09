@@ -4,7 +4,7 @@ title: "Hardening Firefox 2022 - v0.15.0"
 date: 2022-01-20
 ---
 
-Tested on Firefox: `Version 96.0.x (Linux)`
+Tested on Firefox: `Version 97.0.x (Linux)`
 
 <br>
 
