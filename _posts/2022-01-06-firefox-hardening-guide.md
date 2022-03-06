@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Hardening Firefox 2022 - v0.15.0"
+title: "Firefox Hardening Guide"
 date: 2022-01-20
 ---
 
