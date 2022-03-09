@@ -1,10 +1,10 @@
 ---
 layout: post
 title: "Firefox Hardening Guide"
-date: 2022-01-20
+date: 2022-03-09
 ---
 
-Tested on Firefox: `Version 97.0.x (Linux)`
+Tested on Firefox: `Version 98.0.x (Linux)`
 
 <br>
 
@@ -252,13 +252,31 @@ On the search bar digit: `about:config` and set the parameters as follows:
 
     `network.connectivity-service.enabled = false`
 
-### Safe Browsing
+### Safe Browsing (SB)
 
-* Disable Safe Browsing service:
+* Disable safe browsing service:
+
+    `browser.safebrowsing.malware.enabled = false`
+
+    `browser.safebrowsing.phishing.enabled = false`
+
+* Disable SB checks for downloads:
+
+    `browser.safebrowsing.downloads.enabled = false`
 
     `browser.safebrowsing.downloads.remote.enabled = false`
 
     `browser.safebrowsing.downloads.remote.url = ""`
+
+* Disable SB checks for unwanted software:
+
+    `browser.safebrowsing.downloads.remote.block_potentially_unwanted = false`
+
+    `browser.safebrowsing.downloads.remote.block_uncommon = false`
+
+* Disable bypasses the block of SB with a click for current session:
+
+    `browser.safebrowsing.allowOverride = false`
 
 ### Network: (DNS / Proxy / IPv6)
 
