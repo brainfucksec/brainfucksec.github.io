@@ -7,7 +7,7 @@ title: contacts | brainfucksec
 contact me
 ```
 
-Email:  `brainfucksec [at] pm.me`
+Email:  `brainfucksec[at]pm.me`
 
 XMPP:   `brainfucksec@0day.im`
 
