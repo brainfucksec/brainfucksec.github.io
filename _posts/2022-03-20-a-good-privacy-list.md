@@ -39,7 +39,10 @@ I do not sponsor or get paid by any of the organizations listed, and I am not pa
 When I choose to use a service it means that I have search information before, and I have my own opinion about it that may not be the same as other people in this sector.  I often read articles where an application is declared not private and insecure without consistent sources which confirm the claims, or where it is declared reliable and instead it's a honeypot.
 
 Security is a process, so you cannot fully trust any application, organization, and the people behind it.
-Regarding this topic see: [Defence in depth](https://en.wikipedia.org/wiki/Defence_in_depth).
+Regarding this topic see:
+
+[Threat Model](https://en.wikipedia.org/wiki/Threat_model)
+[Defence in depth](https://en.wikipedia.org/wiki/Defense_in_depth_(computing)).
 
 I hope this modest work can help to defende you and fight the censorship and oppression we are experiencing especially in recent years, **knowledge is power**, so search, read, and think with your head!
 In this sector it's very easy to meet organizations and projects that claim to defend privacy but in reality are just mousetraps.
