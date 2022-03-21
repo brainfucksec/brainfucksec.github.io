@@ -308,4 +308,3 @@ If you want and if you can, you can support me with a small donation:
 ```
 ---
 
-by brainf+ck 2022
