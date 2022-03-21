@@ -43,7 +43,7 @@ Regarding this topic see:
 
 [Threat Model](https://en.wikipedia.org/wiki/Threat_model)
 
-[Defence in depth](https://en.wikipedia.org/wiki/Defense_in_depth_(computing)
+[Defence in depth](https://en.wikipedia.org/wiki/Defense_in_depth_(computing))
 
 I hope this modest work can help to defende you and fight the censorship and oppression we are experiencing especially in recent years, **knowledge is power**, so search, read, and think with your head!
 In this sector it's very easy to meet organizations and projects that claim to defend privacy but in reality are just mousetraps.
