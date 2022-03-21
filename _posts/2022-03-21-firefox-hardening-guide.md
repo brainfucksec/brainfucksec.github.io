@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Firefox Hardening Guide"
-date: 2022-03-09
+date: 2022-03-21
 ---
 
 Tested on Firefox: `Version 98.0.x (Linux)`
@@ -20,12 +20,14 @@ Tested on Firefox: `Version 98.0.x (Linux)`
 * [DoH (DNS over HTTPS)](#doh-dns-over-https)
 * [Multiple profiles and Containers](#multiple-profiles-and-containers)
 * [Browser Leak Test](#browser-leak-test)
+* [Recommendations](#recommendations)
+* [Resources](#resources)
 
 <br>
 
 ## Introduction
 
-When you visit a web page, your browser voluntarily sends information about its configuration, such as available fonts, browser type, and add-ons. If this combination of information is unique, it may be possible to identify and track you without using cookies.  For more information on Browser Fingerprinting check out these excellent sources:
+When you visit a web page, your browser voluntarily sends information about its configuration, such as available fonts, browser type, and add-ons. If this combination of information is unique, it may be possible to identify and track you without using cookies.  For more information on Browser Fingerprinting check out these sources:
 
 [How Unique Is Your Web Browser? Peter Eckersley, EFF.](https://coveryourtracks.eff.org/static/browser-uniqueness.pdf)
 
@@ -35,9 +37,13 @@ When you visit a web page, your browser voluntarily sends information about its 
 
 This is my personal configuration for **hardening Mozilla Firefox while maintaining usability**, this mean that some options that help protect against fingerprinting are not enabled by default, for more information see: [Disabled Options](#disabled-options).
 
-With this configuration I try to setup a Browser for better security but without breaking many things, then if you want greater anonymity and privacy see: [Tor Browser](https://www.torproject.org/).
+With this configuration I try to setup a Browser for better security but without breaking many things, then if you want greater anonymity and privacy see:
 
-In Computer security the "100% secure setup" does not exist, what you can do though, is reduce the amount of data collected by entities like Google, Facebook etc. and reduce attack vectors.
+[Tor Browser](https://www.torproject.org/)
+
+[LibreWolf](https://librewolf.net/)
+
+In Computer security the "100% secure setup" does not exist, what you can do though, is reduce the amount of data collected by entities like Google, Meta etc. and reduce attack vectors.
 
 ## Backup Firefox profile
 
@@ -89,15 +95,16 @@ You can use the file [user.js](#userjs) to set all the parameters automatically 
 * Safe Browsing
 * Network: DNS / Proxy / IPv6
 * Search Bar: Suggestions / Autofill
+* Passwords
 * Disk Cache / Memory
-* HTTPS
+* HTTPS / SSL/TLS / OSCP / CERTS
 * Headers / Referers
 * Audio/Video (WebRTC, WebGL)
 * Downloads
 * Cookies
 * UI Features
 * Shutdown Settings
-* Fingerprinting //disabled
+* Fingerprinting (RFP) //disabled
 
 
 On the search bar digit: `about:config` and set the parameters as follows:
@@ -109,10 +116,10 @@ On the search bar digit: `about:config` and set the parameters as follows:
     `browser.aboutConfig.showWarning = false`
 
 * Set startup home page:
-    * 0=blank
-    * 1=home
-    * 2=last visited page
-    * 3=resume previous session
+    * 0 = blank
+    * 1 = home
+    * 2 = last visited page
+    * 3 = resume previous session
 
     `browser.startup.page = 1`
 
@@ -170,9 +177,9 @@ On the search bar digit: `about:config` and set the parameters as follows:
 
     `javascript.use_us_english_locale = true` (Hidden Pref)
 
-### Auto-updates and Recommendations
+### Auto-updates / Recommendations
 
-* Disable auto-INSTALLING Firefox updates:
+* Disable auto-installing Firefox updates:
 
     `app.update.auto = false` (Non-Windows)
 
@@ -292,13 +299,25 @@ On the search bar digit: `about:config` and set the parameters as follows:
 
     `network.predictor.enabled = false`
 
+* Disable link-mouseover opening connection to linked server:
+
+    `network.http.speculative-parallel-limit = 0`
+
+* Disable mousedown speculative connections on bookmarks and history:
+
+    `browser.places.speculativeConnect.enabled = false`
+
 * Disable IPv6:
 
     `network.dns.disableIPv6 = true`
 
-* Disable GIO protocols:
+* Disable GIO protocols as a potential proxy bypass vectors:
 
     `network.gio.supported-protocols = ""` (Hidden Pref)
+
+* Remove special permissions for certain mozilla domains:
+
+    `permissions.manager.defaultsUrl = ""`
 
 * Use Punycode in Internationalized Domain Names to eliminate possible spoofing:
 
@@ -306,9 +325,17 @@ On the search bar digit: `about:config` and set the parameters as follows:
 
 ### Search Bar: Suggestions / Autofill
 
+* Disable location bar domain guessing:
+
+    `browser.fixup.alternate.enabled = false`
+
 * Display all parts of the url in the bar:
 
     `browser.urlbar.trimURLs = false`
+
+* Disable location bar making speculative connections:
+
+    `browser.urlbar.speculativeConnect.enabled = false`
 
 * Disable form autofill:
 
@@ -324,13 +351,32 @@ On the search bar digit: `about:config` and set the parameters as follows:
 
     `extensions.formautofill.heuristics.enabled = false`
 
-    `signon.autofillForms = false`
-
 *  Disable location bar contextual suggestions:
 
     `browser.urlbar.suggest.quicksuggest.nonsponsored = false`
 
     `browser.urlbar.suggest.quicksuggest.sponsored = false`
+
+### Passwords
+
+* Disable saving passwords:
+
+    `signon.rememberSignons = false`
+
+* Disable autofill login and passwords:
+
+    `signon.autofillForms = false`
+
+* Disable formless login capture for Password Manager:
+
+    `signon.formlessCapture.enabled = false`
+
+* Hardens against potential credentials phishing:
+    * 0 = don't allow sub-resources to open HTTP authentication credentials dialogs
+    * 1 = don't allow cross-origin sub-resources to open HTTP authentication credentials dialogs
+    * 2 = allow sub-resources to open HTTP authentication credentials dialogs (default)
+
+    `network.auth.subresource-http-auth-allow = 1`
 
 ### Disk Cache / Memory
 
@@ -349,7 +395,7 @@ On the search bar digit: `about:config` and set the parameters as follows:
 
     `browser.sessionstore.resume_from_crash = false`
 
-### HTTPS
+### HTTPS / SSL/TLS / OSCP / CERTS
 
 * Enable HTTPS-Only mode in all windows:
 
@@ -359,6 +405,27 @@ On the search bar digit: `about:config` and set the parameters as follows:
 
     `dom.security.https_only_mode_send_http_background_request = false`
 
+* Display advanced information on Insecure Connection warning pages:
+
+    `browser.xul.error_pages.expert_bad_cert = true`
+
+* Disable TLS1.3 0-RTT (round-trip time):
+
+    `security.tls.enable_0rtt_data = false`
+
+* Set OCSP to terminate the connection when a CA isn't validate:
+
+    `security.OCSP.require = true`
+
+* Disable SHA-1 certificates:
+
+    `security.pki.sha1_enforcement_level = 1`
+
+* Enable strict pinning (PKP (Public Key Pinning)):
+    * 0 = disabled
+    * 1 = allowa user MiTM (i.e. your Antivirus)
+    * 2 = strict
+    `security.cert_pinning.enforcement_level = 2`
 
 ### Headers / Referers
 
@@ -382,17 +449,28 @@ On the search bar digit: `about:config` and set the parameters as follows:
 
     `media.peerconnection.enabled = false`
 
-* Limit WebRTC IP leaks if using WebRTC:
-
-    `media.peerconnection.ice.default_address_only = true`
-
-    `media.peerconnection.ice.no_host = true`
+* Force WebRTC inside the proxy:
 
     `media.peerconnection.ice.proxy_only_if_behind_proxy = true`
 
-* Disable WebGL:
+* Force a single network interface for ICE candidates generation:
+
+    `media.peerconnection.ice.default_address_only = true`
+
+* Force exclusion of private IPs from ICE candidates:
+
+    `media.peerconnection.ice.no_host = true`
+
+* Disable WebGL (Web Graphics Library):
 
     `webgl.disabled = true`
+
+* Disable autoplay of HTML5 media:
+    * 0 = allow all
+    * 1 = block non-muted media (default)
+    * 5 = block all
+
+    `media.autoplay.default = 5`
 
 ### Downloads
 
@@ -410,25 +488,33 @@ On the search bar digit: `about:config` and set the parameters as follows:
 
     `browser.contentblocking.category = "strict"`
 
+* Enable state partitioning of service workers:
+
     `privacy.partition.serviceWorkers = true`
 
-* Delete cookies and site data on exit:
-
-    `network.cookie.lifetimePolicy = 2`
-
 ### UI Features
+
+* Block popup windows:
+
+    `dom.disable_open_during_load = true`
 
 * Disable Pocket extension:
 
     `extensions.pocket.enabled = false`
 
-* Disable Screenshots extension
+* Disable Screenshots extension:
 
     `extensions.Screenshots.disabled = true`
+
+* Disable PDJFS scripting:
+
+    `pdfjs.enableScripting = false`
 
 ### Shutdown Settings
 
 * Clear history, cookies and site data when Firefox closes:
+
+    `network.cookie.lifetimePolicy = 2`
 
     `privacy.sanitize.sanitizeOnShutdown = true`
 
@@ -452,12 +538,11 @@ On the search bar digit: `about:config` and set the parameters as follows:
 
 ## Disabled Options
 
-Compared to other similar configurations such as [pyllyukko](https://github.com/pyllyukko/user.js) or [arkenfox](https://github.com/arkenfox/user.js) user.js.
-There are several options disabled, some of these are commented in the various sections of the [user.js](#user.js) file, these are the options you can activate for greater protection, but they disable some basic functionality like audio/video libraries or other things you need, so be careful. Also I excluded the `default` entries.
+Compared to other similar configurations such as [pyllyukko](https://github.com/pyllyukko/user.js) or [arkenfox](https://github.com/arkenfox/user.js) user.js, there are several options disabled, some of these are commented in the various sections of the [user.js](#user.js) file, these are the options you can activate for greater protection like [Firefox Resist Fingerprinting (RFP)](https://support.mozilla.org/en-US/kb/firefox-protection-against-fingerprinting), but they disable some basic functionality like audio/video libraries or other things you need, so be careful. Also I excluded the `default` entries.
 
 ## user.js
 
-If you want you can use the `user.js` file with the settings of this guide or with your preferred settings, it is recommended to create a new profile for this purpose.
+If you want (is recommended), you can use the `user.js` file with the settings of this guide or with your preferred settings, it is recommended to create a new profile for this purpose.
 Before using the file check the entries and modify/add them according to your preferences, don't copy/paste without know what you are doing.
 
 Download the `user.js` template from my GitHub gist [here](https://gist.github.com/brainfucksec/68e79da1c965aeaa4782914afd8f7fa2)
@@ -485,8 +570,10 @@ More information about Firefox user.js:
     In the dashboard select `Filter lists`, this is my lists selection (you can select your favorite ones):
 
 ```text
-
 My uBlock Origin blocklists:
+
+* Built-in:
+    * All checked
 
 * Ads:
     * EasyList
@@ -497,6 +584,7 @@ My uBlock Origin blocklists:
 
 * Malware Domains:
     * Online Malicious URL Blocklist
+    * Phishing URL Blocklist
 
 * Annoyances:
     * Fanboy's Annoyance
@@ -505,7 +593,7 @@ My uBlock Origin blocklists:
     * Peter Lowe's Ad and tracking server list
 ```
 
-For more information about uBlock usage see the [Wiki](https://github.com/gorhill/uBlock/wiki) on GitHub, check the [Blocking mode: Medium mode](https://github.com/gorhill/uBlock/wiki/Blocking-mode:-medium-mode) is very powerful :).
+For more information about uBlock usage see the [Wiki](https://github.com/gorhill/uBlock/wiki) on GitHub, check the [Blocking mode: Medium mode](https://github.com/gorhill/uBlock/wiki/Blocking-mode:-medium-mode), is very powerful :).
 
 ## DoH (DNS over HTTPS)
 
@@ -534,8 +622,10 @@ There are come resources where you can test your browser to see how unique it is
 
 [https://arkenfox.github.io/TZP/tzp.html](https://arkenfox.github.io/TZP/tzp.html)
 
-## Use Your Head and Get Informed
+## Recommendations:
 
+Take this guide as a starting point and learn about the meaning of the various options.
+Like all guides, there may be errors or inaccuracies, so don't blindly copy/paste, and if you find something wrong I invite you to [contact me](https://brainfucksec.github.io/contacts) to fix the problem.
 As always, use **Your Head** to avoid intrusions, browser security depends largely on how you behave online, but you cannot know how to behave and know the dangers if you do not inform yourself.
 
 ---
@@ -543,6 +633,10 @@ As always, use **Your Head** to avoid intrusions, browser security depends large
 ## Resources:
 
 * [arkenfox user.js](https://github.com/arkenfox/user.js)
+
+* [pyllyukko user.js](https://github.com/pyllyukko/user.js/)
+
+* [LibreWolf](https://librewolf.net/)
 
 * [uBlock Origin](https://ublockorigin.com/)
 
