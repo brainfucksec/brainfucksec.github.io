@@ -42,7 +42,8 @@ Security is a process, so you cannot fully trust any application, organization, 
 Regarding this topic see:
 
 [Threat Model](https://en.wikipedia.org/wiki/Threat_model)
-[Defence in depth](https://en.wikipedia.org/wiki/Defense_in_depth_(computing)).
+
+[Defence in depth](https://en.wikipedia.org/wiki/Defense_in_depth_(computing)
 
 I hope this modest work can help to defende you and fight the censorship and oppression we are experiencing especially in recent years, **knowledge is power**, so search, read, and think with your head!
 In this sector it's very easy to meet organizations and projects that claim to defend privacy but in reality are just mousetraps.
@@ -249,7 +250,7 @@ In this sector it's very easy to meet organizations and projects that claim to d
 ### Desktop
 
 * [Tor Browser](https://www.torproject.org/)
-* [Mozilla Firefox](https://www.mozilla.org/en-US/firefox/new/) - Eh, the Mozilla long story :(, some [hardening](https://brainfucksec.github.io/firefox-hardening-guide) is required.
+* [Mozilla Firefox](https://www.mozilla.org/en-US/firefox/new/) - Eh, the Mozilla long story.., [hardening](https://brainfucksec.github.io/firefox-hardening-guide) is required.
 * [LibreWolf](https://librewolf.net/)
 * [ungoogled-chromium](https://ungoogled-software.github.io/)
 
@@ -305,3 +306,6 @@ If you want and if you can, you can support me with a small donation:
 ```
 42HrxGUKPzNNJKFguPfFhXQajwNDnhLbogy6EWexWw9Sh5pTumVk7dkcD2PB4MuFgD1m8rnaR3pr1g852BWUTpXaTo9rQyr
 ```
+---
+
+by brainf+ck 2022
