@@ -18,6 +18,7 @@ date: 2022-03-20
 * [Encryption Software](#encryption-software)
 * [File Sharing](#file-sharing)
 * [Instant Messaging](#instant-messaging)
+* [Maps](#maps)
 * [Operating Systems](#operating-systems)
 * [Password Managers](#password-managers)
 * [Reddit Alternatives](#reddit-alternatives)
@@ -163,6 +164,11 @@ In this sector it's very easy to meet organizations and projects that claim to d
 * [Briar](https://briarproject.org/)
 * [Berty](https://berty.tech/)
 
+## Maps
+
+* [OpenStreetMap](https://www.openstreetmap.org/)
+* [OsmAnd](https://osmand.net/) (Android / iOS)
+
 ## Operating Systems
 
 ### PC / Server
@@ -187,8 +193,8 @@ In this sector it's very easy to meet organizations and projects that claim to d
 
 * [Bitwarden](https://bitwarden.com/)
 * [KeepassXC](https://keepassxc.org/)
-* [pass](https://www.passwordstore.org/) (Cli)
 * [Password Safe](https://pwsafe.org/)
+* [pass](https://www.passwordstore.org/) (Cli)
 * [gopass](https://www.gopass.pw/) (Cli)
 
 ## Reddit Alternatives
@@ -296,7 +302,7 @@ Often it's necessary to use third party services in order to make them stable an
 
 ### Donations
 
-If you want and if you can, you can support me with a small donation:
+If you want, you can support me with a small donation:
 
 **Bitcoin**
 ```
