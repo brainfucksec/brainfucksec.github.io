@@ -167,7 +167,11 @@ In this sector it's very easy to meet organizations and projects that claim to d
 ## Maps
 
 * [OpenStreetMap](https://www.openstreetmap.org/)
-* [OsmAnd](https://osmand.net/) (Android / iOS)
+
+### Mobile
+
+* [OsmAnd](https://osmand.net/)
+* [Organic Maps](https://organicmaps.app/)
 
 ## Operating Systems
 
