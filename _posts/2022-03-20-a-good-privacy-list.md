@@ -294,7 +294,6 @@ In this sector it's very easy to meet organizations and projects that claim to d
 
 ### Video Sharing Alternatives
 
-* [BitChute](https://www.bitchute.com/)
 * [BitTube](https://bittube.video/)
 * [PeerTube](https://joinpeertube.org/en/)
 
@@ -317,5 +316,10 @@ If you want, you can support me with a small donation:
 ```
 42HrxGUKPzNNJKFguPfFhXQajwNDnhLbogy6EWexWw9Sh5pTumVk7dkcD2PB4MuFgD1m8rnaR3pr1g852BWUTpXaTo9rQyr
 ```
+
+<br>
+
+**Special thanks to the users of the /r/DeGoogle subreddit for advice and corrections.**
+
 ---
 
