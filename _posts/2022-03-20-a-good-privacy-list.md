@@ -4,6 +4,8 @@ title: "A Good Privacy List"
 date: 2022-03-20
 ---
 
+Update: 29 Mar 2022
+
 <br>
 
 ## Table of Contents
@@ -17,6 +19,7 @@ date: 2022-03-20
 * [Email Anonymous Forwarding](#email-anonymous-forwarding)
 * [Encryption Software](#encryption-software)
 * [File Sharing](#file-sharing)
+* [Git Hosting](#git-hosting)
 * [Instant Messaging](#instant-messaging)
 * [Maps](#maps)
 * [Operating Systems](#operating-systems)
@@ -137,6 +140,12 @@ In this sector it's very easy to meet organizations and projects that claim to d
 * [Cryptpad](https://cryptpad.fr/)
 * [AnonArchive](https://anonarchive.org/)
 
+## Git Hosting
+
+* [Codeberg](https://codeberg.org/)
+* [NotABug](https://notabug.org/)
+* [Gitea](https://gitea.io/en-us/)
+
 ## Instant Messaging
 
 ### Centralized
@@ -222,8 +231,10 @@ In this sector it's very easy to meet organizations and projects that claim to d
 
 * [SearXNG](https://github.com/searxng/searxng)
 * [Metager](https://metager.org/)
-* [Oscobo](https://www.oscobo.com/)
+* [DuckDuckGo](https://duckduckgo.com/)
 * [Whoogle Search](https://github.com/benbusby/whoogle-search)
+* [Oscobo](https://www.oscobo.com/)
+* [Gigablast](https://gigablast.com/)
 
 ## Social Networks
 
