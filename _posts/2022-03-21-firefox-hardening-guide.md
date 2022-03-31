@@ -4,7 +4,7 @@ title: "Firefox Hardening Guide"
 date: 2022-03-21
 ---
 
-Update: 27 Mar 2022
+Update: 31 Mar 2022
 
 Tested on Firefox: `Version 98.0.x (Linux)`
 
@@ -71,13 +71,11 @@ If you want to create new profile see: [Create, remove or switch Firefox profile
 
     * `Search Shortcuts`: select `DuckDuckGo`, remove Google, Bing, eBay, Amazon, Wikipedia search engines
 
-    * Click on `Change settings for other address bar suggestions`: uncheck `Shortcuts`
-
 Notes:
 
-* The other Search settings are managed through the [about:config](#aboutconfig) parameters.
-
 * You can add/select your favorite search engines or restore the default settings, see: [Add or remove a search engine in Firefox](https://support.mozilla.org/en-US/kb/add-or-remove-search-engine-firefox)
+
+* The other Search settings are managed through the [about:config](#aboutconfig) parameters.
 
 ## about:config
 
@@ -177,7 +175,7 @@ On the search bar digit: `about:config` and set the parameters as follows:
 
     `intl.accept_languages = "en-US, en"`
 
-    `javascript.use_us_english_locale = true` (Hidden Pref)
+    `javascript.use_us_english_locale = true` (Hidden pref)
 
 ### Auto-updates / Recommendations
 
@@ -189,7 +187,7 @@ On the search bar digit: `about:config` and set the parameters as follows:
 
 * Disable addons recommendations (uses Google Analytics):
 
-    `extensions.getAddons.showPane = false` (Hidden Pref)
+    `extensions.getAddons.showPane = false` (Hidden pref)
 
     `extensions.htmlaboutaddons.recommendations.enabled = false`
 
@@ -219,9 +217,9 @@ On the search bar digit: `about:config` and set the parameters as follows:
 
     `toolkit.telemetry.firstShutdownPing.enabled = false`
 
-    `toolkit.telemetry.coverage.opt-out = true` (Hidden Pref)
+    `toolkit.telemetry.coverage.opt-out = true` (Hidden pref)
 
-    `toolkit.coverage.opt-out = true` (Hidden Pref)
+    `toolkit.coverage.opt-out = true` (Hidden pref)
 
     `toolkit.coverage.endpoint.base = ""`
 
@@ -273,6 +271,16 @@ On the search bar digit: `about:config` and set the parameters as follows:
 
     `browser.safebrowsing.blockedURIs.enabled = false`
 
+* Disable fetch of updates:
+
+    `browser.safebrowsing.provider.google4.gethashURL = ""`
+
+    `browser.safebrowsing.provider.google4.updateURL = ""`
+
+    `browser.safebrowsing.provider.google.gethashURL = ""`
+
+    `browser.safebrowsing.provider.google.updateURL = ""`
+
 * Disable checks for downloads:
 
     `browser.safebrowsing.downloads.enabled = false`
@@ -319,7 +327,7 @@ On the search bar digit: `about:config` and set the parameters as follows:
 
 * Disable GIO protocols as a potential proxy bypass vectors:
 
-    `network.gio.supported-protocols = ""` (Hidden Pref)
+    `network.gio.supported-protocols = ""` (Hidden pref)
 
 * Remove special permissions for certain mozilla domains:
 
@@ -330,6 +338,12 @@ On the search bar digit: `about:config` and set the parameters as follows:
     `network.IDN_show_punycode = true`
 
 ### Search Bar: Suggestions / Autofill
+
+* Disable search suggestions:
+
+    `browser.search.suggest.enabled = false`
+
+    `browser.urlbar.suggest.searches = false`
 
 * Disable location bar domain guessing:
 
@@ -358,6 +372,10 @@ On the search bar digit: `about:config` and set the parameters as follows:
     `extensions.formautofill.heuristics.enabled = false`
 
 *  Disable location bar contextual suggestions:
+
+    `browser.urlbar.quicksuggest.scenario = "history"`
+
+    `browser.urlbar.quicksuggest.enabled = false`
 
     `browser.urlbar.suggest.quicksuggest.nonsponsored = false`
 
@@ -429,7 +447,7 @@ On the search bar digit: `about:config` and set the parameters as follows:
 
 * Enable strict pinning (PKP (Public Key Pinning)):
     * 0 = disabled
-    * 1 = allowa user MiTM (i.e. your Antivirus)
+    * 1 = allow user MiTM (i.e. your Antivirus)
     * 2 = strict
     `security.cert_pinning.enforcement_level = 2`
 
@@ -542,6 +560,26 @@ On the search bar digit: `about:config` and set the parameters as follows:
 
     `privacy.sanitize.timeSpan = 0`
 
+### Fingerprinting (RFP): disabled in my `user.js`, see: [Disabled Options](#disabled-options)
+
+* Enable RFP:
+
+    `privacy.resistFingerprinting = true`
+
+* Set new window size rounding max values:
+
+    `privacy.window.maxInnerWidth = 1600`
+
+    `privacy.window.maxInnerHeight = 900`
+
+* Disable mozAddonManager Web API:
+
+    `privacy.resistFingerprinting.block_mozAddonManager = true` (Hidden pref)
+
+* Disable using system colors:
+
+    `browser.display.use_system_colors = false` (Default: false (Non-Windows))
+
 ## Disabled Options
 
 Compared to other similar configurations such as [pyllyukko](https://github.com/pyllyukko/user.js) or [arkenfox](https://github.com/arkenfox/user.js) user.js, there are several options disabled, some of these are commented in the various sections of the [user.js](#user.js) file, these are the options you can activate for greater protection like [Firefox Resist Fingerprinting (RFP)](https://support.mozilla.org/en-US/kb/firefox-protection-against-fingerprinting), but they disable some basic functionality like audio/video libraries or other things you need, so be careful. Also I excluded the `default` entries.
@@ -551,7 +589,7 @@ Compared to other similar configurations such as [pyllyukko](https://github.com/
 If you want (is recommended), you can use the `user.js` file with the settings of this guide or with your preferred settings, it is recommended to create a new profile for this purpose.
 Before using the file check the entries and modify/add them according to your preferences, don't copy/paste without know what you are doing.
 
-Download the `user.js` template from my GitHub gist [here](https://gist.github.com/brainfucksec/68e79da1c965aeaa4782914afd8f7fa2)
+Download the `user.js` template from my [GitHub gist](https://gist.github.com/brainfucksec/68e79da1c965aeaa4782914afd8f7fa2)
 
 More information about Firefox user.js:
 
@@ -593,6 +631,7 @@ My uBlock Origin blocklists:
     * Phishing URL Blocklist
 
 * Annoyances:
+    * Anti-Facebook
     * Fanboy's Annoyance
 
 * Multipurpose:
@@ -630,9 +669,9 @@ There are come resources where you can test your browser to see how unique it is
 
 ## Recommendations:
 
-Take this guide as a starting point and learn about the meaning of the various options.
+Take this guide as a starting point and learn about the meaning of the various options, configuring Firefox parameters is a fairly complex topic.
 Like all guides, there may be errors or inaccuracies, so don't blindly copy/paste, and if you find something wrong I invite you to [contact me](https://brainfucksec.github.io/contacts) to fix the problem.
-As always, use **Your Head** to avoid intrusions, browser security depends largely on how you behave online, but you cannot know how to behave and know the dangers if you do not inform yourself.
+Your security depends not only on technical countermeasures, but also on how you behave online, so search for information, compare them, and **think with you head**.
 
 ---
 
