@@ -215,7 +215,7 @@ Use the command `dod` for wipe the disk with method: [DoD 5220.22-M](https://csr
 
 Then the program starts wipe the disk, (be careful because there is no confirmation after the commands):
 
-![alte text](uploads/img/posts/securely-wipe-disks-and-delete-files/dban-4.png)
+![alt text](uploads/img/posts/securely-wipe-disks-and-delete-files/dban-4.png)
 
 DBAN also offers an interactive mode, which can be accessed by pressing the `Enter` key.
 In the interactive mode, press `Space` key for select the volume you want to erase:
