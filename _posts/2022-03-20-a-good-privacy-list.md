@@ -4,7 +4,7 @@ title: "A Good Privacy List"
 date: 2022-03-20
 ---
 
-Update: 29 Mar 2022
+Update: 06 Apr 2022
 
 <br>
 
@@ -13,6 +13,7 @@ Update: 29 Mar 2022
 * [Introduction](#introduction)
 * [AI Assistants](#ai-assistants)
 * [Android App Stores](#android-app-stores)
+* [Calendar Apps](#calendar-apps)
 * [Cloud Storage](#cloud-storage)
 * [DNS Servers](#dns-servers)
 * [Email Providers](#email-providers)
@@ -39,9 +40,9 @@ Update: 29 Mar 2022
 This is my list of Privacy Alternatives of not so good mainstream products who use your data to make money and collaborate with governments for mass surveillance.
 The list is compiled in a simple way, privacy defence requires continuous research, so before using the apps on this list **do your own research** and if you find something wrong please [contact me](https://brainfucksec.github.io/contacts) so I can update it.
 
-I do not sponsor or get paid by any of the organizations of the products listed.
+I do not sponsor or get paid by any of the organizations of the products listed and there are NO referrer URLs in the list, to verify the links you can check the source code of the page (i.e. right click -> "View Page Source").
 When I choose to use a service it means that I have search information before, and I have my own opinion about it that may not be the same as other people in this sector.
-I often read articles where an application is declared not private and insecure without consistent sources which confirm the claims, or where it's declared reliable and instead it's a honeypot.
+I often read articles where an application is declared not private and insecure without consistent sources which confirm the claims, or where it's declared reliable and instead ..it is ad advertising company or a government agency.
 
 Security is a process, so you cannot fully trust any application, organization, and the people behind it.
 Regarding this topic see:
@@ -51,15 +52,17 @@ Regarding this topic see:
 [Defence in depth](https://en.wikipedia.org/wiki/Defense_in_depth_(computing))
 
 I hope this modest work can help to defende you and fight the censorship and oppression we are experiencing especially in recent years, **knowledge is power**, so search, read, and think with your head!
-In this sector it's very easy to meet organizations and projects that claim to defend privacy but in reality are just mousetraps.
+**In this sector it's very easy to meet organizations and projects that claim to defend privacy but in reality are just mousetraps.**
 
-**Only products that meet the following requirements are included in the list:**
+### Only products that meet the following requirements are included in the list:
+
+* Security first: services that are not a security risk (although this is a very long and complex topic), and that are not in the experimental phase (i.e. the software is in the [alpha phase](https://techterms.com/definition/alpha_software)).
 
 * Open source software and clear references to the application source code, I know that a closed source program doesn't necessarily mean it's malicious, but but I prefer to know that there's code available for everyone to read.
 
 * Clear references to the development team and organization (i.e. "About Me" section).
 
-* Privacy Policy clear and easily accessible, if I have to click for 10 pages before reading a complicated and obscure privacy policy I consider that is something wrong.
+* Privacy Policy clear and easily accessible, if I have to click for 10 pages before reading a complicated and obscure privacy policy I consider that there is already something wrong.
 
 * Not sharing data with bad third parties (i.e. No Google, Amazon, Meta (Facebook), Cloudflare and other evil companies), about that argument see: [Notes](#notes)
 
@@ -81,7 +84,14 @@ In this sector it's very easy to meet organizations and projects that claim to d
 * [Fossdroid](https://fossdroid.com/)
 * [Aurora Store](https://auroraoss.com/#aurora-droid) - Alternative Google Playstore Client
 
-## Cloud Storage
+## Calendar Apps
+
+* [Nextcloud Calendar](https://apps.nextcloud.com/apps/calendar)
+* [EteSync](https://www.etesync.com/)
+* [Tutanota Calendar](https://tutanota.com/calendar/) - Required an email account with this service
+* [Proton Calendar](https://calendar.protonmail.com/) - Required an email account with this service
+
+## Cloud Storage.s
 
 * [ProtonDrive](https://account.protonmail.com/login)
 * [Filen](https://filen.io/)
@@ -308,7 +318,6 @@ In this sector it's very easy to meet organizations and projects that claim to d
 * [BitTube](https://bittube.video/)
 * [PeerTube](https://joinpeertube.org/en/)
 
-
 ### Notes
 
 About organizations that use third party software I think a clarification should be made.
@@ -330,7 +339,7 @@ If you want, you can support me with a small donation:
 
 <br>
 
-**Special thanks to the users of the /r/DeGoogle subreddit for advice and corrections.**
+**Special thanks to the users of the /r/DeGoogle subreddit for advices and corrections.**
 
 ---
 
