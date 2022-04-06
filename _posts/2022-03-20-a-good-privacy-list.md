@@ -32,6 +32,7 @@ Update: 06 Apr 2022
 * [VPNs](#vpns)
 * [Web Browsers](#web-browsers)
 * [YouTube Alternatives](#youtube-alternatives)
+* [Other Privacy and Security Resources](#other-privacy-and-security-resources)
 
 <br>
 
@@ -317,6 +318,20 @@ I hope this modest work can help to defende you and fight the censorship and opp
 
 * [BitTube](https://bittube.video/)
 * [PeerTube](https://joinpeertube.org/en/)
+
+## Other Privacy and Security Resources
+
+* [Security List](https://security-list.js.org/#/)
+* [paulaime/awesome-privacy](https://github.com/paulaime/Awesome-Privacy)
+* [Privacy Blogs List](https://lemmy.ca/post/14161)
+* [The Hitchhiker’s Guide to Online Anonymity](https://web.archive.org/web/20220303135123/https://anonymousplanet.org/)
+* [Surveillance Self-Defence](https://ssd.eff.org/)
+* [PRISM Break](https://prism-break.org/en/)
+* [The New Oil](https://thenewoil.org/)
+* [gofoss.net](https://gofoss.net/)
+* [Defensive Computing Checklist](https://defensivecomputingchecklist.com/)
+* [Watch Your Hack](https://watchyourhack.com/)
+* [Decentralize Today - Privacy Cookbook](https://dt.gl/tag/privacy-cookbook/)
 
 ### Notes
 
