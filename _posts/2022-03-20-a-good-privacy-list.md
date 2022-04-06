@@ -91,7 +91,7 @@ I hope this modest work can help to defende you and fight the censorship and opp
 * [Tutanota Calendar](https://tutanota.com/calendar/) - Required an email account with this service
 * [Proton Calendar](https://calendar.protonmail.com/) - Required an email account with this service
 
-## Cloud Storage.s
+## Cloud Storage
 
 * [ProtonDrive](https://account.protonmail.com/login)
 * [Filen](https://filen.io/)
@@ -320,12 +320,17 @@ I hope this modest work can help to defende you and fight the censorship and opp
 
 ### Notes
 
-About organizations that use third party software I think a clarification should be made.
-Often it's necessary to use third party services in order to make them stable and working, examples are Proton or Signal services that use some Amazon AWS or Google servers for traffic routing.
+**Utilization of 3rd party services:** About organizations that use third party software I think a clarification should be made.  Often it's necessary to use third party services in order to make them stable and working, examples are Proton or Signal services that use some Amazon AWS or Google servers for traffic routing. It's not easy to manage thousands or millions of users and it's not easy to manage continuous spam attempts or criminal activities, impossible to do with self-hosted servers with little traffic capacity.
+
+**US based services:** In the post-Snowden era we all know the data collection and surveillance capabilities of the NSA, many are advising not to use services in US jurisdiction, this may be true for unencrypted services, such as email without OpenPGP encryption, IRC servers etc., but if the data is encrypted, then I think we can make an exception. On the other hand, the NSA's surveillance and storage capabilities it extend globally, So try to encrypt as much as possible, if the data is stored in some server in Nevada, China, or outer space ..it will be encrypted data, about this speech see: [Post-quantum_cryptography)](https://en.wikipedia.org/wiki/Post-quantum_cryptography).
+However, I generally tend to prefer services that have jurisdiction in countries with good privacy laws (i.e. Switzerland, Estonia, Iceland) or at least that they are not part of the Five Eyes, about this topic see: [The Five, Nine, and Fourteen Eyes agreements (Explained)](https://protonvpn.com/blog/5-eyes-global-surveillance/).
+
+**ProtonMail case:** Recently it has jumped to the headlines the case in which the service ProtonMail has provided (and previously logged) the IP address of an activist, see: [ProtonMail logged IP address of French activist after order by Swiss authorities](https://techcrunch.com/2021/09/06/protonmail-logged-ip-address-of-french-activist-after-order-by-swiss-authorities/).  Regarding this, I have made my own opinion, which is the same as it was when I first became interested in these topics years ago after [Lavabit case](https://en.wikipedia.org/wiki/Lavabit#Suspension_and_gag_order): No existing service in the world can "cover the ass" of someone who commits an action "judged to be criminal" or criminal, in the case of Proton, probably this person could not have been traced if he had used a VPN or if he had connected by Tor network, also the Proton team recommends [using Tor when using their email service](https://old.reddit.com/r/ProtonMail/comments/pil6xi/climate_activist_arrested_after_protonmail/hbqha63/) if you need to protect your IP address. Anyway, this is a very complex speech that can't be covered here, my advice is to use at least one VPN, and if you use the ProtonMail service you can use it with another VPN service like Mullvad for example.  This way you don't relegate security to a single service, the disadvantage is that you have to trust one more service (the Hamletian doubts of Internet Privacy).
+
 
 ### Donations
 
-If you want, you can support me with a small donation:
+If you liked my work, you can support me with a small donation:
 
 **Bitcoin**
 ```
