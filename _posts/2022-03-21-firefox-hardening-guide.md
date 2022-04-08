@@ -4,7 +4,7 @@ title: "Firefox Hardening Guide"
 date: 2022-03-21
 ---
 
-Update: 06 Apr 2022
+Update: 08 Apr 2022
 
 Tested on Firefox: `Version 99.0.x (Linux)`
 
@@ -123,7 +123,7 @@ On the search bar digit: `about:config` and set the parameters as follows:
 
     `browser.startup.page = 1`
 
-    `browser.startup.homepage = "start.duckduckgo.com"`
+    `browser.startup.homepage = "about:home"`
 
 * Disable Activity Stream on new windows and tab pages:
 
