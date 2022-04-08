@@ -4,7 +4,7 @@ title: "A Good Privacy List"
 date: 2022-03-20
 ---
 
-Update: 06 Apr 2022
+Update: 08 Apr 2022
 
 <br>
 
@@ -195,12 +195,19 @@ I hope this modest work can help to defende you and fight the censorship and opp
 
 ## Operating Systems
 
-### PC / Server
+### GNU/Linux Operating Systems
 
-* [GNU/Linux](https://www.gnu.org/) - [List of Linux Distributions](https://en.wikipedia.org/wiki/List_of_Linux_distributions)
-* [BSD Operating Systems](https://en.wikipedia.org/wiki/List_of_BSD_operating_systems)
+* [Fedora](https://getfedora.org/)
+* [Debian](https://www.debian.org/)
+* [Arch Linux](https://archlinux.org/)
 
-### Mobile
+### Security-Focused Operating Systems
+
+* [Qubes OS](https://www.qubes-os.org/)
+* [Whonix](https://www.whonix.org/)
+* [Tails](https://tails.boum.org/)
+
+### Android-based
 
 * [Calyx OS](https://calyxos.org/)
 * [DivestOS](https://en.wikipedia.org/wiki/List_of_Linux_distributions)
