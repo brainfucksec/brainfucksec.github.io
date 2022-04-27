@@ -4,7 +4,7 @@ title: "A Good Privacy List"
 date: 2022-03-20
 ---
 
-Update: 08 Apr 2022
+Update: 27 Apr 2022
 
 <br>
 
@@ -107,6 +107,8 @@ I hope this modest work can help to defende you and fight the censorship and opp
 * [LibreDNS](https://libredns.gr/)
 * [UncensoredDNS](https://blog.uncensoreddns.org/)
 * [CCC - DNS](https://www.ccc.de/censorship/dns-howto/)
+* [Blahdns](https://blahdns.com/)
+* [Mullvad DNS](https://mullvad.net/en/help/dns-over-https-and-dns-over-tls/)
 
 ## Email Providers
 
@@ -156,6 +158,7 @@ I hope this modest work can help to defende you and fight the censorship and opp
 * [Codeberg](https://codeberg.org/)
 * [NotABug](https://notabug.org/)
 * [Gitea](https://gitea.io/en-us/)
+* [Sourcehut](https://sourcehut.org/)
 
 ## Instant Messaging
 
@@ -331,7 +334,7 @@ I hope this modest work can help to defende you and fight the censorship and opp
 * [Security List](https://security-list.js.org/#/)
 * [paulaime/awesome-privacy](https://github.com/paulaime/Awesome-Privacy)
 * [Privacy Blogs List](https://lemmy.ca/post/14161)
-* [The Hitchhiker’s Guide to Online Anonymity](https://web.archive.org/web/20220303135123/https://anonymousplanet.org/)
+* [The Hitchhiker’s Guide to Online Anonymity](https://anonymousplanet-ng.org/)
 * [Surveillance Self-Defence](https://ssd.eff.org/)
 * [PRISM Break](https://prism-break.org/en/)
 * [The New Oil](https://thenewoil.org/)
@@ -339,6 +342,7 @@ I hope this modest work can help to defende you and fight the censorship and opp
 * [Defensive Computing Checklist](https://defensivecomputingchecklist.com/)
 * [Watch Your Hack](https://watchyourhack.com/)
 * [Decentralize Today - Privacy Cookbook](https://dt.gl/tag/privacy-cookbook/)
+* [Privacy Respecting Software](https://github.com/Lissy93/personal-security-checklist/blob/master/5_Privacy_Respecting_Software.md)
 
 ### Notes
 
