@@ -4,7 +4,7 @@ title: "A Good Privacy List"
 date: 2022-03-20
 ---
 
-Update: 27 Apr 2022
+Update: 28 Apr 2022
 
 <br>
 
@@ -360,7 +360,7 @@ If you liked my work, you can support me with a small donation:
 
 **Bitcoin**
 ```
-1J4LsZh94DYwMcnXj7YhKQ13A85x74GZGu
+19vqscjZcpa22qScPoQEuHJyyiyKokZ6C3
 ```
 
 **Monero**
