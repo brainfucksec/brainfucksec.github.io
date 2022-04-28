@@ -117,7 +117,6 @@ I hope this modest work can help to defende you and fight the censorship and opp
 * [Riseup Email](https://riseup.net/en/email)
 * [Tutanota](https://tutanota.com/)
 * [Autistici](https://www.autistici.org/services/mail)
-* [CTemplar](https://ctemplar.com/)
 * [Disroot Email](https://disroot.org/en/services/email)
 * [Lavabit](https://lavabit.com/)
 * [Posteo](https://posteo.de/en)

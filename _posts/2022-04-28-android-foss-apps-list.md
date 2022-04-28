@@ -128,7 +128,6 @@ Also not included are apps that have not been updated for a long time, useless a
 * [Tutanota](https://tutanota.com/#download)
 * [K-9 Mail](https://k9mail.app/)
 * [SimpleEmail](https://framagit.org/dystopia-project/simple-email)
-* [CTemplar](https://ctemplar.com/)
 * [monocles mail](https://codeberg.org/Arne/monocles_mail)
 
 ## Exif/Metadata Cleaner
