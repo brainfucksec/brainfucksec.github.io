@@ -4,6 +4,8 @@ title: "Android FOSS Apps List"
 date: 2022-04-28
 ---
 
+Update: 29 Apr 2022
+
 List of open source Android applications for "de-google, de-samsung, de-microsoft, de-nsa, de-china-malware etc. etc." your mobile phone, as always, the list is written in a (KISS) simple way.
 Feel free to [contact me](https://brainfucksec.github.io/contacts) to add applications or modify the list.
 
@@ -17,6 +19,7 @@ Also not included are apps that have not been updated for a long time, useless a
 
 ## Table of Contents
 
+* [Android-based Operating Systems](#android-based-operating-systems)
 * [App Stores](#app-stores)
 * [App Repositories](#app-repositories)
 * [2FA](#2fa)
@@ -49,7 +52,7 @@ Also not included are apps that have not been updated for a long time, useless a
 ## Android-based Operating Systems
 
 * [Calyx OS](https://calyxos.org/)
-* [DivestOS](https://en.wikipedia.org/wiki/List_of_Linux_distributions)
+* [DivestOS](https://divestos.org/)
 * [LineageOS](https://lineageos.org/)
 * [GrapheneOS](https://grapheneos.org/)
 * [Replicant](https://www.replicant.us/)
@@ -89,6 +92,7 @@ Also not included are apps that have not been updated for a long time, useless a
 * [Tor Browser](https://www.torproject.org/download/#android)
 * [Privacy Browser](https://www.stoutner.com/privacy-browser-android/)
 * [DuckDuckGo Privacy Browser](https://duckduckgo.com/app)
+* [Fennec F-Droid](https://f-droid.org/en/packages/org.mozilla.fennec_fdroid/)
 * [FOSS Browser](https://github.com/scoute-dich/browser)
 * [monocles browser](https://codeberg.org/Arne/monocles_browser)
 
@@ -146,6 +150,7 @@ Also not included are apps that have not been updated for a long time, useless a
 
 * [Simple Gallery](https://github.com/SimpleMobileTools/Simple-Gallery)
 * [Aves](https://github.com/deckerst/aves)
+* [Floral](https://github.com/vidit135g/Floral)
 
 ## Instant Messagging
 
@@ -177,6 +182,7 @@ Also not included are apps that have not been updated for a long time, useless a
 * [Simple Keyboard](https://github.com/SimpleMobileTools/Simple-Keyboard)
 * [OpenBoard](https://github.com/openboard-team/openboard)
 * [FlorisBoard](https://github.com/florisboard/florisboard)
+* [AnySoftKeyboard](https://anysoftkeyboard.github.io/)
 * [Tiny Keyboard](https://github.com/rkkr/tiny-keyboard)
 
 ## Maps
@@ -190,6 +196,7 @@ Also not included are apps that have not been updated for a long time, useless a
 * [VLC](https://www.videolan.org/vlc/download-android.html)
 * [Simple Music Player](https://github.com/SimpleMobileTools/Simple-Music-Player)
 * [BlackHole](https://github.com/Sangwan5688/BlackHole)
+* [mpv-android](https://github.com/mpv-android/mpv-android)
 
 ### YouTube Alternative Client
 
@@ -198,6 +205,8 @@ Also not included are apps that have not been updated for a long time, useless a
 * [MusicPiped](https://github.com/deep-gaurav/MusicPiped)
 * [SkyTube](https://skytube-app.com/)
 * [Music](https://github.com/z-huang/music)
+* [SongTube](https://github.com/SongTube/SongTube-App)
+* [SpotiFlyer](https://shabinder.github.io/SpotiFlyer/) - Download music from Spotify, YouTube and others.
 
 ## Network Security
 
@@ -214,13 +223,16 @@ Also not included are apps that have not been updated for a long time, useless a
 
 * [Simple Notes](https://github.com/SimpleMobileTools/Simple-Notes)
 * [Notepad](https://github.com/farmerbb/Notepad)
+* [Joplin](https://joplinapp.org/)
 * [Markor](https://gsantner.net/project/markor.html?source=fdroid)
 * [Standard Notes](https://standardnotes.com/)
 * [Notes](https://github.com/billthefarmer/notes)
 * [SilentNotes](https://www.martinstoeckli.ch/silentnotes/)
+* [Quillnote](https://qosp.org/#/)
 
 ## Password Manager
 
+* [Bitwarden](https://bitwarden.com/download/)
 * [KeepassDX](https://www.keepassdx.com/)
 * [Keypass](https://github.com/yogeshpaliyal/KeyPass)
 * [KeepassA](https://github.com/AriaLyy/KeepassA)
@@ -244,6 +256,7 @@ Also not included are apps that have not been updated for a long time, useless a
 
 * [Mastodon](https://apt.izzysoft.de/fdroid/index/apk/org.joinmastodon.android)
 * [Nitter](https://gitlab.com/Plexer0/Nitter-Android)
+* [Fritter](https://fritter.cc/)
 * [monocles social](https://codeberg.org/Arne/monocles_social)
 * [Barinsta](https://github.com/Android-Builds/barinsta)
 
