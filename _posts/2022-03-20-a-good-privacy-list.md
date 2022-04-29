@@ -4,7 +4,7 @@ title: "A Good Privacy List"
 date: 2022-03-20
 ---
 
-Update: 28 Apr 2022
+Update: 29 Apr 2022
 
 <br>
 
@@ -212,7 +212,7 @@ I hope this modest work can help to defende you and fight the censorship and opp
 ### Android-based
 
 * [Calyx OS](https://calyxos.org/)
-* [DivestOS](https://en.wikipedia.org/wiki/List_of_Linux_distributions)
+* [DivestOS](https://divestos.org/)
 * [LineageOS](https://lineageos.org/)
 * [GrapheneOS](https://grapheneos.org/)
 * [Replicant](https://www.replicant.us/)
@@ -221,6 +221,7 @@ I hope this modest work can help to defende you and fight the censorship and opp
 * [PureOS](https://www.pureos.net/)
 * [/e/OS](https://e.foundation/e-os/)
 * [Sailfish OS](https://sailfishos.org/)
+* [Ubuntu Touch](https://ubuntu-touch.io/)
 
 ## Password Managers
 
@@ -304,6 +305,9 @@ I hope this modest work can help to defende you and fight the censorship and opp
 * [Privacy Browser](https://www.stoutner.com/privacy-browser-android/)
 * [Fennec F-Droid](https://f-droid.org/en/packages/org.mozilla.fennec_fdroid/)
 * [ungoogled-chromium-android](https://github.com/ungoogled-software/ungoogled-chromium-android#f-droid-repository)
+* [DuckDuckGo Privacy Browser](https://duckduckgo.com/app)
+* [FOSS Browser](https://github.com/scoute-dich/browser)
+* [monocles browser](https://codeberg.org/Arne/monocles_browser)
 * [Onion Browser](https://itunes.apple.com/us/app/onion-browser/id519296448) (iOS)
 
 ## YouTube Alternatives
@@ -322,6 +326,8 @@ I hope this modest work can help to defende you and fight the censorship and opp
 * [NewPipe](https://newpipe.net/)
 * [LibreTube](https://github.com/Libre-tube/LibreTube)
 * [SkyTube](https://skytube-app.com/)
+* [SongTube](https://github.com/SongTube/SongTube-App)
+* [SpotiFlyer](https://shabinder.github.io/SpotiFlyer/) - Download music from Spotify, YouTube and others.
 
 ### Video Sharing Alternatives
 
