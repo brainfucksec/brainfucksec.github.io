@@ -4,7 +4,7 @@ title: "Android FOSS Apps List"
 date: 2022-04-28
 ---
 
-Update: 29 Apr 2022
+Update: 01 May 2022
 
 List of open source Android applications for "de-google, de-samsung, de-microsoft, de-nsa, de-china-malware etc. etc." your mobile phone, as always, the list is written in a (KISS) simple way.
 Feel free to [contact me](https://brainfucksec.github.io/contacts) to add applications or modify the list.
@@ -32,6 +32,7 @@ Also not included are apps that have not been updated for a long time, useless a
 * [Email Client](#email-client)
 * [Exif/Metadata Cleaner](#exif--metadata-cleaner)
 * [File Manager](#file-manager)
+* [File Sharing](#file-sharing)
 * [Gallery](#gallery)
 * [Instant Messagging](#instant-messagging)
 * [Launcher](#launcher)
@@ -101,11 +102,13 @@ Also not included are apps that have not been updated for a long time, useless a
 
 * [Simple Calendar](https://github.com/SimpleMobileTools/Simple-Calendar)
 * [Etar Calendar](https://github.com/Etar-Group/Etar-Calendar)
+* [DAVx5](https://www.davx5.com/)
 
 ## Camera
 
 * [OpenCamera](https://opencamera.org.uk/)
 * [GrapheneOS Camera](https://github.com/GrapheneOS/Camera)
+* [FreeDcam](https://github.com/KillerInk/FreeDcam)
 
 ## Clock
 
@@ -117,6 +120,7 @@ Also not included are apps that have not been updated for a long time, useless a
 
 * [SimpleContacts](https://github.com/SimpleMobileTools/Simple-Contacts)
 * [OpenContacs](https://gitlab.com/sultanahamer/OpenContacts)
+* [Koler](https://github.com/Chooloo/koler)
 
 ## Documents Reader
 
@@ -146,6 +150,11 @@ Also not included are apps that have not been updated for a long time, useless a
 * [MaterialFiles](https://github.com/zhanghai/MaterialFiles)
 * [Secure File Manager](https://github.com/Secure-File-Manager/Secure-File-Manager)
 * [Amaze File Manager](https://github.com/TeamAmaze/AmazeFileManager)
+
+## File Sharing
+
+* [Snapdrop](https://github.com/fm-sys/snapdrop-android)
+* [Sharik](https://github.com/marchellodev/sharik)
 
 ## Gallery
 
@@ -198,6 +207,7 @@ Also not included are apps that have not been updated for a long time, useless a
 * [Simple Music Player](https://github.com/SimpleMobileTools/Simple-Music-Player)
 * [BlackHole](https://github.com/Sangwan5688/BlackHole)
 * [mpv-android](https://github.com/mpv-android/mpv-android)
+* [Music Player GO](https://github.com/enricocid/Music-Player-GO)
 
 ### YouTube Alternative Client
 
@@ -230,6 +240,7 @@ Also not included are apps that have not been updated for a long time, useless a
 * [Notes](https://github.com/billthefarmer/notes)
 * [SilentNotes](https://www.martinstoeckli.ch/silentnotes/)
 * [Quillnote](https://qosp.org/#/)
+* [Tasks](https://tasks.org/)
 
 ## Password Manager
 
@@ -260,6 +271,7 @@ Also not included are apps that have not been updated for a long time, useless a
 * [Fritter](https://fritter.cc/)
 * [monocles social](https://codeberg.org/Arne/monocles_social)
 * [Barinsta](https://github.com/Android-Builds/barinsta)
+* [PixelDroid](https://pixeldroid.org/)
 
 ## System Security
 
@@ -271,6 +283,9 @@ Also not included are apps that have not been updated for a long time, useless a
 * [Haven](https://guardianproject.github.io/haven/)
 * [PilferShushJammer](https://github.com/kaputnikGo/PilferShushJammer)
 * [QR Scanner](https://github.com/SecUSo/privacy-friendly-qr-scanner)
+* [Yet Another Call Blocker](https://gitlab.com/xynngh/YetAnotherCallBlocker)
+* [InviZible Pro](https://github.com/Gedsh/InviZible)
+* [Exodus](https://github.com/Exodus-Privacy/exodus-android-app)
 
 
 ## VPN Client
