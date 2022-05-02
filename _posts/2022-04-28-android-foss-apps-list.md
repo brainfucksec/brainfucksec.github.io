@@ -4,7 +4,7 @@ title: "Android FOSS Apps List"
 date: 2022-04-28
 ---
 
-Update: 01 May 2022
+Update: 02 May 2022
 
 List of open source Android applications for "de-google, de-samsung, de-microsoft, de-nsa, de-china-malware etc. etc." your mobile phone, as always, the list is written in a (KISS) simple way.
 Feel free to [contact me](https://brainfucksec.github.io/contacts) to add applications or modify the list.
@@ -90,6 +90,7 @@ Also not included are apps that have not been updated for a long time, useless a
 ## Browser
 
 * [Mull](https://github.com/divested-mobile/mull-fenix)
+* [Mulch](https://gitlab.com/divested-mobile/mulch)
 * [Bromite](https://github.com/bromite/bromite)
 * [Tor Browser](https://www.torproject.org/download/#android)
 * [Privacy Browser](https://www.stoutner.com/privacy-browser-android/)
