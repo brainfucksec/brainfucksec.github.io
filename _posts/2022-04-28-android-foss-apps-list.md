@@ -4,7 +4,7 @@ title: "Android FOSS Apps List"
 date: 2022-04-28
 ---
 
-Update: 02 May 2022
+Update: 19 May 2022
 
 List of open source Android applications for "de-google, de-samsung, de-microsoft, de-nsa, de-china-malware etc. etc." your mobile phone, as always, the list is written in a (KISS) simple way.
 Feel free to [contact me](https://brainfucksec.github.io/contacts) to add applications or modify the list.
@@ -89,9 +89,9 @@ Also not included are apps that have not been updated for a long time, useless a
 
 ## Browser
 
+* [Bromite](https://github.com/bromite/bromite)
 * [Mull](https://github.com/divested-mobile/mull-fenix)
 * [Mulch](https://gitlab.com/divested-mobile/mulch)
-* [Bromite](https://github.com/bromite/bromite)
 * [Tor Browser](https://www.torproject.org/download/#android)
 * [Privacy Browser](https://www.stoutner.com/privacy-browser-android/)
 * [DuckDuckGo Privacy Browser](https://duckduckgo.com/app)
@@ -133,10 +133,10 @@ Also not included are apps that have not been updated for a long time, useless a
 
 ## Email Client
 
-* [FairEmail](https://github.com/M66B/FairEmail)
-* [ProtonMail](https://protonmail.com/)
-* [Tutanota](https://tutanota.com/#download)
 * [K-9 Mail](https://k9mail.app/)
+* [FairEmail](https://github.com/M66B/FairEmail) - Currently discontinued, see: [FairEmail & NetGuard Discontinued](https://old.reddit.com/r/fossdroid/comments/uso4js/fairemail_netguard_discontinued/)
+* [ProtonMail](https://protonmail.com/) - Can redirect traffic to Google and Quad9 DNS, see: [alternative routing](https://protonmail.com/blog/anti-censorship-alternative-routing/)
+* [Tutanota](https://tutanota.com/#download)
 * [SimpleEmail](https://framagit.org/dystopia-project/simple-email)
 * [monocles mail](https://codeberg.org/Arne/monocles_mail)
 
@@ -218,6 +218,7 @@ Also not included are apps that have not been updated for a long time, useless a
 * [SkyTube](https://skytube-app.com/)
 * [Music](https://github.com/z-huang/music)
 * [SongTube](https://github.com/SongTube/SongTube-App)
+* [Spotube](https://github.com/KRTirtho/spotube#mobile)
 * [SpotiFlyer](https://shabinder.github.io/SpotiFlyer/) - Download music from Spotify, YouTube and others.
 
 ## Network Security
@@ -226,17 +227,18 @@ Also not included are apps that have not been updated for a long time, useless a
 * [WireGuard](https://f-droid.org/en/packages/com.wireguard.android/)
 * [Orbot](https://github.com/guardianproject/orbot)
 * [I2P](https://geti2p.net/en/download#android)
-* [NetGuard](https://netguard.me/)
+* [NetGuard](https://netguard.me/) - Currently discontinued, see: [FairEmail & NetGuard Discontinued](https://old.reddit.com/r/fossdroid/comments/uso4js/fairemail_netguard_discontinued/)
 * [AfWall+](https://github.com/ukanth/afwall)
 * [Blokada](https://blokada.org/)
 * [AdAway](https://adaway.org/)
 
 ## Notes
 
+* [Notally](https://github.com/OmGodse/Notally)
 * [Simple Notes](https://github.com/SimpleMobileTools/Simple-Notes)
 * [Notepad](https://github.com/farmerbb/Notepad)
-* [Joplin](https://joplinapp.org/)
 * [Markor](https://gsantner.net/project/markor.html?source=fdroid)
+* [Joplin](https://joplinapp.org/)
 * [Standard Notes](https://standardnotes.com/)
 * [Notes](https://github.com/billthefarmer/notes)
 * [SilentNotes](https://www.martinstoeckli.ch/silentnotes/)
@@ -287,7 +289,7 @@ Also not included are apps that have not been updated for a long time, useless a
 * [Yet Another Call Blocker](https://gitlab.com/xynngh/YetAnotherCallBlocker)
 * [InviZible Pro](https://github.com/Gedsh/InviZible)
 * [Exodus](https://github.com/Exodus-Privacy/exodus-android-app)
-
+* [Wasted](https://github.com/x13a/Wasted)
 
 ## VPN Client
 
