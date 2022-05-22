@@ -4,7 +4,7 @@ title: "Firefox Hardening Guide"
 date: 2022-03-21
 ---
 
-Update: 05 May 2022
+Update: 22 May 2022
 
 Tested on Firefox: `Version 100.0.x (Linux)`
 
@@ -73,7 +73,7 @@ If you want to create new profile see: [Create, remove or switch Firefox profile
 
 Notes:
 
-* You can add/select your favorite search engines or restore the default settings, see: [Add or remove a search engine in Firefox](https://support.mozilla.org/en-US/kb/add-or-remove-search-engine-firefox)
+* DuckDuckGo decided to [down-ranks the source of Russian disinformation](https://nitter.unixfox.eu/yegg/status/1501716484761997318?lang=en), everyone is free to have his own opinion about it, for me this is already a form of censorship, I am the one who decides for myself what is disinformation and what is not. Based on my research good alternative search engines are [SearXNG](https://github.com/searxng/searxng) and [MetaGer](https://metager.org/).  To add search engines or restore the default settings, see: [Add or remove a search engine in Firefox](https://support.mozilla.org/en-US/kb/add-or-remove-search-engine-firefox).
 
 * The other Search settings are managed through the [about:config](#aboutconfig) parameters.
 
@@ -157,11 +157,11 @@ On the search bar digit: `about:config` and set the parameters as follows:
 
 * Disable using the OS's geolocation service:
 
-    `geo.provider.ms-windows-location = false` (Windows)
+    `geo.provider.ms-windows-location = false`  [Windows]
 
-    `geo.provider.use_corelocation = false` (macOS)
+    `geo.provider.use_corelocation = false`     [macOS]
 
-    `geo.provider.use_gpsd = false` (Linux)
+    `geo.provider.use_gpsd = false`             [Linux]
 
 * Disable region updates:
 
@@ -175,19 +175,20 @@ On the search bar digit: `about:config` and set the parameters as follows:
 
     `intl.accept_languages = "en-US, en"`
 
-    `javascript.use_us_english_locale = true` (Hidden pref)
+    `javascript.use_us_english_locale = true` [Hidden pref]
 
 ### Auto-updates / Recommendations
 
 * Disable auto-installing Firefox updates:
 
-    `app.update.auto = false` (Non-Windows)
+    `app.update.background.scheduling.enabled = false`  [Windows]
 
-    `app.update.background.scheduling.enabled = false` (Windows)
+    `app.update.auto = false`                           [Non-Windows]
+
 
 * Disable addons recommendations (uses Google Analytics):
 
-    `extensions.getAddons.showPane = false` (Hidden pref)
+    `extensions.getAddons.showPane = false` [Hidden pref]
 
     `extensions.htmlaboutaddons.recommendations.enabled = false`
 
@@ -199,7 +200,7 @@ On the search bar digit: `about:config` and set the parameters as follows:
 
     `datareporting.healthreport.uploadEnabled = false`
 
-    `toolkit.telemetry.enabled = false` (Default: false)
+    `toolkit.telemetry.enabled = false` [Default: false]
 
     `toolkit.telemetry.unified = false`
 
@@ -217,9 +218,9 @@ On the search bar digit: `about:config` and set the parameters as follows:
 
     `toolkit.telemetry.firstShutdownPing.enabled = false`
 
-    `toolkit.telemetry.coverage.opt-out = true` (Hidden pref)
+    `toolkit.telemetry.coverage.opt-out = true` [Hidden pref]
 
-    `toolkit.coverage.opt-out = true` (Hidden pref)
+    `toolkit.coverage.opt-out = true` [Hidden pref]
 
     `toolkit.coverage.endpoint.base = ""`
 
@@ -327,7 +328,7 @@ On the search bar digit: `about:config` and set the parameters as follows:
 
 * Disable GIO protocols as a potential proxy bypass vectors:
 
-    `network.gio.supported-protocols = ""` (Hidden pref)
+    `network.gio.supported-protocols = ""` [Hidden pref]
 
 * Remove special permissions for certain mozilla domains:
 
@@ -419,6 +420,10 @@ On the search bar digit: `about:config` and set the parameters as follows:
 
     `browser.sessionstore.resume_from_crash = false`
 
+* Disable page thumbnail collection
+
+    `browser.pagethumbnails.capturing_disabled = true` [Hidden pref]
+
 ### HTTPS / SSL/TLS / OSCP / CERTS
 
 * Enable HTTPS-Only mode in all windows:
@@ -449,7 +454,18 @@ On the search bar digit: `about:config` and set the parameters as follows:
     * 0 = disabled
     * 1 = allow user MiTM (i.e. your Antivirus)
     * 2 = strict
+
     `security.cert_pinning.enforcement_level = 2`
+
+* Enable CRLite
+    * 0 = disabled
+    * 1 = consult CRLite but only collect telemetry (default)
+    * 2 = consult CRLite and enforce both "Revoked" and "Not Revoked" results
+    * 3 = consult CRLite and enforce "Not Revoked" results, but defer to OCSP for "Revoked"
+
+    `security.remote_settings.crlite_filters.enabled = true`
+
+    `security.pki.crlite_mode = 2`
 
 ### Headers / Referers
 
@@ -461,9 +477,9 @@ On the search bar digit: `about:config` and set the parameters as follows:
     `network.http.referer.XOriginPolicy = 2`
 
 * Control the amount of information to send:
-    * 0 = send full URI (default)
-    * 1 = scheme+host+port+path
-    * 2 = scheme+host+port
+    * 0 = send full URI (default):  https://example.com:8888/foo/bar.html?id=1234
+    * 1 = scheme+host+port+path:    https://example.com:8888/foo/bar.html
+    * 2 = scheme+host+port:         https://example.com:8888
 
     `network.http.referer.XOriginTrimmingPolicy = 2`
 
@@ -508,7 +524,7 @@ On the search bar digit: `about:config` and set the parameters as follows:
 
 ### Cookies
 
-* Enable ETP (Enhanced Tracking Protection):
+* Enable ETP (Enhanced Tracking Protection), ETP strict mode enables Total Cookie Protection (TCP):
 
     `browser.contentblocking.category = "strict"`
 
@@ -574,11 +590,19 @@ On the search bar digit: `about:config` and set the parameters as follows:
 
 * Disable mozAddonManager Web API:
 
-    `privacy.resistFingerprinting.block_mozAddonManager = true` (Hidden pref)
+    `privacy.resistFingerprinting.block_mozAddonManager = true` [Hidden pref]
 
 * Disable using system colors:
 
-    `browser.display.use_system_colors = false` (Default: false (Non-Windows))
+    `browser.display.use_system_colors = false` [Default: false [Non-Windows]]
+
+* Disable showing about:blank page when possible at startup
+
+    `browser.startup.blankWindow = false`
+
+* Disable usinf system colors:
+
+    `browser.display.use_system_colors = false` [Default: false [Non-Windows]]
 
 ## Disabled Options
 
@@ -589,7 +613,7 @@ Compared to other similar configurations such as [pyllyukko](https://github.com/
 If you want (is recommended), you can use the `user.js` file with the settings of this guide or with your preferred settings, it is recommended to create a new profile for this purpose.
 Before using the file check the entries and modify/add them according to your preferences, don't copy/paste without know what you are doing.
 
-Download the `user.js` template from my [GitHub gist](https://gist.github.com/brainfucksec/68e79da1c965aeaa4782914afd8f7fa2)
+Download the `user.js` template from my [GitHub gist](https://gist.github.com/brainfucksec/68e79da1c965aeaa4782914afd8f7fa2), note that this user.js is configured for Linux systems, so if you use Windows or macOS edit, comment/uncomment the relevant entries according to the instructions listed above.
 
 More information about Firefox user.js:
 
@@ -670,7 +694,7 @@ There are come resources where you can test your browser to see how unique it is
 ## Recommendations:
 
 Take this guide as a starting point and learn about the meaning of the various options, configuring Firefox parameters is a fairly complex topic.
-Like all guides, there may be errors or inaccuracies, so don't blindly copy/paste, and if you find something wrong I invite you to [contact me](https://brainfucksec.github.io/contacts) to fix the problem.
+Although I do my best so that there are not, there may be errors or inaccuracies in this guide, so don't blindly copy/paste, and if you find something wrong I invite you to [contact me](https://brainfucksec.github.io/contacts) to fix the problem.
 Your security depends not only on technical countermeasures, but also on how you behave online, so search for information, compare them, and **think with you head**.
 
 ---
@@ -684,4 +708,6 @@ Your security depends not only on technical countermeasures, but also on how you
 * [LibreWolf](https://librewolf.net/)
 
 * [uBlock Origin](https://ublockorigin.com/)
+
+**Thank you guys for your awesome work!**
 
