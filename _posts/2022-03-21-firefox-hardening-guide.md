@@ -600,7 +600,7 @@ On the search bar digit: `about:config` and set the parameters as follows:
 
     `browser.startup.blankWindow = false`
 
-* Disable usinf system colors:
+* Disable using system colors:
 
     `browser.display.use_system_colors = false` [Default: false [Non-Windows]]
 
