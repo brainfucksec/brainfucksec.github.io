@@ -4,7 +4,7 @@ title: "Android FOSS Apps List"
 date: 2022-04-28
 ---
 
-Update: 19 May 2022
+Update: 23 May 2022
 
 List of open source Android applications for "de-google, de-samsung, de-microsoft, de-nsa, de-china-malware etc. etc." your mobile phone, as always, the list is written in a (KISS) simple way.
 Feel free to [contact me](https://brainfucksec.github.io/contacts) to add applications or modify the list.
@@ -130,6 +130,7 @@ Also not included are apps that have not been updated for a long time, useless a
 * [PDF Viewer Plus](https://github.com/JavaCafe01/PdfViewer)
 * [CoolReader 3](https://github.com/buggins/coolreader)
 * [OpenDocument](https://github.com/opendocument-app/OpenDocument.droid)
+* [GrapheneOS PdfViewer](https://github.com/GrapheneOS/PdfViewer)
 
 ## Email Client
 
@@ -156,6 +157,7 @@ Also not included are apps that have not been updated for a long time, useless a
 
 * [Snapdrop](https://github.com/fm-sys/snapdrop-android)
 * [Sharik](https://github.com/marchellodev/sharik)
+* [wormhole-william-mobile](https://github.com/psanford/wormhole-william-mobile)
 
 ## Gallery
 
@@ -272,6 +274,7 @@ Also not included are apps that have not been updated for a long time, useless a
 * [Mastodon](https://apt.izzysoft.de/fdroid/index/apk/org.joinmastodon.android)
 * [Nitter](https://gitlab.com/Plexer0/Nitter-Android)
 * [Fritter](https://fritter.cc/)
+* [Shitter](https://github.com/nuclearfog/Shitter)
 * [monocles social](https://codeberg.org/Arne/monocles_social)
 * [Barinsta](https://github.com/Android-Builds/barinsta)
 * [PixelDroid](https://pixeldroid.org/)
@@ -290,6 +293,7 @@ Also not included are apps that have not been updated for a long time, useless a
 * [InviZible Pro](https://github.com/Gedsh/InviZible)
 * [Exodus](https://github.com/Exodus-Privacy/exodus-android-app)
 * [Wasted](https://github.com/x13a/Wasted)
+* [PrivacyBlur](https://github.com/MATHEMA-GmbH/privacyblur)
 
 ## VPN Client
 
