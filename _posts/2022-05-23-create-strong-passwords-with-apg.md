@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Create Strong Passwords with APG"
+title: "Create Strong Passwords with apg"
 date: 2022-05-23
 ---
 
@@ -8,11 +8,11 @@ date: 2022-05-23
 
 ## Introduction
 
-To generate secure/strong passwords (passphrases) there are several methods, here we see how to generate them with the APG program on Gnu/Linux. But first we need some theory on this topic...
+To generate secure/strong passwords (passphrases) there are several methods, here we see how to generate them with `apg` on GNU/Linux. But first we need some theory on this argument...
 
 From [Wikipedia - Password strenght](https://en.wikipedia.org/wiki/Password_strength):
 
-Password strength is a measure of the effectiveness of a password against guessing or brute-force attacks. **The strength of a password is a function of length, complexity, and unpredictability.** Using strong passwords lowers overall risk of a security breach, but strong passwords do not replace the need for other effective security controls.
+Password strength is a measure of the effectiveness of a password against guessing or brute-force attacks. The strength of a password is a function of length, complexity, and unpredictability. Using strong passwords lowers overall risk of a security breach, but strong passwords do not replace the need for other effective security controls.
 
 The rate at which an attacker can submit guessed passwords to the system is a key factor in determining system security. It is usual in the computer industry to specify password strength in terms of information entropy, which is measured in bits, see: [Entropic Security](https://en.wikipedia.org/wiki/Entropic_security).
 
@@ -32,7 +32,7 @@ In addition, as the great Arch Wiki explains, a password is not secure when it c
 
 See: [Security - ArchWiki: Passwords](https://wiki.archlinux.org/title/security#Passwords)
 
-I will not explain here what is the best method to memorize and maintain passwords because this requires a separate topic, anyway I prefer to **write passwords on paper**, and use password managers only for less important passwords or when strictly necessary.
+I will not explain here what is the best method to memorize and maintain passwords because this requires a separate topic, anyway I prefer to write passwords on paper, and use password managers only for less important passwords or when strictly necessary.
 With this I am not saying that password managers are not a good method, but they are strictly dependent on the security of the operating system in which they are located, If the system is compromised by a malware, when you type the master password all the others are considered compromised, as always, security is a process, a chain in which all rings must be checked.
 Obviously also the paper method becomes useless if the book in which the passwords are written is not secured.
 
@@ -168,7 +168,7 @@ NS,>$RuZzqv-.b>5;m!
 Y#,/Xw2c7H&=RQgH*D6
 ```
 
-Here with the parameter `-M SNCL`, apg generates passwords that MUST include special symbols, numbers, uppercase and lowercase letters, while in the `-E` parameter it is indicated to exclude the characters "{" and "}", note that the escape sequence with three backslashes is used, furthermore, characters that can cause confusion in transcribing or writing passwords are excluded from the generator (some fonts have a 0 and a capital O or l and I which are very similar for example), note that excluding characters decreases entropy (mathematically).
+Here with the parameter `-M SNCL`, apg generates passwords that MUST include special symbols, numbers, uppercase and lowercase letters, while in the `-E` parameter it is indicated to exclude the characters "{" and "}", note that the escape sequence with three backslashes is used, furthermore, characters that can cause confusion in transcribing or writing passwords are excluded from the generator (some fonts have a 0 and a capital O or l and I which are very similar for example).
 
 Generate 1 password of minimum 21 random characters, excluding some and take user input as a random seed:
 
@@ -209,7 +209,55 @@ fW8eB,KM\d~D[sN'GQYvd
 ye$*qGMX}",4F_J3y*KKH
 ```
 
-Now let's look at password security in terms of [entropy bits](https://en.wikipedia.org/wiki/Password_strength#Entropy_as_a_measure_of_password_strength), entropy bits is a term for measure the strength of a password as the number of attempts to find the password, assuming knowledge of the character set the password uses (like in a dictionary attack). .sYou can see an excellent explanation here: [Bits of Entropy - The Importance of Complex Passwords](https://www.securitycentric.com.au/blog/bits-of-entropy-the-importance-of-complex-passwords).
+Let's write a simple Bash script, so we can generate passwords with just one command.
+
+```bash
+#!/usr/bin/env bash
+
+# pwgen.sh
+#
+# Shell script for generate passwords with `apg`
+# see: `man apg` -- `apg --help`
+
+# Characters to exclude when generate passwords.  Use backslashes
+# to include special symbols that can be recognized by shell.
+readonly char_exclude="\\\'\\\ \\\"\\\ \\\`\\\ o0O1lIi"
+
+# Options:
+# -a algorithm  1 - random character password generation
+# -M mode
+#       S      generator must use special symbol set for every generated password.
+#       N      generator must use numeral symbol set for every generated password.
+#       C      generator must use capital symbol set for every generated password.
+#       L      generator  must  use  small  letters symbol set for every generated password
+#
+# -n num_of_pass
+# -m min_pass_len
+# -x max_pass_len
+# -E exclude characters
+#
+# Generate n 10 passwords with a lenght between 12-18 characters, for
+# longer and more secure passwords you should use `apg` manually.
+apg -a 1 -M SNCL -n 10 -m 12 -x 18 -E "${char_exclude}"
+```
+
+Now we just need to run the command the `./pwgen.sh` for launch apg with selected options.
+
+```term
+./pwgen.sh
+Wygz$*a}m9NL(!Zd%Y
+6:nu{N~2%7Zd]j6C?
+K|uEw5gKqSd}R;x
+K4<@+:C^M8*5Njcb]r
+J*7&K[b<<sUg
+tY.:XNALt24&Mj
+quGMYuDU]6>~
+jR_kuwxUkft<M4
+Lk_..c/D)j]6bR
+y3Nuu/VD22=Y
+```
+
+Now let's look at password security in terms of [entropy bits](https://en.wikipedia.org/wiki/Password_strength#Entropy_as_a_measure_of_password_strength), entropy bits is a term for measure the strength of a password as the number of attempts to find the password, assuming knowledge of the character set the password uses (like in a dictionary attack). You can see an excellent explanation here: [Bits of Entropy - The Importance of Complex Passwords](https://www.securitycentric.com.au/blog/bits-of-entropy-the-importance-of-complex-passwords).
 
 For the test we will use the utility on this website: http://rumkin.com/tools/password/passchk.php
 
@@ -236,7 +284,7 @@ Of course, [this is not the only method of generating strong passwords](https://
 
 * Where possible use Two-factor authentication (2FA) in addition to the password.
 
-* If you use a password manager, it is best to place the database in a USB pendrive and connect it only when needed, a great method is to install password manager software on an [Air Gapped Computer](https://www.howtogeek.com/687792/the-ultimate-defense-what-is-an-air-gapped-computer/).
+* If you use a password manager, it is best to place the database in a USB pendrive and connect it only when needed, another great method is to install password manager software on an [Air Gapped Computer](https://www.howtogeek.com/687792/the-ultimate-defense-what-is-an-air-gapped-computer/).
 
 * In most cases it is not necessary to change passwords periodically, change them only in case you suspect that they have been compromised, see: [Schneier on Security - Choosing Secure Passwords](https://www.schneier.com/blog/archives/2014/03/choosing_secure_1.html)
 
