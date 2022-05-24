@@ -4,7 +4,7 @@ title: "Android FOSS Apps List"
 date: 2022-04-28
 ---
 
-Update: 23 May 2022
+Update: 24 May 2022
 
 List of open source Android applications for "de-google, de-samsung, de-microsoft, de-nsa, de-china-malware etc. etc." your mobile phone, as always, the list is written in a (KISS) simple way.
 Feel free to [contact me](https://brainfucksec.github.io/contacts) to add applications or modify the list.
@@ -15,7 +15,7 @@ The list does not include FOSS apps that are present only on Google Play Store, 
 
 C'mon Signal put this app available on F-Droid and we will all be happier :)
 
-Also not included are apps that have not been updated for a long time, useless apps (like Wi-Fi On/OFF, or show my IP address (?)) ...and apps that I don't like :)
+Also not included are apps that have not been updated for a long time (about 1 year) with some exceptions, useless apps (like Wi-Fi On/OFF, or show my IP address (?)) ...and apps that I don't like :)
 
 ## Table of Contents
 
@@ -178,6 +178,7 @@ Also not included are apps that have not been updated for a long time, useless a
 * [Element](https://element.io/get-started#downloads)
 * [FluffyChat](https://fluffychat.im/)
 * [SchildiChat](https://schildi.chat/android/)
+* [Tinelix IRC](https://github.com/tinelix/irc-client-for-android)
 
 ## Launcher
 
@@ -211,10 +212,14 @@ Also not included are apps that have not been updated for a long time, useless a
 * [BlackHole](https://github.com/Sangwan5688/BlackHole)
 * [mpv-android](https://github.com/mpv-android/mpv-android)
 * [Music Player GO](https://github.com/enricocid/Music-Player-GO)
+* [SicMu Player](https://gitlab.com/souch/SMP)
+* [RetroMusicPlayer](https://github.com/RetroMusicPlayer/RetroMusicPlayer)
+* [Harmonoid](https://github.com/harmonoid/harmonoid)
 
 ### YouTube Alternative Client
 
 * [NewPipe](https://newpipe.net/)
+* [NewPipe SponsorBlock](https://github.com/polymorphicshade/NewPipe)
 * [LibreTube](https://github.com/Libre-tube/LibreTube)
 * [MusicPiped](https://github.com/deep-gaurav/MusicPiped)
 * [SkyTube](https://skytube-app.com/)
@@ -222,6 +227,10 @@ Also not included are apps that have not been updated for a long time, useless a
 * [SongTube](https://github.com/SongTube/SongTube-App)
 * [Spotube](https://github.com/KRTirtho/spotube#mobile)
 * [SpotiFlyer](https://shabinder.github.io/SpotiFlyer/) - Download music from Spotify, YouTube and others.
+
+### Streaming Client
+
+* [CloudStream-3](https://github.com/LagradOst/CloudStream-3)
 
 ## Network Security
 
@@ -246,6 +255,7 @@ Also not included are apps that have not been updated for a long time, useless a
 * [SilentNotes](https://www.martinstoeckli.ch/silentnotes/)
 * [Quillnote](https://qosp.org/#/)
 * [Tasks](https://tasks.org/)
+* [Notedge](https://github.com/kigya/NotedgeApp)
 
 ## Password Manager
 
@@ -305,6 +315,10 @@ Also not included are apps that have not been updated for a long time, useless a
 * [Bitmask](https://f-droid.org/en/packages/se.leap.bitmaskclient/)
 
 ---
+
+**Special thanks to all the people who show me the applications to be included and who help me to improve the list!**
+
+<br>
 
 ### Donations
 
