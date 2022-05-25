@@ -4,7 +4,7 @@ title: "Android FOSS Apps List"
 date: 2022-04-28
 ---
 
-Update: 24 May 2022
+Update: 25 May 2022
 
 List of open source Android applications for "de-google, de-samsung, de-microsoft, de-nsa, de-china-malware etc. etc." your mobile phone, as always, the list is written in a (KISS) simple way.
 Feel free to [contact me](https://brainfucksec.github.io/contacts) to add applications or modify the list.
@@ -135,7 +135,7 @@ Also not included are apps that have not been updated for a long time (about 1 y
 ## Email Client
 
 * [K-9 Mail](https://k9mail.app/)
-* [FairEmail](https://github.com/M66B/FairEmail) - Currently discontinued, see: [FairEmail & NetGuard Discontinued](https://old.reddit.com/r/fossdroid/comments/uso4js/fairemail_netguard_discontinued/)
+* [FairEmail](https://github.com/M66B/FairEmail)
 * [ProtonMail](https://protonmail.com/) - Can redirect traffic to Google and Quad9 DNS, see: [alternative routing](https://protonmail.com/blog/anti-censorship-alternative-routing/)
 * [Tutanota](https://tutanota.com/#download)
 * [SimpleEmail](https://framagit.org/dystopia-project/simple-email)
@@ -238,7 +238,6 @@ Also not included are apps that have not been updated for a long time (about 1 y
 * [WireGuard](https://f-droid.org/en/packages/com.wireguard.android/)
 * [Orbot](https://github.com/guardianproject/orbot)
 * [I2P](https://geti2p.net/en/download#android)
-* [NetGuard](https://netguard.me/) - Currently discontinued, see: [FairEmail & NetGuard Discontinued](https://old.reddit.com/r/fossdroid/comments/uso4js/fairemail_netguard_discontinued/)
 * [AfWall+](https://github.com/ukanth/afwall)
 * [Blokada](https://blokada.org/)
 * [AdAway](https://adaway.org/)
