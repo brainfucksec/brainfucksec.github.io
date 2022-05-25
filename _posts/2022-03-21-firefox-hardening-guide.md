@@ -4,7 +4,7 @@ title: "Firefox Hardening Guide"
 date: 2022-03-21
 ---
 
-Update: 22 May 2022
+Update: 25 May 2022
 
 Tested on Firefox: `Version 100.0.x (Linux)`
 
@@ -17,7 +17,6 @@ Tested on Firefox: `Version 100.0.x (Linux)`
 * [Firefox Preferences](#firefox-preferences)
 * [about:config](#aboutconfig)
 * [user.js](#userjs)
-* [Disabled Options](#disabled-options)
 * [uBlock Origin](#ublock-origin)
 * [DoH (DNS over HTTPS)](#doh-dns-over-https)
 * [Multiple profiles and Containers](#multiple-profiles-and-containers)
@@ -37,15 +36,7 @@ When you visit a web page, your browser voluntarily sends information about its 
 
 [What is browser fingerprinting? - amiunique.org](https://www.amiunique.org/faq)
 
-This is my personal configuration for **hardening Mozilla Firefox while maintaining usability**, this mean that some options that help protect against fingerprinting are not enabled by default, for more information see: [Disabled Options](#disabled-options).
-
-With this configuration I try to setup a Browser for better security but without breaking many things, then if you want greater anonymity and privacy see:
-
-[Tor Browser](https://www.torproject.org/)
-
-[LibreWolf](https://librewolf.net/)
-
-In Computer security the "100% secure setup" does not exist, what you can do though, is reduce the amount of data collected by entities like Google, Meta etc. and reduce attack vectors.
+In the area of cybersecurity the "100% secure setup" does not exist, what you can do though, is reduce the amount of data collected by entities like Google, Meta, Cloudflare etc. and reduce attack vectors.
 
 ## Backup Firefox profile
 
@@ -93,18 +84,18 @@ You can use the file [user.js](#userjs) to set all the parameters automatically 
 * Crash Reports
 * Captive Portal Detection / Network Checks
 * Safe Browsing
-* Network: DNS / Proxy / IPv6
-* Search Bar: Suggestions / Autofill
+* Network: DNS, Proxy, IPv6
+* Search Bar: Suggestions, Autofill
 * Passwords
 * Disk Cache / Memory
 * HTTPS / SSL/TLS / OSCP / CERTS
 * Headers / Referers
-* Audio/Video (WebRTC, WebGL)
+* Audio/Video: WebRTC, WebGL, DRM
 * Downloads
 * Cookies
 * UI Features
 * Shutdown Settings
-* Fingerprinting (RFP) //disabled
+* Fingerprinting (RFP)
 
 
 On the search bar digit: `about:config` and set the parameters as follows:
@@ -300,7 +291,7 @@ On the search bar digit: `about:config` and set the parameters as follows:
 
     `browser.safebrowsing.allowOverride = false`
 
-### Network: (DNS / Proxy / IPv6)
+### Network: DNS, Proxy, IPv6
 
 * Disable link prefetching:
 
@@ -338,7 +329,7 @@ On the search bar digit: `about:config` and set the parameters as follows:
 
     `network.IDN_show_punycode = true`
 
-### Search Bar: Suggestions / Autofill
+### Search Bar: Suggestions, Autofill
 
 * Disable search suggestions:
 
@@ -483,7 +474,7 @@ On the search bar digit: `about:config` and set the parameters as follows:
 
     `network.http.referer.XOriginTrimmingPolicy = 2`
 
-### Audio/Video (WebRTC, WebGL)
+### Audio/Video: WebRTC, WebGL, DRM
 
 * Disable WebRTC:
 
@@ -576,7 +567,7 @@ On the search bar digit: `about:config` and set the parameters as follows:
 
     `privacy.sanitize.timeSpan = 0`
 
-### Fingerprinting (RFP): disabled in my `user.js`, see: [Disabled Options](#disabled-options)
+### Fingerprinting (RFP)
 
 * Enable RFP:
 
@@ -603,10 +594,6 @@ On the search bar digit: `about:config` and set the parameters as follows:
 * Disable using system colors:
 
     `browser.display.use_system_colors = false` [Default: false [Non-Windows]]
-
-## Disabled Options
-
-Compared to other similar configurations such as [pyllyukko](https://github.com/pyllyukko/user.js) or [arkenfox](https://github.com/arkenfox/user.js) user.js, there are several options disabled, some of these are commented in the various sections of the [user.js](#user.js) file, these are the options you can activate for greater protection like [Firefox Resist Fingerprinting (RFP)](https://support.mozilla.org/en-US/kb/firefox-protection-against-fingerprinting), but they disable some basic functionality like audio/video libraries or other things you need, so be careful. Also I excluded the `default` entries.
 
 ## user.js
 
