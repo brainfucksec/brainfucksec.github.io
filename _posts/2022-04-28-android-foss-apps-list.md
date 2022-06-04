@@ -4,7 +4,7 @@ title: "Android FOSS Apps List"
 date: 2022-04-28
 ---
 
-Update: 25 May 2022
+Update: 04 June 2022
 
 List of open source Android applications for "de-google, de-samsung, de-microsoft, de-nsa, de-china-malware etc. etc." your mobile phone, as always, the list is written in a (KISS) simple way.
 Feel free to [contact me](https://brainfucksec.github.io/contacts) to add applications or modify the list.
@@ -23,10 +23,12 @@ Also not included are apps that have not been updated for a long time (about 1 y
 * [App Stores](#app-stores)
 * [App Repositories](#app-repositories)
 * [2FA](#2fa)
+* [Alternative Network](#alternative-network)
 * [Browser](#browser)
 * [Calendar](#calendar)
 * [Camera](#camera)
 * [Clock](#clock)
+* [Cloud](#cloud)
 * [Contacts](#contacts)
 * [Documents Reader](#documents-reader)
 * [Email Client](#email-client)
@@ -66,8 +68,8 @@ Also not included are apps that have not been updated for a long time (about 1 y
 
 ## App Stores
 
-* [F-Droid](https://f-droid.org/) - Some security issues, see: [F-Droid Issues](https://wonderfall.dev/fdroid-issues/)
 * [Droid-ify](https://f-droid.org/packages/com.looker.droidify/) - Recommended F-Droid alternative.
+* [F-Droid](https://f-droid.org/) - Some security issues, see: [F-Droid Issues](https://wonderfall.dev/fdroid-issues/)
 * [Fossdroid](https://fossdroid.com/)
 * [Aurora Store](https://auroraoss.com/#aurora-droid) - Alternative Google Playstore Client
 
@@ -87,6 +89,12 @@ Also not included are apps that have not been updated for a long time (about 1 y
 * [Authenticator Pro](https://github.com/jamie-mh/AuthenticatorPro)
 * [Etopa](https://github.com/ltheinrich/etopa)
 
+## Alternative Network
+
+* [Orbot](https://github.com/guardianproject/orbot)
+* [I2P](https://geti2p.net/en/download#android)
+* [Freenet Mobile](https://github.com/freenet-mobile/app)
+
 ## Browser
 
 * [Bromite](https://github.com/bromite/bromite)
@@ -94,7 +102,6 @@ Also not included are apps that have not been updated for a long time (about 1 y
 * [Mulch](https://gitlab.com/divested-mobile/mulch)
 * [Tor Browser](https://www.torproject.org/download/#android)
 * [Privacy Browser](https://www.stoutner.com/privacy-browser-android/)
-* [DuckDuckGo Privacy Browser](https://duckduckgo.com/app)
 * [Fennec F-Droid](https://f-droid.org/en/packages/org.mozilla.fennec_fdroid/)
 * [FOSS Browser](https://github.com/scoute-dich/browser)
 * [monocles browser](https://codeberg.org/Arne/monocles_browser)
@@ -117,6 +124,12 @@ Also not included are apps that have not been updated for a long time (about 1 y
 * [Simple alarm clock](https://github.com/yuriykulikov/AlarmClock)
 * [Clock](https://github.com/qw123wh/new-clock-fdroid)
 
+## Cloud
+
+* [Nextcloud](https://github.com/nextcloud/android)
+* [syncthing-android](https://github.com/syncthing/syncthing-android)
+
+
 ## Contacts
 
 * [SimpleContacts](https://github.com/SimpleMobileTools/Simple-Contacts)
@@ -136,10 +149,15 @@ Also not included are apps that have not been updated for a long time (about 1 y
 
 * [K-9 Mail](https://k9mail.app/)
 * [FairEmail](https://github.com/M66B/FairEmail)
-* [ProtonMail](https://protonmail.com/) - Can redirect traffic to Google and Quad9 DNS, see: [alternative routing](https://protonmail.com/blog/anti-censorship-alternative-routing/)
+* [ProtonMail](https://protonmail.com/) - Can redirect traffic to Google and Quad9 DNS, see: [Why does the PM Bridge use Google and Quad9 DNS?](https://libredd.it/r/ProtonMail/comments/n3a10b/why_does_the_pm_bridge_use_google_and_quad9_dns/)
 * [Tutanota](https://tutanota.com/#download)
 * [SimpleEmail](https://framagit.org/dystopia-project/simple-email)
 * [monocles mail](https://codeberg.org/Arne/monocles_mail)
+
+### Email Anonymous Forwarding
+
+* [SimpleLogin](https://github.com/simple-login/Simple-Login-Android)
+* [AnonAddy Android](https://gitlab.com/Stjin/anonaddy-android)
 
 ## Exif/Metadata Cleaner
 
@@ -207,14 +225,18 @@ Also not included are apps that have not been updated for a long time (about 1 y
 
 ## Media Player
 
+* [Music Player GO](https://github.com/enricocid/Music-Player-GO)
 * [VLC](https://www.videolan.org/vlc/download-android.html)
 * [Simple Music Player](https://github.com/SimpleMobileTools/Simple-Music-Player)
-* [BlackHole](https://github.com/Sangwan5688/BlackHole)
 * [mpv-android](https://github.com/mpv-android/mpv-android)
-* [Music Player GO](https://github.com/enricocid/Music-Player-GO)
-* [SicMu Player](https://gitlab.com/souch/SMP)
 * [RetroMusicPlayer](https://github.com/RetroMusicPlayer/RetroMusicPlayer)
+* [Metro](https://github.com/MuntashirAkon/Metro)
+* [SicMu Player](https://gitlab.com/souch/SMP)
 * [Harmonoid](https://github.com/harmonoid/harmonoid)
+* [BlackHole](https://github.com/Sangwan5688/BlackHole)
+* [Odyssey](https://github.com/gateship-one/odyssey)
+* [Auxio](https://github.com/OxygenCobalt/Auxio)
+* [Nova](https://github.com/nova-video-player/aos-AVP)
 
 ### YouTube Alternative Client
 
@@ -236,11 +258,10 @@ Also not included are apps that have not been updated for a long time (about 1 y
 
 * [OpenVPN for Android](https://ics-openvpn.blinkt.de/)
 * [WireGuard](https://f-droid.org/en/packages/com.wireguard.android/)
-* [Orbot](https://github.com/guardianproject/orbot)
-* [I2P](https://geti2p.net/en/download#android)
 * [AfWall+](https://github.com/ukanth/afwall)
 * [Blokada](https://blokada.org/)
 * [AdAway](https://adaway.org/)
+* [InviZible Pro](https://github.com/Gedsh/InviZible)
 
 ## Notes
 
@@ -299,18 +320,17 @@ Also not included are apps that have not been updated for a long time (about 1 y
 * [PilferShushJammer](https://github.com/kaputnikGo/PilferShushJammer)
 * [QR Scanner](https://github.com/SecUSo/privacy-friendly-qr-scanner)
 * [Yet Another Call Blocker](https://gitlab.com/xynngh/YetAnotherCallBlocker)
-* [InviZible Pro](https://github.com/Gedsh/InviZible)
 * [Exodus](https://github.com/Exodus-Privacy/exodus-android-app)
 * [Wasted](https://github.com/x13a/Wasted)
 * [PrivacyBlur](https://github.com/MATHEMA-GmbH/privacyblur)
 
 ## VPN Client
 
+* [Mullvad VPN](https://mullvad.net/en/download/android/)
+* [ProtonVPN](https://protonvpn.com/download-android) - Can redirect traffic to Google and Quad9 DNS, see: [Why does the PM Bridge use Google and Quad9 DNS?](https://libredd.it/r/ProtonMail/comments/n3a10b/why_does_the_pm_bridge_use_google_and_quad9_dns/)
 * [IVPN](https://www.ivpn.net/apps-android/)
 * [CalyxVPN](https://f-droid.org/en/packages/org.calyxinstitute.vpn/)
 * [RiseupVPN](https://riseup.net/en/vpn/android)
-* [ProtonVPN](https://protonvpn.com/download-android)
-* [Mullvad VPN](https://mullvad.net/en/download/android/)
 * [Bitmask](https://f-droid.org/en/packages/se.leap.bitmaskclient/)
 
 ---
