@@ -4,7 +4,7 @@ title: "A Good Privacy List"
 date: 2022-03-20
 ---
 
-Update: 29 Apr 2022
+Update: 11 Jun 2022
 
 <br>
 
@@ -252,7 +252,6 @@ I hope this modest work can help to defende you and fight the censorship and opp
 
 * [SearXNG](https://github.com/searxng/searxng)
 * [Metager](https://metager.org/)
-* [DuckDuckGo](https://duckduckgo.com/)
 * [Whoogle Search](https://github.com/benbusby/whoogle-search)
 * [Oscobo](https://www.oscobo.com/)
 * [Gigablast](https://gigablast.com/)
