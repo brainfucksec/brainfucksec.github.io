@@ -4,9 +4,9 @@ title: "Firefox Hardening Guide"
 date: 2022-03-21
 ---
 
-Update: 01 June 2022
+Update: 29 June 2022
 
-Tested on Firefox: `Version 101.0.x (Linux)`
+Tested on Firefox: `Version 102.0.x (Linux)`
 
 <br>
 
