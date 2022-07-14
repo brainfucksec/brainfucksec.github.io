@@ -4,12 +4,12 @@ title: "Android FOSS Apps List"
 date: 2022-04-28
 ---
 
-Update: 04 June 2022
+Update: 14 July 2022
 
 List of open source Android applications for "de-google, de-samsung, de-microsoft, de-nsa, de-china-malware etc. etc." your mobile phone, as always, the list is written in a (KISS) simple way.
 Feel free to [contact me](https://brainfucksec.github.io/contacts) to add applications or modify the list.
 
-The links in the list are related to the application website (if exists) or to the source code repository, I suggest to install [Droid-ify](https://github.com/NeoApplications/Neo-Store) which already has the repositories of Guardian Project, IzzyOnDroid and other applications such as Bromite and NewPipe, and search apps from there.
+The links in the list are related to the application website (if exists) or to the source code repository, I suggest to install [Droid-ify](https://github.com/Iamlooker/Droid-ify) or [Neo Store](https://github.com/NeoApplications/Neo-Store) which already has the repositories of Guardian Project, IzzyOnDroid and other applications such as Bromite and NewPipe, and search apps from there.
 
 The list does not include FOSS apps that are present only on Google Play Store, regarding Signal you can download it directly from the website here: <https://signal.org/android/apk/>
 
@@ -68,7 +68,8 @@ Also not included are apps that have not been updated for a long time (about 1 y
 
 ## App Stores
 
-* [Droid-ify](https://f-droid.org/packages/com.looker.droidify/) - Recommended F-Droid alternative.
+* [Droid-ify](https://github.com/Iamlooker/Droid-ify) - Recommended F-Droid alternative
+* [Neo Store](https://github.com/NeoApplications/Neo-Store) - Droid-ify Fork
 * [F-Droid](https://f-droid.org/) - Some security issues, see: [F-Droid Issues](https://wonderfall.dev/fdroid-issues/)
 * [Fossdroid](https://fossdroid.com/)
 * [Aurora Store](https://auroraoss.com/#aurora-droid) - Alternative Google Playstore Client
@@ -111,6 +112,7 @@ Also not included are apps that have not been updated for a long time (about 1 y
 * [Simple Calendar](https://github.com/SimpleMobileTools/Simple-Calendar)
 * [Etar Calendar](https://github.com/Etar-Group/Etar-Calendar)
 * [DAVx5](https://www.davx5.com/)
+* [Note Calendar](https://github.com/Sztorm/NoteCalendar)
 
 ## Camera
 
@@ -128,7 +130,6 @@ Also not included are apps that have not been updated for a long time (about 1 y
 
 * [Nextcloud](https://github.com/nextcloud/android)
 * [syncthing-android](https://github.com/syncthing/syncthing-android)
-
 
 ## Contacts
 
@@ -176,6 +177,7 @@ Also not included are apps that have not been updated for a long time (about 1 y
 * [Snapdrop](https://github.com/fm-sys/snapdrop-android)
 * [Sharik](https://github.com/marchellodev/sharik)
 * [wormhole-william-mobile](https://github.com/psanford/wormhole-william-mobile)
+* [Seafile](https://github.com/haiwen/seadroid)
 
 ## Gallery
 
@@ -225,6 +227,7 @@ Also not included are apps that have not been updated for a long time (about 1 y
 
 ## Media Player
 
+* [Apollo](https://github.com/nuclearfog/Apollo-Music)
 * [Music Player GO](https://github.com/enricocid/Music-Player-GO)
 * [VLC](https://www.videolan.org/vlc/download-android.html)
 * [Simple Music Player](https://github.com/SimpleMobileTools/Simple-Music-Player)
@@ -249,6 +252,7 @@ Also not included are apps that have not been updated for a long time (about 1 y
 * [SongTube](https://github.com/SongTube/SongTube-App)
 * [Spotube](https://github.com/KRTirtho/spotube#mobile)
 * [SpotiFlyer](https://shabinder.github.io/SpotiFlyer/) - Download music from Spotify, YouTube and others.
+* [Musify](https://github.com/gokadzev/Musify)
 
 ### Streaming Client
 
@@ -262,6 +266,8 @@ Also not included are apps that have not been updated for a long time (about 1 y
 * [Blokada](https://blokada.org/)
 * [AdAway](https://adaway.org/)
 * [InviZible Pro](https://github.com/Gedsh/InviZible)
+* [NetGuard](https://www.netguard.me/)
+* [RethinkDNS](https://www.rethinkdns.com/)
 
 ## Notes
 
@@ -302,6 +308,7 @@ Also not included are apps that have not been updated for a long time (about 1 y
 ## Social Network
 
 * [Mastodon](https://apt.izzysoft.de/fdroid/index/apk/org.joinmastodon.android)
+* [SubwayTooter](https://github.com/tateisu/SubwayTooter)
 * [Nitter](https://gitlab.com/Plexer0/Nitter-Android)
 * [Fritter](https://fritter.cc/)
 * [Shitter](https://github.com/nuclearfog/Shitter)
@@ -323,6 +330,7 @@ Also not included are apps that have not been updated for a long time (about 1 y
 * [Exodus](https://github.com/Exodus-Privacy/exodus-android-app)
 * [Wasted](https://github.com/x13a/Wasted)
 * [PrivacyBlur](https://github.com/MATHEMA-GmbH/privacyblur)
+* [DroidFS](https://forge.chapril.org/hardcoresushi/DroidFS)
 
 ## VPN Client
 
