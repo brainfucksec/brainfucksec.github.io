@@ -4,7 +4,7 @@ title: "A Good Privacy List"
 date: 2022-03-20
 ---
 
-Update: 11 Jun 2022
+Update: 14 Jul 2022
 
 <br>
 
@@ -31,6 +31,7 @@ Update: 11 Jun 2022
 * [Torrent Clients](#torrent-clients)
 * [VPNs](#vpns)
 * [Web Browsers](#web-browsers)
+* [Wikipedia Alternatives](#wikipedia-alternatives)
 * [YouTube Alternatives](#youtube-alternatives)
 * [Other Privacy and Security Resources](#other-privacy-and-security-resources)
 
@@ -77,11 +78,13 @@ I hope this modest work can help to defende you and fight the censorship and opp
 * [Leon](https://getleon.ai/)
 * [Microft](https://mycroft.ai/)
 * [OpenAI](https://openai.com/)
+* [Stephanie](https://slapbot.github.io/)
 
 ## Android App Stores
 
 * [F-Droid](https://f-droid.org/) - Some security issues, see: [F-Droid Issues](https://wonderfall.dev/fdroid-issues/)
-* [Droid-ify](https://f-droid.org/packages/com.looker.droidify/) - Recommended F-Droid alternative.
+* [Droid-ify](https://f-droid.org/packages/com.looker.droidify/) - Recommended F-Droid Alternative
+* [Neo Store](https://github.com/NeoApplications/Neo-Store) - Fork of Droid-ify
 * [Fossdroid](https://fossdroid.com/)
 * [Aurora Store](https://auroraoss.com/#aurora-droid) - Alternative Google Playstore Client
 
@@ -118,7 +121,6 @@ I hope this modest work can help to defende you and fight the censorship and opp
 * [Tutanota](https://tutanota.com/)
 * [Autistici](https://www.autistici.org/services/mail)
 * [Disroot Email](https://disroot.org/en/services/email)
-* [Lavabit](https://lavabit.com/)
 * [Posteo](https://posteo.de/en)
 * [Runbox](https://runbox.com/)
 * [Migadu](https://www.migadu.com/)
@@ -150,7 +152,6 @@ I hope this modest work can help to defende you and fight the censorship and opp
 * [Anoxinon.de](https://share.anoxinon.de/)
 * [Disroot file uploader](https://upload.disroot.org/)
 * [Cryptpad](https://cryptpad.fr/)
-* [AnonArchive](https://anonarchive.org/)
 
 ## Git Hosting
 
@@ -202,6 +203,9 @@ I hope this modest work can help to defende you and fight the censorship and opp
 * [Fedora](https://getfedora.org/)
 * [Debian](https://www.debian.org/)
 * [Arch Linux](https://archlinux.org/)
+* [Gentoo Linux](https://www.gentoo.org/)
+* [openSUSE](https://www.opensuse.org/)
+* [NixOS](https://nixos.org/)
 
 ### Security-Focused Operating Systems
 
@@ -301,13 +305,17 @@ I hope this modest work can help to defende you and fight the censorship and opp
 * [Tor Browser for Android](https://www.torproject.org/download/#android)
 * [Bromite](https://www.bromite.org/)
 * [Mull](https://f-droid.org/en/packages/us.spotco.fennec_dos/)
+* [Mulch](https://gitlab.com/divested-mobile/mulch)
 * [Privacy Browser](https://www.stoutner.com/privacy-browser-android/)
 * [Fennec F-Droid](https://f-droid.org/en/packages/org.mozilla.fennec_fdroid/)
 * [ungoogled-chromium-android](https://github.com/ungoogled-software/ungoogled-chromium-android#f-droid-repository)
-* [DuckDuckGo Privacy Browser](https://duckduckgo.com/app)
 * [FOSS Browser](https://github.com/scoute-dich/browser)
 * [monocles browser](https://codeberg.org/Arne/monocles_browser)
 * [Onion Browser](https://itunes.apple.com/us/app/onion-browser/id519296448) (iOS)
+
+## Wikipedia Alternatives
+
+* [Wikiless](https://wikiless.org/)
 
 ## YouTube Alternatives
 
@@ -336,7 +344,7 @@ I hope this modest work can help to defende you and fight the censorship and opp
 ## Other Privacy and Security Resources
 
 * [Security List](https://security-list.js.org/#/)
-* [paulaime/awesome-privacy](https://github.com/paulaime/Awesome-Privacy)
+* [pluja/awesome-privacy](https://github.com/pluja/awesome-privacy)
 * [Privacy Blogs List](https://lemmy.ca/post/14161)
 * [The Hitchhiker’s Guide to Online Anonymity](https://anonymousplanet-ng.org/)
 * [Surveillance Self-Defence](https://ssd.eff.org/)
