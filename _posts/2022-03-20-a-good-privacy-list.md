@@ -4,7 +4,7 @@ title: "A Good Privacy List"
 date: 2022-03-20
 ---
 
-Update: 14 Jul 2022
+Update: 14 July 2022
 
 <br>
 
