@@ -52,7 +52,7 @@ Under **Search engine** section there are some default search engines you can se
 
 ![alt text](uploads/img/posts/bromite-android-browser/03-search-engine.png)
 
-You can also add our favorite search engine which implements [OpenSearch](https://developer.mozilla.org/en-US/docs/Web/OpenSearch), to do so, perform a search with the chosen search engine, after which it will be available in the settings, in the example, I added a SearXNG public instance:
+You can also add our favorite search engine which implements [OpenSearch](https://developer.mozilla.org/en-US/docs/Web/OpenSearch), to do so, perform a search with the chosen search engine, after which it will be available in the settings, in the example, I added a [SearXNG](https://searx.space) public instance:
 
 ![alt text](uploads/img/posts/bromite-android-browser/04-search-engine-custom.png)
 
@@ -159,6 +159,8 @@ Chromium Project: [https://www.chromium.org/Home/](https://www.chromium.org/Home
 GitHub Bromite: [https://github.com/bromite/bromite](https://github.com/bromite/bromite)
 
 GNU General Public License: [https://www.gnu.org/licenses/gpl-3.0.en.html](https://www.gnu.org/licenses/gpl-3.0.en.html)
+
+SearXNG Metasearch engine: [https://github.com/searxng/](https://github.com/searxng/)
 
 ## Disclaimer
 
