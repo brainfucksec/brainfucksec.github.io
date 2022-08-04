@@ -14,6 +14,7 @@ date: 2022-08-04
 * [System WebView](#systemwebview)
 * [Other Android Privacy Browsers](#other-android-privacy-browsers)
 * [Resources](#resources)
+* [Credits](#credits)
 
 ## What is Bromite?
 
@@ -128,32 +129,37 @@ See: [What Is the Android System WebView and What Can You Do With It?](https://g
 Bromite is a great project, however there are other good open source browsers for Android:
 
 [Tor Browser](https://www.torproject.org/download/#android) - Tor Browser for Android.
+
 [Fennec F-Droid](https://f-droid.org/en/packages/org.mozilla.fennec_fdroid/) - Fennec F-Droid is based on the latest Firefox release (codenamed Fenix).
+
 [Mull](https://github.com/divested-mobile/mull-fenix) - A privacy hardened browser, fork of Fennec F-Droid.
+
 [Privacy Browser](https://www.stoutner.com/privacy-browser-android/) - An open source Android web browser focused on user privacy.
+
 [FOSS Browser](https://github.com/scoute-dich/browser) - A fully free (as in freedom) open source Android browser.
+
 [monocles browser](https://codeberg.org/Arne/monocles_browser) - A open source privacy respecting android browser.
+
 [Vanadium](https://github.com/GrapheneOS/Vanadium) - Privacy and security enhanced releases of Chromium for GrapheneOS.
 
 ## Resources
 
-Bromite Official Website: https://www.bromite.org/
+Bromite Official Website: [https://www.bromite.org](https://www.bromite.org)
 
-GitHub Project: https://github.com/bromite/bromite
+GitHub Project: [https://github.com/bromite/bromite](https://github.com/bromite/bromite)
 
-Bromite FAQ: https://github.com/bromite/bromite/blob/master/FAQ.md
+Bromite FAQ: [https://github.com/bromite/bromite/blob/master/FAQ.md](https://github.com/bromite/bromite/blob/master/FAQ.md)
 
-Bromite wiki: https://github.com/bromite/bromite/wiki
+Bromite wiki: [https://github.com/bromite/bromite/wiki](https://github.com/bromite/bromite/wiki)
+
+## Credits
+
+Chromium Project: [https://www.chromium.org/Home/](https://www.chromium.org/Home/)
+
+GitHub Bromite: [https://github.com/bromite/bromite](https://github.com/bromite/bromite)
+
+GNU General Public License: [https://www.gnu.org/licenses/gpl-3.0.en.html](https://www.gnu.org/licenses/gpl-3.0.en.html)
 
 ## Disclaimer
 
 This is a guide on how to use Bromite Web Browser for Android, I am not part of the team nor am I affiliated in any way with the [Bromite project](https://github.com/bromite/bromite).
-
-## Credits
-
-Chromium Project: https://www.chromium.org/Home/
-
-GitHub Bromite: https://github.com/bromite/bromite
-
-GNU General Public License: https://www.gnu.org/licenses/gpl-3.0.en.html
-
