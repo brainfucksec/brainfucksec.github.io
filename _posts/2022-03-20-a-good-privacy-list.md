@@ -4,7 +4,7 @@ title: "A Good Privacy List"
 date: 2022-03-20
 ---
 
-Update: 14 July 2022
+Update: 31 August 2022
 
 <br>
 
@@ -100,7 +100,10 @@ I hope this modest work can help to defende you and fight the censorship and opp
 * [ProtonDrive](https://account.protonmail.com/login)
 * [Filen](https://filen.io/)
 * [Nextcloud](https://nextcloud.com/)- See: [Nextcloud Providers](https://github.com/nextcloud/providers)
+* [Seafile](https://www.seafile.com/en/home/)
 * [Cozy](https://cozy.io/en/privacy/)
+* [Peergos](https://peergos.org/)
+* [Internxt](https://internxt.com/)
 
 ## DNS Servers
 
@@ -112,6 +115,7 @@ I hope this modest work can help to defende you and fight the censorship and opp
 * [CCC - DNS](https://www.ccc.de/censorship/dns-howto/)
 * [Blahdns](https://blahdns.com/)
 * [Mullvad DNS](https://mullvad.net/en/help/dns-over-https-and-dns-over-tls/)
+* [NextDNS](https://nextdns.io/)
 
 ## Email Providers
 
@@ -144,6 +148,7 @@ I hope this modest work can help to defende you and fight the censorship and opp
 
 * [GnuPG](https://gnupg.org/)
 * [Cryptomator](https://cryptomator.org/)
+* [age](https://github.com/FiloSottile/age)
 * [Pycocrypt](https://evansu.cc/picocrypt)
 
 ## File Sharing
@@ -152,6 +157,7 @@ I hope this modest work can help to defende you and fight the censorship and opp
 * [Anoxinon.de](https://share.anoxinon.de/)
 * [Disroot file uploader](https://upload.disroot.org/)
 * [Cryptpad](https://cryptpad.fr/)
+* [Espiv files](https://files.espiv.net/)
 
 ## Git Hosting
 
@@ -186,6 +192,7 @@ I hope this modest work can help to defende you and fight the censorship and opp
 
 * [Briar](https://briarproject.org/)
 * [Berty](https://berty.tech/)
+* [Ricochet Refresh](https://www.ricochetrefresh.net/)
 
 ## Maps
 
@@ -206,6 +213,7 @@ I hope this modest work can help to defende you and fight the censorship and opp
 * [Gentoo Linux](https://www.gentoo.org/)
 * [openSUSE](https://www.opensuse.org/)
 * [NixOS](https://nixos.org/)
+* [Alpine Linux](https://www.alpinelinux.org/)
 
 ### Security-Focused Operating Systems
 
@@ -232,6 +240,7 @@ I hope this modest work can help to defende you and fight the censorship and opp
 * [Bitwarden](https://bitwarden.com/)
 * [KeepassXC](https://keepassxc.org/)
 * [Password Safe](https://pwsafe.org/)
+* [Passky](https://passky.org/)
 * [pass](https://www.passwordstore.org/) (Cli)
 * [gopass](https://www.gopass.pw/) (Cli)
 
@@ -289,7 +298,7 @@ I hope this modest work can help to defende you and fight the censorship and opp
 * [CalyxVPN](https://calyxinstitute.org/projects/digital-services/vpn)
 * [IVPN](https://www.ivpn.net/)
 * [AirVPN](https://airvpn.org/)
-* [AzireVPN](https://www.azirevpn.com/)
+* [AzireVPN](https://www.azirevpn.com/) - Some warnings, see: [https://github.com/Lissy93/awesome-privacy/issues/4](https://github.com/Lissy93/awesome-privacy/issues/4)
 
 ## Web Browsers
 
@@ -327,6 +336,8 @@ I hope this modest work can help to defende you and fight the censorship and opp
 ### Desktop Clients
 
 * [FreeTube](https://freetubeapp.io/)
+* [youtube-dl](https://ytdl-org.github.io/youtube-dl/) (Cli/Gui)
+* [yt-dlp](https://github.com/yt-dlp/yt-dlp) - (Cli)
 
 ### Mobile Clients
 
@@ -340,11 +351,13 @@ I hope this modest work can help to defende you and fight the censorship and opp
 
 * [BitTube](https://bittube.video/)
 * [PeerTube](https://joinpeertube.org/en/)
+* [DTube](https://d.tube/)
 
 ## Other Privacy and Security Resources
 
 * [Security List](https://security-list.js.org/#/)
 * [pluja/awesome-privacy](https://github.com/pluja/awesome-privacy)
+* [Lissy93/awesome-privacy](https://github.com/Lissy93/awesome-privacy)
 * [Privacy Blogs List](https://lemmy.ca/post/14161)
 * [The Hitchhiker’s Guide to Online Anonymity](https://anonymousplanet-ng.org/)
 * [Surveillance Self-Defence](https://ssd.eff.org/)
@@ -354,7 +367,6 @@ I hope this modest work can help to defende you and fight the censorship and opp
 * [Defensive Computing Checklist](https://defensivecomputingchecklist.com/)
 * [Watch Your Hack](https://watchyourhack.com/)
 * [Decentralize Today - Privacy Cookbook](https://dt.gl/tag/privacy-cookbook/)
-* [Privacy Respecting Software](https://github.com/Lissy93/personal-security-checklist/blob/master/5_Privacy_Respecting_Software.md)
 
 ### Notes
 
