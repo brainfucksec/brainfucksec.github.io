@@ -4,7 +4,7 @@ title: "Firefox Hardening Guide"
 date: 2022-03-21
 ---
 
-Update: 01 November 2022
+Update: 06 November 2022
 
 <br>
 
@@ -36,7 +36,7 @@ When you visit a web page, your browser voluntarily sends information about its 
 
 In the area of cybersecurity the "100% secure setup" does not exist, what you can do though, is reduce the amount of data collected by entities like Google, Meta, Cloudflare etc. and reduce attack vectors.
 
-## Backup Firefox profile
+## Backup and create Firefox profile
 
 Before changing the configuration, you should make a backup of the default profile, or create a new profile to be used with the new settings.
 
@@ -48,7 +48,7 @@ when "xxxxxxxx" is the ID of your profile.
 
 See: [Back up and restore information in Firefox profiles](https://support.mozilla.org/en-US/kb/back-and-restore-information-firefox-profiles)
 
-If you want to create new profile see: [Create, remove or switch Firefox profiles](https://support.mozilla.org/en-US/kb/profile-manager-create-remove-switch-firefox-profiles?redirectslug=profile-manager-create-and-remove-firefox-profiles&redirectlocale=en-US) (also, see [Multiple profiles and Containers](#multiple-profiles-and-containers) section.
+For create new profiles see: [Create, remove or switch Firefox profiles](https://support.mozilla.org/en-US/kb/profile-manager-create-remove-switch-firefox-profiles?redirectslug=profile-manager-create-and-remove-firefox-profiles&redirectlocale=en-US) also, see [Multiple profiles and Containers](#multiple-profiles-and-containers) section.
 
 ## Firefox Preferences
 
@@ -92,6 +92,7 @@ Anyway, You can use the file [user.js](#userjs) to set all the parameters automa
 * Downloads
 * Cookies
 * UI Features
+* Extensions
 * Shutdown Settings
 * Fingerprinting (RFP)
 
@@ -166,7 +167,7 @@ On the search bar digit: `about:config` and set the parameters as follows:
 
     `intl.accept_languages` = `"en-US, en"`
 
-    `javascript.use_us_english_locale` = `true` [Hidden pref]
+    `javascript.use_us_english_locale` = `true` [HIDDEN PREF]
 
 ### Auto-updates / Recommendations
 
@@ -178,7 +179,7 @@ On the search bar digit: `about:config` and set the parameters as follows:
 
 * Disable addons recommendations (uses Google Analytics):
 
-    `extensions.getAddons.showPane` = `false` [Hidden pref]
+    `extensions.getAddons.showPane` = `false` [HIDDEN PREF]
 
     `extensions.htmlaboutaddons.recommendations.enabled` = `false`
 
@@ -208,9 +209,9 @@ On the search bar digit: `about:config` and set the parameters as follows:
 
     `toolkit.telemetry.firstShutdownPing.enabled` = `false`
 
-    `toolkit.telemetry.coverage.opt-out` = `true` [Hidden pref]
+    `toolkit.telemetry.coverage.opt-out` = `true` [HIDDEN PREF]
 
-    `toolkit.coverage.opt-out` = `true` [Hidden pref]
+    `toolkit.coverage.opt-out` = `true` [HIDDEN PREF]
 
     `toolkit.coverage.endpoint.base` = `""`
 
@@ -318,7 +319,11 @@ On the search bar digit: `about:config` and set the parameters as follows:
 
 * Disable GIO protocols as a potential proxy bypass vectors:
 
-    `network.gio.supported-protocols` = `""` [Hidden pref]
+    `network.gio.supported-protocols` = `""` [HIDDEN PREF]
+
+* Disable using UNC (Uniform Naming Convention) paths (prevent proxy bypass):
+
+    `network.file.disable_unc_paths` = `true` [HIDDEN PREF]
 
 * Remove special permissions for certain mozilla domains:
 
@@ -412,7 +417,11 @@ On the search bar digit: `about:config` and set the parameters as follows:
 
 * Disable page thumbnail collection
 
-    `browser.pagethumbnails.capturing_disabled` = `true` [Hidden pref]
+    `browser.pagethumbnails.capturing_disabled` = `true` [HIDDEN PREF]
+
+* Delete temporary files opened with external apps:
+
+    `browser.helperApps.deleteTempFileOnExit` = `true`
 
 ### HTTPS / SSL/TLS / OSCP / CERTS
 
@@ -537,6 +546,10 @@ On the search bar digit: `about:config` and set the parameters as follows:
 
     `dom.disable_open_during_load` = `true`
 
+* Limit events that can cause a popup:
+
+    `dom.popup_allowed_events` = `click dblclick mousedown pointerdown`
+
 * Disable Pocket extension:
 
     `extensions.pocket.enabled` = `false`
@@ -548,6 +561,24 @@ On the search bar digit: `about:config` and set the parameters as follows:
 * Disable PDJFS scripting:
 
     `pdfjs.enableScripting` = `false`
+
+* Enable Containers and show the UI settings:
+
+    `privacy.userContext.enabled` = `true`
+
+    `privacy.userContext.enabled` = `true`
+
+### Extensions
+
+* Set extensions to work on restricted domains, and their scopeis to "profile+applications":
+
+    `extensions.enabledScopes` = `5` [HIDDEN PREF]
+
+    `extensions.webextensions.restrictedDomains` = `""`
+
+* Display always the installation prompt:
+
+    `extensions.postDownloadThirdPartyPrompt` = `false`
 
 ### Shutdown Settings
 
@@ -698,9 +729,9 @@ Your security depends not only on technical countermeasures, but also on how you
 
 * [arkenfox user.js](https://github.com/arkenfox/user.js)
 
-* [pyllyukko user.js](https://github.com/pyllyukko/user.js/)
-
 * [LibreWolf](https://librewolf.net/)
+
+* [pyllyukko user.js](https://github.com/pyllyukko/user.js/)
 
 * [uBlock Origin](https://ublockorigin.com/)
 
