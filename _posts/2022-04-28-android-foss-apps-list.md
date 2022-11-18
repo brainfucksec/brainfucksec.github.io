@@ -4,51 +4,53 @@ title: "Android FOSS Apps List"
 date: 2022-04-28
 ---
 
-Update: 14 July 2022
+Update: 18 November 2022
 
-List of open source Android applications for "de-google, de-samsung, de-microsoft, de-nsa, de-china-malware etc. etc." your mobile phone, as always, the list is written in a (KISS) simple way.
+List of open source Android applications for "de-google, de-samsung, de-microsoft, de-nsa, de-china-malware etc. etc." your mobile phone, as always, the list is written in a [KISS](https://en.wikipedia.org/wiki/KISS_principle) simple way. The apps in the list are divided by category but within the categories they have no order.
 Feel free to [contact me](https://brainfucksec.github.io/contacts) to add applications or modify the list.
 
-The links in the list are related to the application website (if exists) or to the source code repository, I suggest to install [Droid-ify](https://github.com/Iamlooker/Droid-ify) or [Neo Store](https://github.com/NeoApplications/Neo-Store) which already has the repositories of Guardian Project, IzzyOnDroid and other applications such as Bromite and NewPipe, and search apps from there.
+The links in the list are related to the application website (if exists) or to the source code repository, I suggest to install [Droid-ify](https://github.com/Iamlooker/Droid-ify) or [Neo Store](https://github.com/NeoApplications/Neo-Store) which already has the repositories of [Guardian Project](https://guardianproject.info/), [IzzyOnDroid](https://apt.izzysoft.de/fdroid/) and other applications such as Bromite and NewPipe, and search apps from there.
 
-The list does not include FOSS apps that are present only on Google Play Store, regarding Signal you can download it directly from the website here: <https://signal.org/android/apk/>
+The list does not include FOSS (FLOSS) apps that are present only on Google Play Store, regarding Signal you can download it directly from the website here: <https://signal.org/android/apk/>
 
-C'mon Signal put this app available on F-Droid and we will all be happier :)
-
-Also not included are apps that have not been updated for a long time (about 1 year) with some exceptions, useless apps (like Wi-Fi On/OFF, or show my IP address (?)) ...and apps that I don't like :)
+Also the apps not included are those that have not been updated for a long time (about 1 year) with some exceptions, useless apps (like Wi-Fi On/OFF, or show my IP address (?)) ...and apps that I don't like :)
 
 ## Table of Contents
 
-* [Android-based Operating Systems](#android-based-operating-systems)
-* [App Stores](#app-stores)
-* [App Repositories](#app-repositories)
-* [2FA](#2fa)
-* [Alternative Network](#alternative-network)
-* [Browser](#browser)
-* [Calendar](#calendar)
-* [Camera](#camera)
-* [Clock](#clock)
-* [Cloud](#cloud)
-* [Contacts](#contacts)
-* [Documents Reader](#documents-reader)
-* [Email Client](#email-client)
-* [Exif/Metadata Cleaner](#exif--metadata-cleaner)
-* [File Manager](#file-manager)
-* [File Sharing](#file-sharing)
-* [Gallery](#gallery)
-* [Instant Messagging](#instant-messagging)
-* [Launcher](#launcher)
-* [Keyboard](#keyboard)
-* [Maps](#maps)
-* [Media Player](#media-player)
-* [Network Security](#network-security)
-* [Notes](#notes)
-* [Password Manager](#password-manager)
-* [Reddit Client](#reddit-client)
-* [RSS Reader](#rss-reader)
-* [Social Network](#social-network)
-* [System Security](#system-security)
-* [VPN Client](#vpn-client)
+- [Table of Contents](#table-of-contents)
+- [Android-based Operating Systems](#android-based-operating-systems)
+- [App Stores](#app-stores)
+- [App Repositories](#app-repositories)
+- [2FA](#2fa)
+- [Alternative Network](#alternative-network)
+- [Browser](#browser)
+- [Calendar](#calendar)
+- [Camera](#camera)
+- [Clock](#clock)
+- [Cloud](#cloud)
+- [Contacts](#contacts)
+- [Documents Reader](#documents-reader)
+- [Email Client](#email-client)
+- [Email Anonymous Forwarding](#email-anonymous-forwarding)
+- [Exif/Metadata Cleaner](#exifmetadata-cleaner)
+- [File Manager](#file-manager)
+- [File Sharing](#file-sharing)
+- [Gallery](#gallery)
+- [Instant Messagging](#instant-messagging)
+- [Launcher](#launcher)
+- [Keyboard](#keyboard)
+- [Maps](#maps)
+- [Media Player](#media-player)
+- [YouTube Alternative Client](#youtube-alternative-client)
+- [Network Security](#network-security)
+- [Notes](#notes)
+- [Password Manager](#password-manager)
+- [Reddit Client](#reddit-client)
+- [RSS Reader](#rss-reader)
+- [Social Network](#social-network)
+- [System Security](#system-security)
+- [VPN Client](#vpn-client)
+- [Donations](#donations)
 
 <br>
 
@@ -85,7 +87,6 @@ Also not included are apps that have not been updated for a long time (about 1 y
 ## 2FA
 
 * [Aegis](https://getaegis.app/)
-* [andOTP](https://github.com/andOTP/andOTP)
 * [FreeOTP Plus](https://github.com/helloworld1/FreeOTPPlus)
 * [Authenticator Pro](https://github.com/jamie-mh/AuthenticatorPro)
 * [Etopa](https://github.com/ltheinrich/etopa)
@@ -140,8 +141,7 @@ Also not included are apps that have not been updated for a long time (about 1 y
 ## Documents Reader
 
 * [MuPDF](https://mupdf.com/)
-* [Book Reader](https://gitlab.com/axet/android-book-reader/tree/HEAD)
-* [PDF Viewer Plus](https://github.com/JavaCafe01/PdfViewer)
+* [Book Reader](https://gitlab.com/axet/android-book-reader)
 * [CoolReader 3](https://github.com/buggins/coolreader)
 * [OpenDocument](https://github.com/opendocument-app/OpenDocument.droid)
 * [GrapheneOS PdfViewer](https://github.com/GrapheneOS/PdfViewer)
@@ -162,7 +162,7 @@ Also not included are apps that have not been updated for a long time (about 1 y
 
 ## Exif/Metadata Cleaner
 
-* [Scrambled Exif](https://gitlab.com/juanitobananas/scrambled-exif/tree/HEAD)
+* [Scrambled Exif](https://gitlab.com/juanitobananas/scrambled-exif)
 * [Imagepipe](https://codeberg.org/Starfish/Imagepipe)
 
 ## File Manager
@@ -171,6 +171,7 @@ Also not included are apps that have not been updated for a long time (about 1 y
 * [MaterialFiles](https://github.com/zhanghai/MaterialFiles)
 * [Secure File Manager](https://github.com/Secure-File-Manager/Secure-File-Manager)
 * [Amaze File Manager](https://github.com/TeamAmaze/AmazeFileManager)
+* [File Explorer](https://github.com/Raival-e/File-Explorer)
 
 ## File Sharing
 
@@ -183,7 +184,6 @@ Also not included are apps that have not been updated for a long time (about 1 y
 
 * [Simple Gallery](https://github.com/SimpleMobileTools/Simple-Gallery)
 * [Aves](https://github.com/deckerst/aves)
-* [Floral](https://github.com/vidit135g/Floral)
 
 ## Instant Messagging
 
@@ -199,6 +199,7 @@ Also not included are apps that have not been updated for a long time (about 1 y
 * [FluffyChat](https://fluffychat.im/)
 * [SchildiChat](https://schildi.chat/android/)
 * [Tinelix IRC](https://github.com/tinelix/irc-client-for-android)
+* [Moxxy](https://codeberg.org/moxxy/moxxyv2) - Alpha version
 
 ## Launcher
 
@@ -248,15 +249,12 @@ Also not included are apps that have not been updated for a long time (about 1 y
 * [LibreTube](https://github.com/Libre-tube/LibreTube)
 * [MusicPiped](https://github.com/deep-gaurav/MusicPiped)
 * [SkyTube](https://skytube-app.com/)
-* [Music](https://github.com/z-huang/music)
+* [InnerTune](https://github.com/z-huang/InnerTune)
 * [SongTube](https://github.com/SongTube/SongTube-App)
 * [Spotube](https://github.com/KRTirtho/spotube#mobile)
 * [SpotiFlyer](https://shabinder.github.io/SpotiFlyer/) - Download music from Spotify, YouTube and others.
 * [Musify](https://github.com/gokadzev/Musify)
-
-### Streaming Client
-
-* [CloudStream-3](https://github.com/LagradOst/CloudStream-3)
+* [ViMusic](https://github.com/vfsfitvnm/ViMusic)
 
 ## Network Security
 
@@ -274,7 +272,7 @@ Also not included are apps that have not been updated for a long time (about 1 y
 * [Notally](https://github.com/OmGodse/Notally)
 * [Simple Notes](https://github.com/SimpleMobileTools/Simple-Notes)
 * [Notepad](https://github.com/farmerbb/Notepad)
-* [Markor](https://gsantner.net/project/markor.html?source=fdroid)
+* [Markor](https://gsantner.net/project/markor.html)
 * [Joplin](https://joplinapp.org/)
 * [Standard Notes](https://standardnotes.com/)
 * [Notes](https://github.com/billthefarmer/notes)
@@ -289,7 +287,8 @@ Also not included are apps that have not been updated for a long time (about 1 y
 * [KeepassDX](https://www.keepassdx.com/)
 * [Keypass](https://github.com/yogeshpaliyal/KeyPass)
 * [KeepassA](https://github.com/AriaLyy/KeepassA)
-* [rust-keylock](https://rust-keylock.github.io/)
+* [Passy](https://github.com/GlitterWare/Passy)
+* [Passky](https://github.com/Rabbit-Company/Passky-Android)
 
 ## Reddit Client
 
@@ -308,29 +307,30 @@ Also not included are apps that have not been updated for a long time (about 1 y
 ## Social Network
 
 * [Mastodon](https://apt.izzysoft.de/fdroid/index/apk/org.joinmastodon.android)
-* [SubwayTooter](https://github.com/tateisu/SubwayTooter)
-* [Nitter](https://gitlab.com/Plexer0/Nitter-Android)
-* [Fritter](https://fritter.cc/)
-* [Shitter](https://github.com/nuclearfog/Shitter)
+* [SubwayTooter](https://github.com/tateisu/SubwayTooter) - Mastodon client
+* [Nitter](https://gitlab.com/Plexer0/Nitter-Android) - Twitter client
+* [Fritter](https://fritter.cc/) - Twitter client
+* [Shitter](https://github.com/nuclearfog/Shitter) - Twitter client
 * [monocles social](https://codeberg.org/Arne/monocles_social)
-* [Barinsta](https://github.com/Android-Builds/barinsta)
-* [PixelDroid](https://pixeldroid.org/)
+* [PixelDroid](https://pixeldroid.org/) - Pixelfed Android client
 
 ## System Security
 
-* [Cryptomator](https://cryptomator.org/downloads/)
-* [Shelter](https://github.com/PeterCxy/Shelter)
-* [Insular](https://secure-system.gitlab.io/Insular/)
+* [Cryptomator](https://cryptomator.org/downloads/) - Multi-platform transparent client-side encryption of your files in the cloud
+* [Shelter](https://github.com/PeterCxy/Shelter) - Provide an isolated space that you can install or clone apps into
+* [Insular](https://secure-system.gitlab.io/Insular/) - Sandbox environment to clone selected apps and isolate them from accessing your personal data outside the sandbox
 * [FindMyDevice](https://gitlab.com/Nulide/findmydevice)
-* [Seguime](https://gitlab.com/javipc/seguime)
-* [Haven](https://guardianproject.github.io/haven/)
-* [PilferShushJammer](https://github.com/kaputnikGo/PilferShushJammer)
+* [Locate My Device](https://github.com/xfarrow/locatemydevice)
+* [Haven](https://guardianproject.github.io/haven/) - Leverages on-device sensors to provide monitoring and protection of physical areas
+* [PilferShushJammer](https://github.com/kaputnikGo/PilferShushJammer) - Test microphone jamming techniques to combat Cross-Device Tracking (XDT)
 * [QR Scanner](https://github.com/SecUSo/privacy-friendly-qr-scanner)
 * [Yet Another Call Blocker](https://gitlab.com/xynngh/YetAnotherCallBlocker)
-* [Exodus](https://github.com/Exodus-Privacy/exodus-android-app)
-* [Wasted](https://github.com/x13a/Wasted)
-* [PrivacyBlur](https://github.com/MATHEMA-GmbH/privacyblur)
-* [DroidFS](https://forge.chapril.org/hardcoresushi/DroidFS)
+* [Exodus](https://github.com/Exodus-Privacy/exodus-android-app) -  Let you know what trackers are embedded in apps installed on your smartphone
+* [TrackerControl](https://trackercontrol.org/) - Monitor and control hidden data collection in mobile apps about user behaviour (tracking)
+* [Wasted](https://github.com/x13a/Wasted) - Lock and wipe on emergency
+* [PrivacyBlur](https://github.com/MATHEMA-GmbH/privacyblur) - Obfuscate sensitive data in your pictures before sharing them online
+* [Photok](https://github.com/leonlatsch/Photok) - Encrypted Photo Safe for Android
+* [DroidFS](https://forge.chapril.org/hardcoresushi/DroidFS) - Encrypted overlay filesystems implementation for Android
 
 ## VPN Client
 
