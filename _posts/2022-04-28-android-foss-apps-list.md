@@ -17,7 +17,6 @@ Also the apps not included are those that have not been updated for a long time 
 
 ## Table of Contents
 
-- [Table of Contents](#table-of-contents)
 - [Android-based Operating Systems](#android-based-operating-systems)
 - [App Stores](#app-stores)
 - [App Repositories](#app-repositories)
