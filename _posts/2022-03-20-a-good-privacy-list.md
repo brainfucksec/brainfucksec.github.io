@@ -4,36 +4,61 @@ title: "A Good Privacy List"
 date: 2022-03-20
 ---
 
-Update: 31 August 2022
+Update: 10 December 2022
 
 <br>
 
 ## Table of Contents
 
-* [Introduction](#introduction)
-* [AI Assistants](#ai-assistants)
-* [Android App Stores](#android-app-stores)
-* [Calendar Apps](#calendar-apps)
-* [Cloud Storage](#cloud-storage)
-* [DNS Servers](#dns-servers)
-* [Email Providers](#email-providers)
-* [Email Anonymous Forwarding](#email-anonymous-forwarding)
-* [Encryption Software](#encryption-software)
-* [File Sharing](#file-sharing)
-* [Git Hosting](#git-hosting)
-* [Instant Messaging](#instant-messaging)
-* [Maps](#maps)
-* [Operating Systems](#operating-systems)
-* [Password Managers](#password-managers)
-* [Reddit Alternatives](#reddit-alternatives)
-* [Search Engines / Metasearch Engines](#search-engines--metasearch-engines)
-* [Social Networks](#social-networks)
-* [Torrent Clients](#torrent-clients)
-* [VPNs](#vpns)
-* [Web Browsers](#web-browsers)
-* [Wikipedia Alternatives](#wikipedia-alternatives)
-* [YouTube Alternatives](#youtube-alternatives)
-* [Other Privacy and Security Resources](#other-privacy-and-security-resources)
+- [Table of Contents](#table-of-contents)
+- [Introduction](#introduction)
+- [Requirements for the products](#requirements-for-the-products)
+- [AI Assistants](#ai-assistants)
+- [Android App Stores](#android-app-stores)
+- [Calendar Apps](#calendar-apps)
+- [Cloud Storage](#cloud-storage)
+- [DNS Servers](#dns-servers)
+- [Email Providers](#email-providers)
+- [Email Anonymous Forwarding](#email-anonymous-forwarding)
+- [Encryption Software](#encryption-software)
+  - [Disk Encryption](#disk-encryption)
+  - [File Encryption](#file-encryption)
+- [File Sharing](#file-sharing)
+- [Git Hosting](#git-hosting)
+- [Graphics Editor](#graphics-editor)
+- [Instant Messaging](#instant-messaging)
+  - [Centralized](#centralized)
+  - [Matrix Clients](#matrix-clients)
+  - [XMPP Clients](#xmpp-clients)
+  - [P2P](#p2p)
+- [Maps](#maps)
+  - [Mobile](#mobile)
+- [Operating Systems](#operating-systems)
+  - [GNU/Linux Operating Systems](#gnulinux-operating-systems)
+  - [Security-Focused Operating Systems](#security-focused-operating-systems)
+  - [Android-based](#android-based)
+- [Password Managers](#password-managers)
+- [Privacy Frontends](#privacy-frontends)
+  - [Quora](#quora)
+  - [Reddit](#reddit)
+  - [Reddit Mobile Clients](#reddit-mobile-clients)
+  - [Reddit Alternative Communities](#reddit-alternative-communities)
+  - [Twitter](#twitter)
+  - [Wikipedia](#wikipedia)
+  - [YouTube](#youtube)
+  - [YouTube Desktop Clients](#youtube-desktop-clients)
+  - [YouTube Mobile Clients](#youtube-mobile-clients)
+  - [Youtube Alternatives Platforms](#youtube-alternatives-platforms)
+- [Search Engines / Metasearch Engines](#search-engines--metasearch-engines)
+- [Social Networks](#social-networks)
+- [Torrent Clients](#torrent-clients)
+- [VPNs](#vpns)
+- [Web Browsers](#web-browsers)
+  - [Desktop](#desktop)
+  - [Mobile](#mobile-1)
+- [Other Privacy and Security Resources](#other-privacy-and-security-resources)
+  - [Notes](#notes)
+  - [Donations](#donations)
 
 <br>
 
@@ -56,15 +81,18 @@ Regarding this topic see:
 I hope this modest work can help to defende you and fight the censorship and oppression we are experiencing especially in recent years, **knowledge is power**, so search, read, and think with your head!
 **In this sector it's very easy to meet organizations and projects that claim to defend privacy but in reality are just mousetraps.**
 
+
+## Requirements for the products
+
 ### Only products that meet the following requirements are included in the list:
 
 * Security first: services that are not a security risk (although this is a very long and complex topic), and that are not in the experimental phase (i.e. the software is in the [alpha phase](https://techterms.com/definition/alpha_software)).
 
-* Open source software and clear references to the application source code, I know that a closed source program doesn't necessarily mean it's malicious, but but I prefer to know that there's code available for everyone to read.
+* Open source software and clear references to the application source code, I know that a closed source program doesn't necessarily mean it's malicious, but I prefer to know that there's code available for everyone to read.
 
-* Clear references to the development team and organization (i.e. "About Me" section).
+* Clear references to the development team and organization (i.e. "About Me" section), if I cannot find easily what is the organization behind the project I prefer to skip to another choice.
 
-* Privacy Policy clear and easily accessible, if I have to click for 10 pages before reading a complicated and obscure privacy policy I consider that there is already something wrong.
+* Privacy Policy clear and easily accessible, if I have to click for 10 pages before reading a complicated and obscure privacy policy I consider that there is something wrong.
 
 * Not sharing data with bad third parties (i.e. No Google, Amazon, Meta (Facebook), Cloudflare and other evil companies), about that argument see: [Notes](#notes)
 
@@ -166,6 +194,12 @@ I hope this modest work can help to defende you and fight the censorship and opp
 * [Gitea](https://gitea.io/en-us/)
 * [Sourcehut](https://sourcehut.org/)
 
+## Graphics Editor
+
+* [GIMP](https://www.gimp.org/)
+* [Krita](https://github.com/KDE/krita)
+* [Inkscape](https://inkscape.org/)
+
 ## Instant Messaging
 
 ### Centralized
@@ -244,22 +278,59 @@ I hope this modest work can help to defende you and fight the censorship and opp
 * [pass](https://www.passwordstore.org/) (Cli)
 * [gopass](https://www.gopass.pw/) (Cli)
 
-## Reddit Alternatives
+## Privacy Frontends
 
-### Privacy Front-end
+### Quora
+
+* [Quetre](https://github.com/zyachel/quetre)
+
+### Reddit
 
 * [Libreddit](https://github.com/spikecodes/libreddit)
 * [teddit](https://teddit.net/)
 
-### Mobile Clients
+### Reddit Mobile Clients
 
 * [Infinity](https://github.com/Docile-Alligator/Infinity-For-Reddit)
 * [Slide](https://github.com/Haptic-Apps/Slide)
 
-### Communities
+### Reddit Alternative Communities
 
 * [Lemmy](https://lemmy.ml/)
 * [Tildes](https://tildes.net/)
+
+### Twitter
+
+* [Nitter](https://nitter.net/)
+
+### Wikipedia
+
+* [Wikiless](https://wikiless.org/)
+
+### YouTube
+
+* [Invidious](https://invidious.io/)
+* [Piped](https://piped.kavin.rocks/)
+
+### YouTube Desktop Clients
+
+* [FreeTube](https://freetubeapp.io/)
+* [youtube-dl](https://ytdl-org.github.io/youtube-dl/) (Cli/Gui)
+* [yt-dlp](https://github.com/yt-dlp/yt-dlp) - (Cli)
+
+### YouTube Mobile Clients
+
+* [NewPipe](https://newpipe.net/)
+* [LibreTube](https://github.com/Libre-tube/LibreTube)
+* [SkyTube](https://skytube-app.com/)
+* [SongTube](https://github.com/SongTube/SongTube-App)
+* [SpotiFlyer](https://shabinder.github.io/SpotiFlyer/) - Download music from Spotify, YouTube and others.
+
+### Youtube Alternatives Platforms
+
+* [BitTube](https://bittube.video/)
+* [PeerTube](https://joinpeertube.org/en/)
+* [DTube](https://d.tube/)
 
 ## Search Engines / Metasearch Engines
 
@@ -277,7 +348,6 @@ I hope this modest work can help to defende you and fight the censorship and opp
 * [Pixelfed](https://pixelfed.org/)
 * [Pleroma](https://pleroma.social/)
 * [Misskey](https://join.misskey.page/en-US/)
-* [Bibliogram](https://bibliogram.art/) - InstaGram Viewer
 
 ## Torrent Clients
 
@@ -321,37 +391,6 @@ I hope this modest work can help to defende you and fight the censorship and opp
 * [FOSS Browser](https://github.com/scoute-dich/browser)
 * [monocles browser](https://codeberg.org/Arne/monocles_browser)
 * [Onion Browser](https://itunes.apple.com/us/app/onion-browser/id519296448) (iOS)
-
-## Wikipedia Alternatives
-
-* [Wikiless](https://wikiless.org/)
-
-## YouTube Alternatives
-
-### Web Front-end
-
-* [Invidious](https://invidious.io/)
-* [Piped](https://piped.kavin.rocks/)
-
-### Desktop Clients
-
-* [FreeTube](https://freetubeapp.io/)
-* [youtube-dl](https://ytdl-org.github.io/youtube-dl/) (Cli/Gui)
-* [yt-dlp](https://github.com/yt-dlp/yt-dlp) - (Cli)
-
-### Mobile Clients
-
-* [NewPipe](https://newpipe.net/)
-* [LibreTube](https://github.com/Libre-tube/LibreTube)
-* [SkyTube](https://skytube-app.com/)
-* [SongTube](https://github.com/SongTube/SongTube-App)
-* [SpotiFlyer](https://shabinder.github.io/SpotiFlyer/) - Download music from Spotify, YouTube and others.
-
-### Video Sharing Alternatives
-
-* [BitTube](https://bittube.video/)
-* [PeerTube](https://joinpeertube.org/en/)
-* [DTube](https://d.tube/)
 
 ## Other Privacy and Security Resources
 
