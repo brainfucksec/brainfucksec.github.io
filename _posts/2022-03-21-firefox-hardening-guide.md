@@ -4,7 +4,7 @@ title: "Firefox Hardening Guide"
 date: 2022-03-21
 ---
 
-Update: 06 November 2022
+Update: 23 April 2023
 
 <br>
 
@@ -28,11 +28,13 @@ Update: 06 November 2022
 
 When you visit a web page, your browser voluntarily sends information about its configuration, such as available fonts, browser type, and add-ons. If this combination of information is unique, it may be possible to identify and track you without using cookies.  For more information on Browser Fingerprinting check out these sources:
 
-[How Unique Is Your Web Browser? Peter Eckersley, EFF.](https://coveryourtracks.eff.org/static/browser-uniqueness.pdf)
+[Device fingerprint - Wikipedia](https://en.wikipedia.org/wiki/Device_fingerprint)
+
+[What is browser fingerprinting? - amiunique.org](https://www.amiunique.org/faq)
 
 [Support Mozilla - Firefox's protection against fingerprinting](https://support.mozilla.org/en-US/kb/firefox-protection-against-fingerprinting)
 
-[What is browser fingerprinting? - amiunique.org](https://www.amiunique.org/faq)
+**PDF:** [How Unique Is Your Web Browser? Peter Eckersley, EFF.](https://coveryourtracks.eff.org/static/browser-uniqueness.pdf)
 
 In the area of cybersecurity the "100% secure setup" does not exist, what you can do though, is reduce the amount of data collected by entities like Google, Meta, Cloudflare etc. and reduce attack vectors.
 
@@ -131,9 +133,9 @@ On the search bar digit: `about:config` and set the parameters as follows:
 
     `browser.newtabpage.activity-stream.section.highlights.includePocket` = `false`
 
-    `browser.newtabpage.activity-stream.showSponsored` = `false`
-
     `browser.newtabpage.activity-stream.feeds.discoverystreamfeed` = `false`
+
+    `browser.newtabpage.activity-stream.showSponsored` = `false`
 
     `browser.newtabpage.activity-stream.showSponsoredTopSites` = `false`
 
@@ -182,6 +184,8 @@ On the search bar digit: `about:config` and set the parameters as follows:
     `extensions.getAddons.showPane` = `false` [HIDDEN PREF]
 
     `extensions.htmlaboutaddons.recommendations.enabled` = `false`
+
+    `browser.discovery.enabled` = `false`
 
 ### Telemetry
 
@@ -272,6 +276,8 @@ On the search bar digit: `about:config` and set the parameters as follows:
     `browser.safebrowsing.provider.google.gethashURL` = `""`
 
     `browser.safebrowsing.provider.google.updateURL` = `""`
+
+    `browser.safebrowsing.provider.google4.dataSharingURL` = `""`
 
 * Disable checks for downloads:
 
@@ -418,6 +424,10 @@ On the search bar digit: `about:config` and set the parameters as follows:
 * Disable page thumbnail collection
 
     `browser.pagethumbnails.capturing_disabled` = `true` [HIDDEN PREF]
+
+* Disable favicons in profile folder
+
+    `browser.shell.shortcutFavicons` = `false`
 
 * Delete temporary files opened with external apps:
 
