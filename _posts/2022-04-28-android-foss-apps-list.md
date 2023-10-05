@@ -86,6 +86,7 @@ Also the apps not included are those that have not been updated for a long time 
 ## 2FA
 
 * [Aegis](https://getaegis.app/)
+* [2FAS Authenticator](https://2fas.com/)
 * [FreeOTP Plus](https://github.com/helloworld1/FreeOTPPlus)
 * [Authenticator Pro](https://github.com/jamie-mh/AuthenticatorPro)
 * [Etopa](https://github.com/ltheinrich/etopa)
