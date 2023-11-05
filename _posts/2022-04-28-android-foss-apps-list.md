@@ -220,7 +220,7 @@ Also the apps not included are those that have not been updated for a long time 
 * [KISS Launcher](https://kisslauncher.com/)
 * [TinyBit Launcher](https://github.com/TBog/TBLauncher)
 * [Hex Launcher](https://github.com/MrMannWood/launcher)
-* [Simple lunar laincher Launcher](https://github.com/SimpleMobileTools/Simple-Launcher)
+* [Simple Launcher](https://github.com/SimpleMobileTools/Simple-Launcher)
 * [Discreet Launcher](https://github.com/falzonv/discreet-launcher)
 * [Pie Launcher](https://github.com/markusfisch/PieLauncher)
 * [Unlauncher](https://jkuester.github.io/unlauncher/)
