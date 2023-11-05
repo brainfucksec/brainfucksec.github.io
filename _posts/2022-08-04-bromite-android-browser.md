@@ -4,6 +4,12 @@ title: "Bromite Android Browser"
 date: 2022-08-04
 ---
 
+## Note:
+
+Bromite has not been update since 2022 and is a dead project, you can use [Chromite](https://github.com/uazo/cromite/) instead.
+
+See: [Bromite is Dead, Use Cromite Instead](https://github.com/bromite/bromite/issues/2641),
+
 <br>
 
 ## Table of Contents
