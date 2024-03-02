@@ -4,7 +4,7 @@ title: "Android FOSS Apps List"
 date: 2022-04-28
 ---
 
-Update: 08 January 2024
+Update: 02 March 2024
 
 List of open source Android applications for "de-google, de-samsung, de-microsoft, de-nsa, de-china-malware etc. etc." your mobile phone, as always, the list is written in a [KISS](https://en.wikipedia.org/wiki/KISS_principle) simple way. The apps in the list are divided by category but within the categories they have no order.
 Feel free to [contact me](https://brainfucksec.github.io/contacts) to add applications or modify the list.
