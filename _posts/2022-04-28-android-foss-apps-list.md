@@ -4,9 +4,9 @@ title: "Android FOSS Apps List"
 date: 2022-04-28
 ---
 
-Update: 02 March 2024
+Update: 03 March 2024
 
-List of open source Android applications for "de-google, de-samsung, de-microsoft, de-nsa, de-china-malware etc. etc." your mobile phone, as always, the list is written in a [KISS](https://en.wikipedia.org/wiki/KISS_principle) simple way. The apps in the list are divided by category but within the categories they have no order.
+List of open source Android applications for "de-google, de-samsung, de-microsoft, de-nsa, de-china-malware etc. etc." your mobile phone, as always, the list is written in a [KISS](https://en.wikipedia.org/wiki/KISS_principle) simple way. The apps in the list are divided by category but within the categories they have no specific order (although in some categories the most popular apps may be higher on the list).
 Feel free to [contact me](https://brainfucksec.github.io/contacts) to add applications or modify the list.
 
 The links in the list are related to the application website (if exists) or to the source code repository, I suggest to install [Neo Store](https://github.com/NeoApplications/Neo-Store) or [Droid-ify](https://github.com/Iamlooker/Droid-ify) which already has the repositories of [Guardian Project](https://guardianproject.info/), [IzzyOnDroid](https://apt.izzysoft.de/fdroid/) and other applications such as [Mull Browser](https://github.com/divested-mobile/mull-fenix) or [NewPipe](https://newpipe.net/), and search apps from there.
@@ -51,6 +51,7 @@ Also the apps not included are those that have not been updated for a long time 
   - [Wireguard Client](#wireguard-client)
 - [Notes](#notes)
 - [Password Manager](#password-manager)
+- [Phone SMS](#phone-sms)
 - [Reddit Client](#reddit-client)
 - [RSS Reader](#rss-reader)
 - [Social Network Client](#social-network-client)
@@ -71,13 +72,13 @@ Also the apps not included are those that have not been updated for a long time 
 - [DivestOS](https://divestos.org/) - A mobile operating system divested from the norm.
 - [Calyx OS](https://calyxos.org/) - CalyxOS is an Android mobile operating system that puts privacy and security into the hands of everyday users (Pixel, Fairphone and Motorola devices).
 - [GrapheneOS](https://grapheneos.org/) - The private and secure mobile operating system with Android app compatibility (Pixel devices).
-- [Replicant](https://www.replicant.us/) - Replicant is a fully free Android distribution running on several devices.
-- [Plasma Mobile (KDE)](https://plasma-mobile.org/) - Plasma Mobile is a privacy-respecting, open-source and secure phone ecosystem.
-- [postmarketOS](https://postmarketos.org/) - See: [Pinephone](https://www.pine64.org) - postmarketOS is a free software mobile OS that is modeled. after traditional Linux distributions and avoids Android's build system
 - [PureOS](https://www.pureos.net/) - PureOS is a fully audited operating system that respects your privacy and offers a range of free software. applications for your daily usage
-- [/e/OS](https://e.foundation/e-os/) - /e/OS is a complete, fully “deGoogled”, mobile ecosystem.
-- [Sailfish OS](https://sailfishos.org/) - Sailfish OS is an open platform with an active open source contribution model and a seamless user. experience - (Sony Xperia and Gemini PDA devices).
 - [Ubuntu Touch](https://ubuntu-touch.io/) - Ubuntu Touch is a mobile version of the Ubuntu operating system, being developed by the UBports community.
+- [/e/OS](https://e.foundation/e-os/) - /e/OS is a complete, fully “deGoogled”, mobile ecosystem.
+- [Plasma Mobile (KDE)](https://plasma-mobile.org/) - Plasma Mobile is a privacy-respecting, open-source and secure phone ecosystem.
+- [Replicant](https://www.replicant.us/) - Replicant is a fully free Android distribution running on several devices.
+- [postmarketOS](https://postmarketos.org/) - See: [Pinephone](https://www.pine64.org) - postmarketOS is a free software mobile OS that is modeled. after traditional Linux distributions and avoids Android's build system
+- [Sailfish OS](https://sailfishos.org/) - Sailfish OS is an open platform with an active open source contribution model and a seamless user. experience - (Sony Xperia and Gemini PDA devices).
 
 ## App Stores
 
@@ -93,7 +94,7 @@ Also the apps not included are those that have not been updated for a long time 
 - [CalyxOS](https://calyxos.org/docs/guide/apps/) -  App stores, app compatibility, and apps special to CalyxOS.
 - [Guardian Project](https://guardianproject.info/apps/) - Guardian Project is a project that creates easy to use secure apps, open-source software libraries, and customized solutions for personal security, anonymity and privacy.
 - [DivestOS](https://divestos.org/pages/our_apps) - DivestOS Apps.
-- [SimpleMobileTools](https://github.com/orgs/SimpleMobileTools) - A group of simple, open source Android apps without ads and unnecessary permissions, with customizable colors.
+- [Fossify](https://github.com/FossifyOrg) - Fossify is all about community-backed, open-source, and ad-free mobile apps. A fork of the @SimpleMobileTools, which is no longer maintained, and we're here to continue the legacy, bringing simple and private tech to everyone.
 - [You Apps](https://you-apps.net) - A collection of open source Android apps, developed with privacy in mind and beautiful design.
 - [SECUSO](https://github.com/SecUSo) - SECUSO - Security Usability Society.
 - [MicroG Project](https://microg.org/) - A free-as-in-freedom re-implementation of Google's proprietary Android user space apps and libraries.
@@ -126,7 +127,7 @@ Also the apps not included are those that have not been updated for a long time 
 ## Calendar
 
 - [Proton Calendar](https://calendar.proton.me/) - Proton Calendar helps you stay on top of your schedule while protecting your data.
-- [Simple Calendar](https://github.com/SimpleMobileTools/Simple-Calendar) - A simple calendar with events, tasks, customizable colors, widgets and no ads.
+- [Fossify Calendar](https://github.com/FossifyOrg/Calendar) - Your Private & Powerful Schedule Planner.
 - [Etar Calendar](https://github.com/Etar-Group/Etar-Calendar) - Android open source calendar.
 - [DAVx5](https://www.davx5.com/) - CalDAV / CardDAV / WebDAV for Android.
 - [Note Calendar](https://github.com/Sztorm/NoteCalendar) - A simple note calendar app for Android.
@@ -135,12 +136,10 @@ Also the apps not included are those that have not been updated for a long time 
 
 - [OpenCamera](https://opencamera.org.uk/) - Open Camera is an Open Source Camera app for Android phones and tablets.
 - [GrapheneOS Camera](https://github.com/GrapheneOS/Camera) - Modern camera app focused on privacy and security with QR & barcode scanning.
-- [Simple Camera](https://github.com/SimpleMobileTools/Simple-Camera) - Quick photo and video camera with a flash, customizable aspect ratio.
 - [Libre Camera](https://github.com/iakmds/librecamera) - A free and open source camera app for Android written in Flutter and Dart.
 
 ## Clock
 
-- [Simple Clock](https://github.com/SimpleMobileTools/Simple-Clock) - Combination of a beautiful clock with widget, alarm, stopwatch & timer, no ads.
 - [Simple alarm clock](https://github.com/yuriykulikov/AlarmClock) - Most popular open source Android Alarm Clock App.
 - [Clock You](https://github.com/you-apps/ClockYou) -  Privacy focused clock app built with MD3.
 
@@ -154,7 +153,7 @@ Also the apps not included are those that have not been updated for a long time 
 
 ## Contacts
 
-- [SimpleContacts](https://github.com/SimpleMobileTools/Simple-Contacts) - Easy and quick contact management with no ads, handles groups and favorites too.
+- [Fossify Contacts](https://github.com/FossifyOrg/Contacts) - Easy and quick contact management with no ads, handles groups and favorites too.
 - [Connect You](https://github.com/you-apps/ConnectYou) -  Privacy focused contacts and SMS messenger app built with MD3.
 - [OpenContacts](https://gitlab.com/sultanahamer/OpenContacts) - Privacy to your contacts.
 - [Koler](https://github.com/Chooloo/koler) - Just a phone app.
@@ -192,7 +191,7 @@ Also the apps not included are those that have not been updated for a long time 
 
 ## File Manager
 
-- [Simple File Manager](https://github.com/SimpleMobileTools/Simple-File-Manager) - Easy app for managing your files without ads, respecting your privacy & security.
+- [Fossify File Manager](https://github.com/FossifyOrg/File-Manager) - Easy app for managing your files without ads, respecting your privacy & security.
 - [Material Files](https://github.com/zhanghai/MaterialFiles) - Material Design file manager for Android.
 
 ## File Sharing
@@ -205,7 +204,7 @@ Also the apps not included are those that have not been updated for a long time 
 
 ## Gallery
 
-- [Simple Gallery](https://github.com/SimpleMobileTools/Simple-Gallery) - A premium app for managing and editing your photos, videos, GIFs without ads.
+- [Fossify Gallery](https://github.com/FossifyOrg/Gallery) - Browse your memories without any interruptions with this photo and video gallery.
 - [Aves](https://github.com/deckerst/aves) - Aves is a gallery and metadata explorer app, built for Android with Flutter.
 - [Gallery](https://github.com/IacobIonut01/Gallery) - Light-weight Media Gallery app for Android made with Jetpack Compose.
 
@@ -214,6 +213,7 @@ Also the apps not included are those that have not been updated for a long time 
 - [Signal](https://www.signal.org/) - State-of-the-art end-to-end encryption (powered by the open source Signal Protocol) keeps your conversations secure.
 - [Molly](https://github.com/mollyim/mollyim-android) - A fork of Signal for Android
 - [Threema](https://threema.ch/en/) - Threema is a secure and private messaging app that encrypts your communication, lets you make voice and video calls, and offers various features.
+- [SimpleX Chat](https://simplex.chat/) - Privacy redefined. The first messenger without user IDs.
 - [Briar](https://briarproject.org/) - Censorship-resistant peer-to-peer messaging that bypasses centralized servers. Connect via Bluetooth, Wi-Fi or Tor, with privacy built-in.
 - [Jami](https://jami.net/download-jami-android/) - Jami is a free/libre, end-to-end encrypted, and private communication software.
 - [Forkgram](https://github.com/forkgram/TelegramAndroid) - Fork of Telegram Desktop messaging app.
@@ -263,7 +263,6 @@ Own your data, customize anything, integrate everything.
 ## Keyboard
 
 - [Simple Keyboard](https://github.com/rkkr/simple-keyboard) - This keyboard is created for those who only need a keyboard and nothing more.
-- [Simple Keyboard](https://github.com/SimpleMobileTools/Simple-Keyboard) - Easy keyboard for inserting all kinds of texts, special characters and numbers.
 - [OpenBoard](https://github.com/openboard-team/openboard) - 100% FOSS keyboard, based on AOSP.
 
 ## Maps
@@ -277,8 +276,8 @@ Own your data, customize anything, integrate everything.
 
 - [Apollo](https://github.com/nuclearfog/Apollo-Music) - Apollo-Music is a fork from CyanogenMod's Apollo music app supporting Android 4.1+.
 - [VLC](https://www.videolan.org/vlc/download-android.html) - VLC for Android is a full port of VLC media player to the Android™ platform.
-- [Simple Music Player](https://github.com/SimpleMobileTools/Simple-Music-Player) - A clean music player with a customizable widget, stylish interface and no ads.
 - [VinylMusicPlayer](https://github.com/VinylMusicPlayer/VinylMusicPlayer) - A material designed music player for Android.
+- [Fossify Music Player](https://github.com/FossifyOrg/Music-Player) - A clean music player with a customizable widget, stylish interface and no ads.
 - [mpv-android](https://github.com/mpv-android/mpv-android) - mpv-android is a video player for Android based on libmpv.
 - [Retro Music Player](https://retromusic.app/) - The best Material design offline music player for Android.
 - [Metro](https://github.com/MuntashirAkon/Metro) - Material Design music player for Android music lovers.
@@ -335,7 +334,6 @@ Own your data, customize anything, integrate everything.
 - [Markor](https://gsantner.net/project/markor.html) - Text editor - Notes & ToDo (for Android).
 - [Joplin](https://joplinapp.org/) - Joplin is an open source note-taking app.
 - [Standard Notes](https://standardnotes.com/) - Standard Notes is a free, secure note-taking app with powerful end-to-end encryption.
-- [Simple Notes](https://github.com/SimpleMobileTools/Simple-Notes) - A simple textfield for adding quick notes without ads.
 - [Notally](https://github.com/OmGodse/Notally) - A beautiful notes app.
 - [Notepad](https://github.com/farmerbb/Notepad) - https://github.com/farmerbb/Notepad.
 - [Notes](https://github.com/billthefarmer/notes) - Android notebook.
@@ -352,6 +350,11 @@ Own your data, customize anything, integrate everything.
 - [Keypass](https://github.com/yogeshpaliyal/KeyPass) - Open-source & offline password manager. Store, manage, take control securely.
 - [LibrePass](https://github.com/LibrePass/LibrePass-Android) -  LibrePass Android Application.
 - [Passy](https://github.com/GlitterWare/Passy) - Offline password manager with cross-platform synchronization.
+
+## Phone SMS
+
+- [Fossify Phone](https://github.com/FossifyOrg/Phone) - A handy phone call manager with phonebook, number blocking and multi-SIM support.
+- [Fossify Messages](https://github.com/FossifyOrg/Messages) - An easy and quick way of managing SMS and MMS messages without ads.
 
 ## Reddit Client
 
@@ -389,7 +392,6 @@ Own your data, customize anything, integrate everything.
 - [Nostros](https://nostros.net/) - nostr client for Android.
 - [Nozzle](https://github.com/dluvian/Nozzle) - A lightweight nostr client for Android.
 - [Primal](https://github.com/PrimalHQ/primal-android-app) -  Primal's Android app for Nostr.
-
 
 ### Other
 
