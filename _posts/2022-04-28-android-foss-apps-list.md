@@ -230,7 +230,6 @@ Own your data, customize anything, integrate everything.
 - [SchildiChat](https://schildi.chat/android/) - SchildiChat for Android is a Matrix Client based on Element Android.
 - [FluffyChat](https://fluffychat.im/) - FluffyChat is an open, nonprofit and cute matrix messenger app for Ubuntu Touch, Android and iOS.
 
-
 ### XMPP Client
 
 - [Conversations](https://conversations.im/) - Conversations is a Jabber/XMPP client for Android 5.0+ smartphones that has been optimized to provide a unique mobile experience.
@@ -355,6 +354,7 @@ Own your data, customize anything, integrate everything.
 
 - [Fossify Phone](https://github.com/FossifyOrg/Phone) - A handy phone call manager with phonebook, number blocking and multi-SIM support.
 - [Fossify Messages](https://github.com/FossifyOrg/Messages) - An easy and quick way of managing SMS and MMS messages without ads.
+- [Linphone](https://www.linphone.org/) - Linphone is an open source app offering free audio/video calls and text messaging.
 
 ## Reddit Client
 
