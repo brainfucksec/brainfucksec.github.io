@@ -731,7 +731,7 @@ There are come resources where you can test your browser to see how unique it is
 
 Take this guide as a starting point and learn about the meaning of the various options, configuring Firefox parameters is a fairly complex topic.
 Although I do my best so that there are not, there may be errors or inaccuracies in this guide, so don't blindly copy/paste, and if you find something wrong I invite you to [contact me](https://brainfucksec.github.io/contacts) to fix the problem.
-Your security depends not only on technical countermeasures, but also on how you behave online, so search for information, compare them, and **think with you head**.
+Your security depends not only on technical countermeasures, but also on how you behave online, so search for information, compare them, and **think with your head**.
 
 ---
 
