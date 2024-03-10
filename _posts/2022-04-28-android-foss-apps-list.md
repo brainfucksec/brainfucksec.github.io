@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Android FOSS Apps List"
-date: 2022-04-28 (Update: 2024-03-10)
+date: 2022-04-28
 ---
 
 Update: 10 March 2024
