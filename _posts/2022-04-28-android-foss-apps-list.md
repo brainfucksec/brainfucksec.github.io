@@ -1,10 +1,10 @@
 ---
 layout: post
 title: "Android FOSS Apps List"
-date: 2022-04-28
+date: 2022-04-28 (Update: 2024-03-10)
 ---
 
-Update: 03 March 2024
+Update: 10 March 2024
 
 List of open source Android applications for "de-google, de-samsung, de-microsoft, de-nsa, de-china-malware etc. etc." your mobile phone, as always, the list is written in a [KISS](https://en.wikipedia.org/wiki/KISS_principle) simple way. The apps in the list are divided by category but within the categories they have no specific order (although in some categories the most popular apps may be higher on the list).
 Feel free to [contact me](https://brainfucksec.github.io/contacts) to add applications or modify the list.
@@ -403,8 +403,8 @@ Own your data, customize anything, integrate everything.
 - [Cryptomator](https://cryptomator.org/downloads/) - Multi-platform transparent client-side encryption of your files in the cloud
 - [Shelter](https://github.com/PeterCxy/Shelter) - Provide an isolated space that you can install or clone apps into
 - [Insular](https://secure-system.gitlab.io/Insular/) - Sandbox environment to clone selected apps and isolate them from accessing your personal data outside the sandbox
-- [FindMyDevice](https://gitlab.com/Nulide/findmydevice)
-- [QR Scanner](https://github.com/SecUSo/privacy-friendly-qr-scanner)
+- [FindMyDevice](https://gitlab.com/Nulide/findmydevice) - Find your Device with an SMS or online with the help of FMDServer.
+- [QR Scanner](https://github.com/SecUSo/privacy-friendly-qr-scanner) - Privacy Friendly QR Code Scanner for Android.
 - [Exodus](https://github.com/Exodus-Privacy/exodus-android-app) -  Let you know what trackers are embedded in apps installed on your smartphone
 - [TrackerControl](https://trackercontrol.org/) - Monitor and control hidden data collection in mobile apps about user behaviour (tracking)
 - [Photok](https://github.com/leonlatsch/Photok) - Encrypted Photo Safe for Android
