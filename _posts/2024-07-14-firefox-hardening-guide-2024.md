@@ -4,8 +4,6 @@ title: "Firefox Hardening Guide 2024"
 date: 2024-07-14
 ---
 
-Update: 14 July 2024
-
 <br>
 
 ## Table of Contents
