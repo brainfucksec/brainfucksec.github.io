@@ -4,7 +4,7 @@ title: "Firefox Hardening Guide 2024"
 date: 2024-07-14
 ---
 
-<br>
+Update: 02 August 2024
 
 ## Table of Contents
 
@@ -74,15 +74,15 @@ To add search engines or restore the default settings, see: [Add or remove a sea
 
 ## about:config
 
-The parameters are divided into "Sections" and are indicated with the format `option` = `value` for the sake of clarity (and also because you can easily copy the values into `about:config` :)).
+The parameters are divided into "Sections" and are indicated with the format `option` = `value` for the sake of clarity (and also because you can easily copy the values into `about:config` if you want :)).
 Anyway, You can use the file [user.js](#userjs) to set all the parameters automatically at Firefox startup.
 
-### Sections:
+### Index of Sections:
 
 * StartUp Settings
 * Geolocation
 * Language / Locale
-* Auto-updates / Recommendations
+* Recommendations
 * Telemetry
 * Studies
 * Crash Reports
@@ -106,11 +106,11 @@ On the search bar digit: `about:config` and set the parameters as follows:
 
 ### StartUp Settings
 
-* Disable about:config warning:
+* Disable about:config warning
 
     `browser.aboutConfig.showWarning` = `false`
 
-* Set startup home page:
+* Set startup home page
     * 0 = blank
     * 1 = home
     * 2 = last visited page
@@ -118,29 +118,30 @@ On the search bar digit: `about:config` and set the parameters as follows:
 
     `browser.startup.page` = `1`
 
+* Set Home + New Window page
+    * about:home = Firefox Home (default)
+    * about:blank = custom URL
+
     `browser.startup.homepage` = `"about:home"`
 
-* Disable Activity Stream on new windows and tab pages:
+* Set NEWTAB page
+    * true = Firefox Home (default), false = blank page
 
     `browser.newtabpage.enabled` = `false`
 
-    `browser.newtab.preload` = `false`
+* Disable Firefox Home (Activity Stream) telemetry
 
     `browser.newtabpage.activity-stream.feeds.telemetry` = `false`
 
     `browser.newtabpage.activity-stream.telemetry` = `false`
 
-    `browser.newtabpage.activity-stream.feeds.snippets` = `false`
-
-    `browser.newtabpage.activity-stream.feeds.section.topstories` = `false`
-
-    `browser.newtabpage.activity-stream.section.highlights.includePocket` = `false`
-
-    `browser.newtabpage.activity-stream.feeds.discoverystreamfeed` = `false`
+* Disable sponsored content on Firefox Home (Activity Stream)
 
     `browser.newtabpage.activity-stream.showSponsored` = `false`
 
     `browser.newtabpage.activity-stream.showSponsoredTopSites` = `false`
+
+* Sponsored shortcuts: clear default topsites
 
     `browser.newtabpage.activity-stream.default.sites` = `""`
 
@@ -150,53 +151,49 @@ On the search bar digit: `about:config` and set the parameters as follows:
 
     `geo.provider.network.url = "https://location.services.mozilla.com/v1/geolocate?key=%MOZILLA_API_KEY%"`
 
-* Disable using the OS's geolocation service:
+* Disable using the OS's geolocation service
 
     `geo.provider.ms-windows-location` = `false`  [Windows]
 
     `geo.provider.use_corelocation` = `false`     [macOS]
 
-    `geo.provider.use_gpsd` = `false`             [Linux]
+    `geo.provider.use_gpsd` = `false`             [Linux] [HIDDEN PREF]
 
     `geo.provider.use_geoclue` = `false`          [Linux]
 
-* Disable region updates:
-
-    `browser.region.network.url` = `""`
-
-    `browser.region.update.enabled` = `false`
-
 ### Language / Locale
 
-* Set language for displaying web pages:
+* Set language for displaying web pages
 
     `intl.accept_languages` = `"en-US, en"`
 
     `javascript.use_us_english_locale` = `true` [HIDDEN PREF]
 
-### Auto-updates / Recommendations
+### Recommendations
 
-* Disable auto-installing Firefox updates:
-
-    `app.update.background.scheduling.enabled` = `false`  [Windows]
-
-    `app.update.auto` = `false`                           [Non-Windows]
-
-* Disable addons recommendations (uses Google Analytics):
+* Disable recommendation pane in about:addons (use Google Analytics)
 
     `extensions.getAddons.showPane` = `false` [HIDDEN PREF]
 
+* Disable recommendations in about:addons Extensions and Themes panes
+
     `extensions.htmlaboutaddons.recommendations.enabled` = `false`
+
+* Disable personalized Extension Recommendations in about:addons
 
     `browser.discovery.enabled` = `false`
 
 ### Telemetry
 
-* Disable telemetry:
+* Disable new data submission
 
     `datareporting.policy.dataSubmissionEnabled` = `false`
 
+* Disable Health Reports
+
     `datareporting.healthreport.uploadEnabled` = `false`
+
+* Disable telemetry
 
     `toolkit.telemetry.enabled` = `false` [Default: false]
 
@@ -212,7 +209,7 @@ On the search bar digit: `about:config` and set the parameters as follows:
 
     `toolkit.telemetry.updatePing.enabled` = `false`
 
-    `toolkit.telemetry.bhrPing.enabled` = `false`
+    `toolkit.telemetry.bhrPing.enabled` = `false` [bhr = Background Hang Reporter]
 
     `toolkit.telemetry.firstShutdownPing.enabled` = `false`
 
@@ -222,21 +219,18 @@ On the search bar digit: `about:config` and set the parameters as follows:
 
     `toolkit.coverage.endpoint.base` = `""`
 
+* Disable PingCentre telemetry (used in several System Add-ons)
+
     `browser.ping-centre.telemetry` = `false`
-
-    `browser.newtabpage.activity-stream.feeds.telemetry` = `false`
-
-    `browser.newtabpage.activity-stream.telemetry` = `false`
-
-    `beacon.enabled` = `false`
 
 ### Studies
 
-* Disable studies:
+* Disable studies
 
     `app.shield.optoutstudies.enabled` = `false`
 
-* Disable Normandy/Shield:
+* Disable normandy/shield (telemetry system)
+* See: [https://mozilla.github.io/normandy/](https://mozilla.github.io/normandy/hh,s)
 
     `app.normandy.enabled` = `false`
 
@@ -244,7 +238,7 @@ On the search bar digit: `about:config` and set the parameters as follows:
 
 ### Crash Reports
 
-* Disable crash reports:
+* Disable crash reports
 
     `breakpad.reportURL` = `""`
 
@@ -252,29 +246,29 @@ On the search bar digit: `about:config` and set the parameters as follows:
 
 ### Captive Portal Detection / Network Checks
 
-* Disable captive portal detection:
+* Disable captive portal detection
 
     `captivedetect.canonicalURL` = `""`
 
     `network.captive-portal-service.enabled` = `false`
 
-* Disable network connections checks:
+* Disable network connections checks
 
     `network.connectivity-service.enabled` = `false`
 
 ### Safe Browsing
 
-* Disable safe browsing service:
+* Disable safe browsing service
 
     `browser.safebrowsing.malware.enabled` = `false`
 
     `browser.safebrowsing.phishing.enabled` = `false`
 
-* Disable list of blocked URI:
+* Disable list of blocked URI
 
     `browser.safebrowsing.blockedURIs.enabled` = `false`
 
-* Disable fetch of updates:
+* Disable fetch of updates
 
     `browser.safebrowsing.provider.google4.gethashURL` = `""`
 
@@ -286,7 +280,7 @@ On the search bar digit: `about:config` and set the parameters as follows:
 
     `browser.safebrowsing.provider.google4.dataSharingURL` = `""`
 
-* Disable checks for downloads:
+* Disable checks for downloads
 
     `browser.safebrowsing.downloads.enabled` = `false`
 
@@ -294,23 +288,23 @@ On the search bar digit: `about:config` and set the parameters as follows:
 
     `browser.safebrowsing.downloads.remote.url` = `""`
 
-* Disable checks for unwanted software:
+* Disable checks for unwanted software
 
     `browser.safebrowsing.downloads.remote.block_potentially_unwanted` = `false`
 
     `browser.safebrowsing.downloads.remote.block_uncommon` = `false`
 
-* Disable bypasses the block of safe browsing with a click for current session:
+* Disable bypasses the block of safe browsing with a click for current session
 
     `browser.safebrowsing.allowOverride` = `false`
 
 ### Network: DNS, Proxy, IPv6
 
-* Disable link prefetching:
+* Disable link prefetching
 
     `network.prefetch-next` = `false`
 
-* Disable DNS prefetching:
+* Disable DNS prefetching
 
     `network.dns.disablePrefetch` = `true`
 
@@ -331,6 +325,7 @@ On the search bar digit: `about:config` and set the parameters as follows:
     `network.dns.disableIPv6` = `true`
 
 * Disable GIO protocols as a potential proxy bypass vectors:
+* See: [https://en.wikipedia.org/wiki/GIO_(software)](https://en.wikipedia.org/wiki/GIO_(software))
 
     `network.gio.supported-protocols` = `""` [HIDDEN PREF]
 
@@ -348,12 +343,6 @@ On the search bar digit: `about:config` and set the parameters as follows:
 
 ### Search Bar: Suggestions, Autofill
 
-*  Disable location bar contextual suggestions:
-
-    `browser.urlbar.suggest.quicksuggest.nonsponsored` = `false`
-
-    `browser.urlbar.suggest.quicksuggest.sponsored` = `false`
-
 * Disable search suggestions:
 
     `browser.search.suggest.enabled` = `false`
@@ -368,27 +357,17 @@ On the search bar digit: `about:config` and set the parameters as follows:
 
     `browser.urlbar.addons.featureGate` = `false`
 
-    `browser.urlbar.mdn.featureGate` = `false`
-
-    `browser.urlbar.pocket.featureGate` = `false`
-
-    `browser.urlbar.weather.featureGate` = `false`
-
-* Disable location bar domain guessing:
-
-    `browser.fixup.alternate.enabled` = `false`
-
-* Display all parts of the url in the bar:
-
-    `browser.urlbar.trimURLs` = `false`
+    `browser.urlbar.mdn.featureGate` = `false` [HIDDEN PREF]
 
 * Disable location bar making speculative connections:
 
     `browser.urlbar.speculativeConnect.enabled` = `false`
 
-* Disable form autofill:
+* Disable search and form history:
 
     `browser.formfill.enable` = `false`
+
+* Disable form autofill:
 
     `extensions.formautofill.addresses.enabled` = `false`
 
@@ -497,7 +476,7 @@ On the search bar digit: `about:config` and set the parameters as follows:
 
 ### Headers / Referers
 
-* Control when to send a referer:
+* Control when to send a cross-origin referer:
     * 0 = always (default)
     * 1 = only if base domains match
     * 2 = only if hosts match
@@ -512,10 +491,6 @@ On the search bar digit: `about:config` and set the parameters as follows:
     `network.http.referer.XOriginTrimmingPolicy` = `2`
 
 ### Audio/Video: WebRTC, WebGL, DRM
-
-* Disable WebRTC:
-
-    `media.peerconnection.enabled` = `false`
 
 * Force WebRTC inside the proxy:
 
@@ -554,10 +529,6 @@ On the search bar digit: `about:config` and set the parameters as follows:
 
 ### UI Features
 
-* Block popup windows:
-
-    `dom.disable_open_during_load` = `true`
-
 * Limit events that can cause a popup:
 
     `dom.popup_allowed_events` = `click dblclick mousedown pointerdown`
@@ -566,11 +537,7 @@ On the search bar digit: `about:config` and set the parameters as follows:
 
     `extensions.pocket.enabled` = `false`
 
-* Disable Screenshots extension:
-
-    `extensions.Screenshots.disabled` = `true`
-
-* Disable PDJFS scripting:
+* Disable PDFJS scripting:
 
     `pdfjs.enableScripting` = `false`
 
@@ -578,15 +545,20 @@ On the search bar digit: `about:config` and set the parameters as follows:
 
     `privacy.userContext.enabled` = `true`
 
-    `privacy.userContext.enabled` = `true`
+    `privacy.userContext.ui.enabled` = `true`
 
 ### Extensions
 
-* Set extensions to work on restricted domains, and their scope is to "profile+applications":
+* Limit allowed extension directories:
+    * 1 = profile
+    * 2 = user
+    * 4 = application
+    * 8 = system
+    * 16 = temporary
+    * 31 = all
+    * The pref value represents the sum: e.g. 5 would be profile and application directories.
 
     `extensions.enabledScopes` = `5` [HIDDEN PREF]
-
-    `extensions.webextensions.restrictedDomains` = `""`
 
 * Display always the installation prompt:
 
@@ -596,25 +568,19 @@ On the search bar digit: `about:config` and set the parameters as follows:
 
 * Clear history, cookies and site data when Firefox closes:
 
-    `network.cookie.lifetimePolicy` = `2`
-
     `privacy.sanitize.sanitizeOnShutdown` = `true`
-
-    `privacy.clearOnShutdown.cache` = `true`
 
     `privacy.clearOnShutdown.cookies` = `true`
 
-    `privacy.clearOnShutdown.downloads` = `true`
-
-    `privacy.clearOnShutdown.formdata` = `true`
-
-    `privacy.clearOnShutdown.history` = `true`
-
     `privacy.clearOnShutdown.offlineApps` = `true`
 
-    `privacy.clearOnShutdown.sessions` = `true`
-
-    `privacy.clearOnShutdown.sitesettings` = `false`
+* Set Time range to clear for "Clear Data" and "Clear History"
+    * 0 = everything
+    * 1 = last hour
+    * 2 = last two hours
+    * 3 = last four hours
+    * 4 = today
+    * NOTE: Values 5 (last 5 minutes) and 6 (last 24 hours) are not listed in the dropdown
 
     `privacy.sanitize.timeSpan` = `0`
 
@@ -624,27 +590,25 @@ On the search bar digit: `about:config` and set the parameters as follows:
 
     `privacy.resistFingerprinting` = `true`
 
-* Set new window size rounding max values:
+* Increase the size of new RFP windows for better usability:
 
     `privacy.window.maxInnerWidth` = `1600`
 
     `privacy.window.maxInnerHeight` = `900`
 
+    `privacy.resistFingerprinting.letterboxing` = `false`
+
 * Disable mozAddonManager Web API:
 
-    `privacy.resistFingerprinting.block_mozAddonManager` = `true` [Hidden pref]
+    `privacy.resistFingerprinting.block_mozAddonManager` = `true`
 
 * Disable using system colors:
 
-    `browser.display.use_system_colors` = `false` [Default: false [Non-Windows]]
+    `browser.display.use_system_colors` = `false` [Default: false] [Non-Windows]
 
-* Disable showing about:blank page when possible at startup
+* Set all open window methods to abide by "browser.link.open_newwindow":
 
-    `browser.startup.blankWindow` = `false`
-
-* Disable using system colors:
-
-    `browser.display.use_system_colors` = `false` [Default: false [Non-Windows]]
+    `browser.link.open_newwindow.restriction` = `0`
 
 ## user.js
 
@@ -676,8 +640,6 @@ More information about Firefox user.js:
     In the dashboard select `Filter lists`, this is my lists selection (you can select your favorite ones):
 
 ```text
-My uBlock Origin blocklists:
-
 * Built-in:
     * All checked
 
@@ -685,8 +647,8 @@ My uBlock Origin blocklists:
     * EasyList
 
 * Privacy:
-    * AdGuard URL Tracking Protection
     * EasyPrivacy
+    * AdGuard URL Tracking Protection
 
 * Malware Domains:
     * Online Malicious URL Blocklist
@@ -739,9 +701,6 @@ Your security depends not only on technical countermeasures, but also on how you
 
 * [LibreWolf](https://librewolf.net/)
 
-* [pyllyukko user.js](https://github.com/pyllyukko/user.js/)
-
 * [uBlock Origin](https://ublockorigin.com/)
 
-**Thank you guys for your awesome work!**
-
+***This work would not have been possible without these projects.  Thank you guys for your awesome work!***
