@@ -4,13 +4,13 @@ title: "Firefox Hardening Guide 2024"
 date: 2024-07-14
 ---
 
-Update: 02 August 2024
+Update: 18 August 2024
 
 ## Table of Contents
 
 * [Introduction](#introduction)
-* [Backup Firefox Profile](#backup-firefox-profile)
-* [Firefox Preferences](#firefox-preferences)
+* [Backup and create Firefox profile](#backup-and-create-firefox-profile)
+* [Search Preferences](#search-preferences)
 * [about:config](#aboutconfig)
 * [user.js](#userjs)
 * [uBlock Origin](#ublock-origin)
@@ -50,9 +50,9 @@ See: [Back up and restore information in Firefox profiles](https://support.mozil
 
 For create new profiles see: [Create, remove or switch Firefox profiles](https://support.mozilla.org/en-US/kb/profile-manager-create-remove-switch-firefox-profiles?redirectslug=profile-manager-create-and-remove-firefox-profiles&redirectlocale=en-US) also, see [Multiple profiles and Containers](#multiple-profiles-and-containers) section.
 
-## Firefox Preferences
+## Search Preferences
 
-**Search Preferences**
+To change your preferences on the search engines used:
 
 * Go to `Search`:
 
@@ -70,11 +70,11 @@ Other good privacy-oriented search engines are:
 
 To add search engines or restore the default settings, see: [Add or remove a search engine in Firefox](https://support.mozilla.org/en-US/kb/add-or-remove-search-engine-firefox).
 
-* The other Search settings are managed through the [about:config](#aboutconfig) parameters.
+* The other Search settings are managed through the [about:config](#about:config) parameters.
 
 ## about:config
 
-The parameters are divided into "Sections" and are indicated with the format `option` = `value` for the sake of clarity (and also because you can easily copy the values into `about:config` if you want :)).
+In this guide (and in the `user.js` file), the parameters are divided into "Sections" and are indicated with the format `option` = `value` for the sake of clarity (and also because you can easily copy the values into `about:config` if you want :)).
 Anyway, You can use the file [user.js](#userjs) to set all the parameters automatically at Firefox startup.
 
 ### Index of Sections:
@@ -464,7 +464,7 @@ On the search bar digit: `about:config` and set the parameters as follows:
 
     `security.cert_pinning.enforcement_level` = `2`
 
-* Enable CRLite
+* Enable CRLite:
     * 0 = disabled
     * 1 = consult CRLite but only collect telemetry
     * 2 = consult CRLite and enforce both "Revoked" and "Not Revoked" results
@@ -574,7 +574,7 @@ On the search bar digit: `about:config` and set the parameters as follows:
 
     `privacy.clearOnShutdown.offlineApps` = `true`
 
-* Set Time range to clear for "Clear Data" and "Clear History"
+* Set Time range to clear for "Clear Data" and "Clear History":
     * 0 = everything
     * 1 = last hour
     * 2 = last two hours
@@ -612,7 +612,7 @@ On the search bar digit: `about:config` and set the parameters as follows:
 
 ## user.js
 
-If you want (is recommended), you can use the `user.js` file with the settings of this guide or with your preferred settings, it is recommended to create a new profile for this purpose.
+If you want (is recommended), you can use the `user.js` file with the settings of this guide or with your preferred settings, it's strongly recommended to create a new profile for this purpose.
 Before using the file check the entries and modify/add them according to your preferences, don't copy/paste without know what you are doing.
 
 Download the `user.js` template from my [GitHub gist](https://gist.github.com/brainfucksec/68e79da1c965aeaa4782914afd8f7fa2), note that this user.js is configured for Linux systems, so if you use Windows or macOS edit, comment/uncomment the relevant entries according to the instructions listed above.
@@ -704,3 +704,5 @@ Your security depends not only on technical countermeasures, but also on how you
 * [uBlock Origin](https://ublockorigin.com/)
 
 ***This work would not have been possible without these projects.  Thank you guys for your awesome work!***
+
+<br>
