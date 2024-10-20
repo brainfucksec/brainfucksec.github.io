@@ -4,7 +4,7 @@ title: "Firefox Hardening Guide 2024"
 date: 2024-07-14
 ---
 
-Update: 18 August 2024
+Update: 20 October 2024
 
 ## Table of Contents
 
@@ -17,7 +17,7 @@ Update: 18 August 2024
 * [DoH (DNS over HTTPS)](#doh-dns-over-https)
 * [Multiple profiles and Containers](#multiple-profiles-and-containers)
 * [Browser Leak Test](#browser-leak-test)
-* [Recommendations](#recommendations)
+* [Recommendation](#recommendation)
 * [Resources](#resources)
 
 <br>
@@ -663,11 +663,22 @@ For more information about uBlock usage see the [Wiki](https://github.com/gorhil
 ## DoH (DNS over HTTPS)
 
 DNS-over-HTTPS, DNS-over-TLS, and DNSCrypt resolvers will not make you anonymous. Using Anonymized DNSCrypt hides only your DNS traffic from your Internet Service Provider. However, using any of these protocols will prevent DNS hijacking, and make your DNS requests harder for third parties to eavesdrop on and tamper with.
-For more information about DNS and DoH see: [Wikipedia - DNS over HTTPS](https://en.wikipedia.org/wiki/DNS_over_HTTPS)
+For more information about DNS and DoH see:
+
+* [Firefox DNS-over-HTTPS](https://support.mozilla.org/en-US/kb/firefox-dns-over-https)
+* [Wikipedia - DNS over HTTPS](https://en.wikipedia.org/wiki/DNS_over_HTTPS)
 
 If you want to set DoH on Firefox:
 
-Go to `Edit -> Settings -> General -> Network Settings`, click on `Settings`, select `Enable DNS over HTTPS`, in `Use Provider` window, select `Custom` and insert your DoH provider.
+Go to `Edit -> Settings -> Privacy & Security`, in the `DNS over HTTPS` section go to `Enable DNS over HTTPS using:`, select `Max Protection`, then select your preferred DNS provider.
+
+Some good DNS providers are:
+
+* [Mullvad](https://mullvad.net/en/help/dns-over-https-and-dns-over-tls)
+* [AdGuard DNS](https://adguard-dns.io/en/public-dns.html)
+* [Quad9](https://docs.quad9.net/services/)
+* [Control D](https://controld.com/free-dns)
+* [NextDNS](https://my.nextdns.io/aa5a24/setup) (Available in default DoH providers)
 
 ## Multiple profiles and Containers
 
@@ -675,7 +686,7 @@ A good practice is to use multiple profiles for different purposes, e.g. (work, 
 
 In the latest versions of Firefox you can create [Containers](https://support.mozilla.org/en-US/kb/containers), Firefox Multi-Account Containers lets you keep parts of your online life separated into color-coded tabs that preserve your privacy. Cookies are separated by container, allowing you to use the web with multiple identities or accounts simultaneously.
 
-## Browser Leak Tests
+## Browser Leak Test
 
 There are come resources where you can test your browser to see how unique it is:
 
@@ -687,7 +698,7 @@ There are come resources where you can test your browser to see how unique it is
 
 [https://arkenfox.github.io/TZP/tzp.html](https://arkenfox.github.io/TZP/tzp.html)
 
-## Recommendations:
+## Recommendation:
 
 Take this guide as a starting point and learn about the meaning of the various options, configuring Firefox parameters is a fairly complex topic.
 Although I do my best so that there are not, there may be errors or inaccuracies in this guide, so don't blindly copy/paste, and if you find something wrong I invite you to [contact me](https://brainfucksec.github.io/contacts) to fix the problem.
