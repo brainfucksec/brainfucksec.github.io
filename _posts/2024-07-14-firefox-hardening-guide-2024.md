@@ -4,20 +4,20 @@ title: "Firefox Hardening Guide 2024"
 date: 2024-07-14
 ---
 
-Update: 20 October 2024
+Update: 20 October 2024 - Rev.1 (05:46:13 PM UTC 2024)
 
 ## Table of Contents
 
 * [Introduction](#introduction)
 * [Backup and create Firefox profile](#backup-and-create-firefox-profile)
 * [Search Preferences](#search-preferences)
-* [about:config](#aboutconfig)
+* [about:config / user.js settings](#aboutconfig--userjs-settings)
 * [user.js](#userjs)
 * [uBlock Origin](#ublock-origin)
 * [DoH (DNS over HTTPS)](#doh-dns-over-https)
 * [Multiple profiles and Containers](#multiple-profiles-and-containers)
 * [Browser Leak Test](#browser-leak-test)
-* [Recommendation](#recommendation)
+* [Disclaimer](#disclaimer)
 * [Resources](#resources)
 
 <br>
@@ -34,17 +34,21 @@ When you visit a web page, your browser voluntarily sends information about its 
 
 **PDF:** [How Unique Is Your Web Browser? Peter Eckersley, EFF.](https://coveryourtracks.eff.org/static/browser-uniqueness.pdf)
 
-In the area of cybersecurity the "100% secure setup" does not exist, what you can do though, is reduce the amount of data collected by entities like Google, Meta, Cloudflare etc. and reduce attack vectors.
+In the area of cybersecurity the "100% secure setup" does not exist, what you can do though, is reduce the amount of data collected by "Third Party entities" when you browse the Internet, and reduce attack vectors.
 
 ## Backup and create Firefox profile
 
-Before changing the configuration, you should make a backup of the default profile, or create a new profile to be used with the new settings.
+Before starting the configuration, it's stronlgy recommended to backup the default profile, and create a new profile for the new settings and to use the user.js file
 
-To back up your profile, first close Firefox if it is open and then copy the default profile folder to another location, for example on Linux the profile folder is:
+To back up your default profile, first close Firefox if it is open and then copy the default profile folder to another location, the Firefox profile folder is located in the Home of the operating system, for example on Linux you can find it in the following path::
 
-`~/.mozilla/firefox/xxxxxxxx.default`
+`/home/username/.mozilla/firefox/xxxxxxxx.default`
 
-when "xxxxxxxx" is the ID of your profile.
+while on Windows it's located in:
+
+`C:\Users\username\AppData\Roaming\Mozilla\Firefox\Profiles\xxxxxxxx.default`
+
+where "username" is your profile name and "xxxxxxxx" is the ID of your profile.
 
 See: [Back up and restore information in Firefox profiles](https://support.mozilla.org/en-US/kb/back-and-restore-information-firefox-profiles)
 
@@ -60,8 +64,6 @@ To change your preferences on the search engines used:
 
     * `Search Shortcuts`: select `DuckDuckGo`, remove Google, Bing, eBay, Amazon, Wikipedia search engines
 
-Notes:
-
 Other good privacy-oriented search engines are:
 
 * [SearXNG](https://github.com/searxng/searxng)
@@ -70,39 +72,44 @@ Other good privacy-oriented search engines are:
 
 To add search engines or restore the default settings, see: [Add or remove a search engine in Firefox](https://support.mozilla.org/en-US/kb/add-or-remove-search-engine-firefox).
 
-* The other Search settings are managed through the [about:config](#about:config) parameters.
+The other Search settings are managed through the [about:config](#aboutconfig--userjs-settings) parameters.
 
-## about:config
+## about:config / user.js settings
 
-In this guide (and in the `user.js` file), the parameters are divided into "Sections" and are indicated with the format `option` = `value` for the sake of clarity (and also because you can easily copy the values into `about:config` if you want :)).
-Anyway, You can use the file [user.js](#userjs) to set all the parameters automatically at Firefox startup.
+These are the settings in the `about:config` section and in the [user.js](#userjs) file.
+The parameters are divided into sections, see [Index of Sections](#index-of-sections) below, and `[INDEX]` in the `user.js` file.
+
+There are some keywords used in the comments of the user.js file and in this section:
+
+* `[Windows], [Linux] etc.` - The option is valid only for the indicated operating system.
+* `[Non-Windows]`           - The option is valid for all operating systems other than Windows.
+* `[HIDDEN PREF]`           - Option that must be enabled in order to change its default value or to be used.
+
+NOTE: Settings with default value "false" are not present (with some exceptions for clarity).
 
 ### Index of Sections:
 
-* StartUp Settings
-* Geolocation
-* Language / Locale
-* Recommendations
-* Telemetry
-* Studies
-* Crash Reports
-* Captive Portal Detection / Network Checks
-* Safe Browsing
-* Network: DNS, Proxy, IPv6
-* Search Bar: Suggestions, Autofill
-* Passwords
-* Disk Cache / Memory
-* HTTPS / SSL/TLS / OSCP / CERTS
-* Headers / Referers
-* Audio/Video: WebRTC, WebGL, DRM
-* Downloads
-* Cookies
-* UI Features
-* Extensions
-* Shutdown Settings
-* Fingerprinting (RFP)
-
-On the search bar digit: `about:config` and set the parameters as follows:
+* [StartUp Settings](#startup-settings)
+* [Geolocation](#geolocation)
+* [Language / Locale](#language--locale)
+* [Recommendations](#recommendations)
+* [Telemetry](#telemetry)
+* [Studies](#studies)
+* [Crash Reports](#crash-reports)
+* [Safe Browsing](#safe-browsing)
+* [Network: DNS, Proxy, Network Checks](#network-dns-proxy-network-checks)
+* [Search Bar: Suggestions, Autofill, Forms](#search-bar-suggestions-autofill-forms)
+* [Passwords](#passwords)
+* [Disk Cache / Memory](#disk-cache--memory)
+* [HTTPS / SSL/TLS / OSCP / CERTS](#https-ssltls-oscp-certs)
+* [Headers / Referers](#headers--referers)
+* [Audio/Video: WebRTC, WebGL](#audiovideo-webrtc-webgl)
+* [Downloads](#downloads)
+* [Cookies](#cookies)
+* [UI Features](#ui-features)
+* [Extensions](#extensions)
+* [Shutdown Settings & Sanitizing](#shutdown-settings--sanitizing)
+* [Fingerprinting (RFP)](#fingerprinting-rfp)
 
 ### StartUp Settings
 
@@ -129,12 +136,6 @@ On the search bar digit: `about:config` and set the parameters as follows:
 
     `browser.newtabpage.enabled` = `false`
 
-* Disable Firefox Home (Activity Stream) telemetry
-
-    `browser.newtabpage.activity-stream.feeds.telemetry` = `false`
-
-    `browser.newtabpage.activity-stream.telemetry` = `false`
-
 * Disable sponsored content on Firefox Home (Activity Stream)
 
     `browser.newtabpage.activity-stream.showSponsored` = `false`
@@ -147,17 +148,11 @@ On the search bar digit: `about:config` and set the parameters as follows:
 
 ### Geolocation
 
-* Use Mozilla geolocation service instead of Google if permission is granted:
-
-    `geo.provider.network.url = "https://location.services.mozilla.com/v1/geolocate?key=%MOZILLA_API_KEY%"`
-
 * Disable using the OS's geolocation service
 
     `geo.provider.ms-windows-location` = `false`  [Windows]
 
     `geo.provider.use_corelocation` = `false`     [macOS]
-
-    `geo.provider.use_gpsd` = `false`             [Linux] [HIDDEN PREF]
 
     `geo.provider.use_geoclue` = `false`          [Linux]
 
@@ -219,9 +214,12 @@ On the search bar digit: `about:config` and set the parameters as follows:
 
     `toolkit.coverage.endpoint.base` = `""`
 
-* Disable PingCentre telemetry (used in several System Add-ons)
+* Disable Firefox Home (Activity Stream) Telemetry
 
-    `browser.ping-centre.telemetry` = `false`
+    `browser.newtabpage.activity-stream.feeds.telemetry` = `false`
+
+    `browser.newtabpage.activity-stream.telemetry` = `false`
+
 
 ### Studies
 
@@ -243,18 +241,6 @@ On the search bar digit: `about:config` and set the parameters as follows:
     `breakpad.reportURL` = `""`
 
     `browser.tabs.crashReporting.sendReport` = `false`
-
-### Captive Portal Detection / Network Checks
-
-* Disable captive portal detection
-
-    `captivedetect.canonicalURL` = `""`
-
-    `network.captive-portal-service.enabled` = `false`
-
-* Disable network connections checks
-
-    `network.connectivity-service.enabled` = `false`
 
 ### Safe Browsing
 
@@ -298,7 +284,7 @@ On the search bar digit: `about:config` and set the parameters as follows:
 
     `browser.safebrowsing.allowOverride` = `false`
 
-### Network: DNS, Proxy, IPv6
+### Network: DNS, Proxy, Network Checks
 
 * Disable link prefetching
 
@@ -307,6 +293,8 @@ On the search bar digit: `about:config` and set the parameters as follows:
 * Disable DNS prefetching
 
     `network.dns.disablePrefetch` = `true`
+
+    `network.dns.disablePrefetchFromHTTPS` = `true`
 
 * Disable predictor:
 
@@ -319,10 +307,6 @@ On the search bar digit: `about:config` and set the parameters as follows:
 * Disable mousedown speculative connections on bookmarks and history:
 
     `browser.places.speculativeConnect.enabled` = `false`
-
-* Disable IPv6:
-
-    `network.dns.disableIPv6` = `true`
 
 * Disable GIO protocols as a potential proxy bypass vectors:
 * See: [https://en.wikipedia.org/wiki/GIO_(software)](https://en.wikipedia.org/wiki/GIO_(software))
@@ -341,9 +325,31 @@ On the search bar digit: `about:config` and set the parameters as follows:
 
     `network.IDN_show_punycode` = `true`
 
-### Search Bar: Suggestions, Autofill
+* Disable captive portal detection
 
-* Disable search suggestions:
+    `captivedetect.canonicalURL` = `""`
+
+    `network.captive-portal-service.enabled` = `false`
+
+* Disable network connections checks
+
+    `network.connectivity-service.enabled` = `false`
+
+### Search Bar: Suggestions, Autofill, Forms
+
+* Disable location bar making speculative connections:
+
+    `browser.urlbar.speculativeConnect.enabled` = `false`
+
+* Disable location bar contextual suggestions
+
+    `browser.urlbar.quicksuggest.enabled` = `false`
+
+    `browser.urlbar.suggest.quicksuggest.nonsponsored` = `false`
+
+    `browser.urlbar.suggest.quicksuggest.sponsored` = `false`
+
+* Disable live search suggestions:
 
     `browser.search.suggest.enabled` = `false`
 
@@ -358,10 +364,6 @@ On the search bar digit: `about:config` and set the parameters as follows:
     `browser.urlbar.addons.featureGate` = `false`
 
     `browser.urlbar.mdn.featureGate` = `false` [HIDDEN PREF]
-
-* Disable location bar making speculative connections:
-
-    `browser.urlbar.speculativeConnect.enabled` = `false`
 
 * Disable search and form history:
 
@@ -406,7 +408,7 @@ On the search bar digit: `about:config` and set the parameters as follows:
 
     `media.memory_cache_max_size` = `65536`
 
-* Disable storing extra session data:
+* Disable storing extra session data (cookies, POST data, etc.):
     * 0 = everywhere
     * 1 = unencrypted sites
     * 2 = nowhere
@@ -429,25 +431,13 @@ On the search bar digit: `about:config` and set the parameters as follows:
 
     `browser.shell.shortcutFavicons` = `false`
 
-* Delete temporary files opened with external apps:
+* Delete temporary files opened from non-Private Browsing windows with external apps:
 
     `browser.download.start_downloads_in_tmp_dir` = `true`
 
     `browser.helperApps.deleteTempFileOnExit` = `true`
 
 ### HTTPS (SSL/TLS, OSCP, CERTS)
-
-* Enable HTTPS-Only mode in all windows:
-
-    `dom.security.https_only_mode` = `true`
-
-* Disable sending HTTP request for checking HTTPS support by the server:
-
-    `dom.security.https_only_mode_send_http_background_request` = `false`
-
-* Display advanced information on Insecure Connection warning pages:
-
-    `browser.xul.error_pages.expert_bad_cert` = `true`
 
 * Disable TLS1.3 0-RTT (round-trip time):
 
@@ -457,7 +447,11 @@ On the search bar digit: `about:config` and set the parameters as follows:
 
     `security.OCSP.require` = `true`
 
-* Enable strict PKP (Public Key Pinning):
+* Display advanced information on Insecure Connection warning pages:
+
+    `browser.xul.error_pages.expert_bad_cert` = `true`
+
+* HPKP (HTTP Public Key Pinning), Enable strict PKP (Public Key Pinning):
     * 0 = disabled
     * 1 = allow user MiTM (i.e. your Antivirus)
     * 2 = strict
@@ -474,14 +468,15 @@ On the search bar digit: `about:config` and set the parameters as follows:
 
     `security.pki.crlite_mode` = `2`
 
+* Enable HTTPS-Only mode in all windows:
+
+    `dom.security.https_only_mode` = `true`
+
+* Disable sending HTTP request for checking HTTPS support by the server:
+
+    `dom.security.https_only_mode_send_http_background_request` = `false`
+
 ### Headers / Referers
-
-* Control when to send a cross-origin referer:
-    * 0 = always (default)
-    * 1 = only if base domains match
-    * 2 = only if hosts match
-
-    `network.http.referer.XOriginPolicy` = `2`
 
 * Control the amount of information to send:
     * 0 = send full URI (default):  https://example.com:8888/foo/bar.html?id=1234
@@ -490,13 +485,14 @@ On the search bar digit: `about:config` and set the parameters as follows:
 
     `network.http.referer.XOriginTrimmingPolicy` = `2`
 
-### Audio/Video: WebRTC, WebGL, DRM
+### Audio/Video: WebRTC, WebGL
 
 * Force WebRTC inside the proxy:
 
     `media.peerconnection.ice.proxy_only_if_behind_proxy` = `true`
 
 * Force a single network interface for ICE candidates generation:
+* [https://wiki.mozilla.org/Media/WebRTC/Privacy](https://wiki.mozilla.org/Media/WebRTC/Privacy)
 
     `media.peerconnection.ice.default_address_only` = `true`
 
@@ -507,9 +503,6 @@ On the search bar digit: `about:config` and set the parameters as follows:
 * Disable WebGL (Web Graphics Library):
 
     `webgl.disabled` = `true`
-
-* Disable DRM Content:
-    `media.eme.enabled` = `false`
 
 ### Downloads
 
@@ -525,7 +518,7 @@ On the search bar digit: `about:config` and set the parameters as follows:
 
 * Enable ETP (Enhanced Tracking Protection), ETP strict mode enables Total Cookie Protection (TCP):
 
-    `browser.contentblocking.category` = `"strict"`
+    `browser.contentblocking.category` = `"strict"` [HIDDEN PREF]
 
 ### UI Features
 
@@ -533,15 +526,12 @@ On the search bar digit: `about:config` and set the parameters as follows:
 
     `dom.popup_allowed_events` = `click dblclick mousedown pointerdown`
 
-* Disable Pocket extension:
-
-    `extensions.pocket.enabled` = `false`
-
 * Disable PDFJS scripting:
 
     `pdfjs.enableScripting` = `false`
 
 * Enable Containers and show the UI settings:
+* [https://wiki.mozilla.org/Security/Contextual_Identity_Project/Containers ](https://wiki.mozilla.org/Security/Contextual_Identity_Project/Containers )
 
     `privacy.userContext.enabled` = `true`
 
@@ -560,19 +550,21 @@ On the search bar digit: `about:config` and set the parameters as follows:
 
     `extensions.enabledScopes` = `5` [HIDDEN PREF]
 
-* Display always the installation prompt:
+* Display always the installation prompt of 3rd party extension:
 
     `extensions.postDownloadThirdPartyPrompt` = `false`
 
-### Shutdown Settings
+### Shutdown Settings & Sanitizing
 
 * Clear history, cookies and site data when Firefox closes:
 
     `privacy.sanitize.sanitizeOnShutdown` = `true`
 
-    `privacy.clearOnShutdown.cookies` = `true`
+    `privacy.clearOnShutdown.cookies` = `true` [Cookies]
 
-    `privacy.clearOnShutdown.offlineApps` = `true`
+    `privacy.clearOnShutdown.offlineApps` = `true` [Site data]
+
+    `privacy.clearOnShutdown_v2.cookiesAndStorage` = `true` [Cookies, Site data, Active Logins]
 
 * Set Time range to clear for "Clear Data" and "Clear History":
     * 0 = everything
@@ -581,6 +573,7 @@ On the search bar digit: `about:config` and set the parameters as follows:
     * 3 = last four hours
     * 4 = today
     * NOTE: Values 5 (last 5 minutes) and 6 (last 24 hours) are not listed in the dropdown
+    * which will display a blank value, and are not guaranteed to wok
 
     `privacy.sanitize.timeSpan` = `0`
 
@@ -612,10 +605,10 @@ On the search bar digit: `about:config` and set the parameters as follows:
 
 ## user.js
 
-If you want (is recommended), you can use the `user.js` file with the settings of this guide or with your preferred settings, it's strongly recommended to create a new profile for this purpose.
+The easiest way to handle Firefox parameters is to use the `user.js` file, it's strongly recommended to create a new profile for this purpose. See: [Backup and create Firefox profile](#backup-and-create-firefox-profile) section at the beginning of this guide.
 Before using the file check the entries and modify/add them according to your preferences, don't copy/paste without know what you are doing.
 
-Download the `user.js` template from my [GitHub gist](https://gist.github.com/brainfucksec/68e79da1c965aeaa4782914afd8f7fa2), note that this user.js is configured for Linux systems, so if you use Windows or macOS edit, comment/uncomment the relevant entries according to the instructions listed above.
+Download the `user.js` template from my [GitHub gist](https://gist.github.com/brainfucksec/68e79da1c965aeaa4782914afd8f7fa2), note that this user.js is configured for Linux systems, so if you use Windows or macOS edit, comment/uncomment the relevant entries according to the instructions listed above, see notes at: [about:config / user.js settings](#aboutconfig--userjs-settings) section.
 
 More information about Firefox user.js:
 
@@ -625,9 +618,7 @@ More information about Firefox user.js:
 
 ## uBlock Origin
 
-[uBlock Origin](https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/)
-
-* Install `uBlock Origin`:
+* Install [uBlock Origin](https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/):
 
     Click on `Add to Firefox`
 
@@ -698,7 +689,7 @@ There are come resources where you can test your browser to see how unique it is
 
 [https://arkenfox.github.io/TZP/tzp.html](https://arkenfox.github.io/TZP/tzp.html)
 
-## Recommendation:
+## Disclaimer:
 
 Take this guide as a starting point and learn about the meaning of the various options, configuring Firefox parameters is a fairly complex topic.
 Although I do my best so that there are not, there may be errors or inaccuracies in this guide, so don't blindly copy/paste, and if you find something wrong I invite you to [contact me](https://brainfucksec.github.io/contacts) to fix the problem.
