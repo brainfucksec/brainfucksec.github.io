@@ -4,6 +4,8 @@ title: "A Good Privacy List - 2024 Update"
 date: 2024-11-09
 ---
 
+<br>
+
 ## Table of Contents
 
 * [Introduction](#introduction)
