@@ -1,5 +1,5 @@
 title: brainfucksec
-description: "Systems | Cyber Security | Privacy"
+description: "Cyber Security | Privacy | Systems"
 author:
   name: "brainfucksec"
   email: ""
@@ -29,7 +29,7 @@ plugins:
 
 # Custom variables
 owner : "brainf+ck"
-year : "2024"
+year : "2025"
 
 # thanks tocttou for this theme
 remote_theme: tocttou/hacker-blog
