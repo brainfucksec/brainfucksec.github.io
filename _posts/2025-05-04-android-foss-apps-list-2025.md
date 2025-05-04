@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Android FOSS Apps List 2025"
-date: 2025-05-02
+date: 2025-05-04
 ---
 
 <br>
@@ -71,7 +71,7 @@ date: 2025-05-02
 
 ## Introduction
 
-This is a list of open source applications for Android, as always, the list is written in a [KISS](https://en.wikipedia.org/wiki/KISS_principle) simple way, the apps in the list are divided by category, but withinWith Apps like F-Droid you can add different repositories: the categories they have no specific order (although in some categories the most popular apps may be higher on the list).
+This is a list of open source applications for Android, as always, the list is written in a [KISS](https://en.wikipedia.org/wiki/KISS_principle) simple way, the apps in the list are divided by category, with apps like F-Droid you can add different repositories.
 Feel free to [contact me](https://brainfucksec.github.io/contacts) to add applications or modify the list.
 
 ### About links
@@ -82,7 +82,7 @@ Application links in the list are related to one of these resources:
 - The App's source code website/page (git repositories such as GitHub, Codebase etc.)
 - The repository page on F-Droid
 
-_If in addition to these sources I have difficulty finding the source code I do not list the Application_. See: - [Some little rules of the list](#some-little-rules-of-the-list)
+_If in addition to these sources I'm having trouble finding the source code, I do not list the Application_. See: - [Some little rules of the list](#some-little-rules-of-the-list)
 
 ## F-Droid Applications
 
@@ -100,7 +100,7 @@ You can use different methods to search for Applications in the F-Droid reposito
 
 Here you will find a complete list of repositories supported by F-Droid and a simple guide on how to add them:
 
-[F-Droid - Known Repositories: <https://forum.f-droid.org/t/known-repositories/721>](https://forum.f-droid.org/t/known-repositories/721)
+[F-Droid - Known Repositories: <https://forum.f-droid.org/t/known-repositories/721>]
 
 See: [App Repositories](#app-repositories)
 
@@ -111,7 +111,7 @@ The Applications included in the list match the following parameters, the parame
 - Source code is not findable/easily available.
 - Applications whose download is exclusively on Google Play.
 - There are no repositories on F-Droid, GitHub etc, consequently the application cannot be updated easily.
-- The project/app has not been updated for some time or is no longer maintained (i.e., archived status): _Generally, Applications are removed from the list after 1 year or so that the package/release is not updated. This is with exceptions based on the type of Applications or if for example it is still valid and there is no alternative._
+- The project/app has not been updated for some time or is no longer maintained (i.e., archived status): _Generally, Applications are removed from the list after 1 year or so that the package/release is not updated. This is with exceptions based on the type of Application, or if for example it is still valid and there is no alternative._
 - Applications that aren't really fundamental (like Wi-Fi On/Off, Show my IP Address, various Flashlights etc.)
 
 ## Android and Linux based Mobile OS
@@ -329,7 +329,6 @@ The Applications included in the list match the following parameters, the parame
 - [MonsterMusic](https://github.com/ZTFtrue/MonsterMusic) - A music player on android platform, developed by Andoroid composer.
 - [CuteMusic](https://github.com/sosauce/CuteMusic) - CuteMusic is a simple,lightweight and open-source offline music player app for Android.
 
-
 ### YouTube Alternative Client
 
 - [NewPipe](https://newpipe.net/) - The lightweight YouTube experience for Android.
@@ -389,7 +388,7 @@ The Applications included in the list match the following parameters, the parame
 - [Markor](https://github.com/gsantner/markor) - Text editor - Notes & ToDo (for Android).
 - [Tasks](https://github.com/tasks/tasks) - Open-source To-Do Lists & Reminders.
 - [Notally](https://github.com/OmGodse/Notally) - A beautiful notes app.
-- [NotallyX](https://github.com/PhilKes/NotallyX) - Minimalistic Android note taking App | Notally, but eXtended.
+- [NotallyX](https://github.com/PhilKes/NotallyX) - Minimalistic Android note taking App - Notally, but eXtended.
 - [Notes (PFA)](https://secuso.aifb.kit.edu/english/Notes.php) - Privacy Friendly Notes App.
 - [traced it](https://www.traced-it.app/) - Quick notes with time and amounts.
 - [LocalMaterialNotes](https://github.com/maelchiotti/LocalMaterialNotes) - Simple, local, material design notes.
