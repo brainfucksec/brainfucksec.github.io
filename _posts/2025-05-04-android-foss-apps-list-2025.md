@@ -4,7 +4,7 @@ title: "Android FOSS Apps List 2025"
 date: 2025-05-04
 ---
 
-<br>
+Update: 11 May 2025
 
 ## Table of Contents
 
@@ -71,7 +71,7 @@ date: 2025-05-04
 
 ## Introduction
 
-This is a list of open source applications for Android, as always, the list is written in a [KISS](https://en.wikipedia.org/wiki/KISS_principle) simple way, the apps in the list are divided by category, with apps like F-Droid you can add different repositories.
+This is a list of open source applications for Android, as always, the list is written in a [KISS](https://en.wikipedia.org/wiki/KISS_principle) simple way, the apps in the list are divided by category.
 Feel free to [contact me](https://brainfucksec.github.io/contacts) to add applications or modify the list.
 
 ### About links
@@ -100,7 +100,7 @@ You can use different methods to search for Applications in the F-Droid reposito
 
 Here you will find a complete list of repositories supported by F-Droid and a simple guide on how to add them:
 
-[F-Droid - Known Repositories: <https://forum.f-droid.org/t/known-repositories/721>]
+[F-Droid - Known Repositories: <https://forum.f-droid.org/t/known-repositories/721>](https://forum.f-droid.org/t/known-repositories/721)
 
 See: [App Repositories](#app-repositories)
 
@@ -113,6 +113,11 @@ The Applications included in the list match the following parameters, the parame
 - There are no repositories on F-Droid, GitHub etc, consequently the application cannot be updated easily.
 - The project/app has not been updated for some time or is no longer maintained (i.e., archived status): _Generally, Applications are removed from the list after 1 year or so that the package/release is not updated. This is with exceptions based on the type of Application, or if for example it is still valid and there is no alternative._
 - Applications that aren't really fundamental (like Wi-Fi On/Off, Show my IP Address, various Flashlights etc.)
+
+Security:
+
+Security related applications such as file encryption, password managers etc. are included if they are stable and tested by many users, so usually the most popular applications are included.
+However, it is not a mandatory parameter.
 
 ## Android and Linux based Mobile OS
 
@@ -164,6 +169,16 @@ The Applications included in the list match the following parameters, the parame
 - [Privacy Browser](https://www.stoutner.com/privacy-browser-android/) - Privacy Browser Android is an open source Android web browser focused on user privacy.
 - [FOSS Browser](https://codeberg.org/Gaukler_Faun/FOSS_Browser) - A simple Android webbrowser based on webview.
 - [FREE Browser](https://github.com/woheller69/browser) - A privacy oriented web browser with Greasemonkey style script support and Cookie Banner Blocker.
+
+## Calculator
+
+- [Fossify Calculator](https://github.com/FossifyOrg/Calculator) - A calculator for quick simple calculations with a nice user interface and no ads.
+- [OpenCalc](https://github.com/Darkempire78/OpenCalc) -  A simple and beautiful calculator for Android.
+- [CalcYou](https://github.com/you-apps/CalcYou) - Privacy focused calculator app built with MD3.
+- [Calculator-You](https://github.com/forzzzzz/Calculator-You) - Calculator You is a beautiful calculator for solving simple tasks.
+- [yetCalc](https://github.com/Yet-Zio/yetCalc) - Yet another calculator designed and developed for Android.
+- [DigitalCalculator](https://github.com/adeeteya/DigitalCalculator) - A neumorphic themed digital calculator which has keyboard support (external bluetooth keyboard).
+- [CuteCalc](https://github.com/sosauce/CuteCalc) - CuteCalc is a simple,lightweight and open-source calculator app for Android.
 
 ## Calendar
 
@@ -463,12 +478,16 @@ See: [Encrypted Gallery](#encrypted-gallery) section.
 - [QuickWeather](https://github.com/TylerWilliamson/QuickWeather) - Weather at a glance! Current and forecast weather for anywhere in the world!
 - [omWeather](https://github.com/woheller69/omweather) - Weather and rain radar for any location - worldwide,
 
+<br>
+
 ---
+
+<br>
 
 ### Disclaimer
 
-This list is only intended to recommend to users Free Open Source (or Open Source) Applications that respect privacy and requirements that I believe would be good for security and privacy on a personal device.
-Before installing anything on your smartphone please check the sources well and be careful.
+This list is only intended to recommend to users Free Open Source (or Open Source) Applications that respect privacy and requirements that I believe would be good on a personal device.
+**Before installing anything on your smartphone please check the sources well and be careful.**
 
 ### Thanks
 
