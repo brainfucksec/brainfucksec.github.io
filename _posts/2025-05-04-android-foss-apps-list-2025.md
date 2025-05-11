@@ -4,7 +4,7 @@ title: "Android FOSS Apps List 2025"
 date: 2025-05-04
 ---
 
-Update: 11 May 2025
+Update: 11 May 2025 - 12:18 PM UTC
 
 ## Table of Contents
 
@@ -20,6 +20,7 @@ Update: 11 May 2025
 - [2FA](#2fa)
 - [Alternative Network](#alternative-network)
 - [Browser](#browser)
+- [Calculator](#calculator)
 - [Calendar](#calendar)
 - [Camera](#camera)
 - [Clock](#clock)
