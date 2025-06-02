@@ -6,6 +6,8 @@ date: 2024-07-14
 
 Update: 20 October 2024 - Rev.1 (05:46:13 PM UTC 2024)
 
+New 2025 version: <https://brainfucksec.github.io/firefox-hardening-guide-2025>
+
 ## Table of Contents
 
 * [Introduction](#introduction)
