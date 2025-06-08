@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Firefox Hardening Guide 2025"
-date: 2025-06-02
+date: 2025-06-08
 ---
 
 ## Table of Contents
@@ -79,13 +79,13 @@ The parameters are divided into sections, you can see it in [Index of Sections](
 
 There are some keywords used for the configuration parameters, you can see this keywords also in the comments of the `user.js` file, and are as follows:
 
-* `[Windows], [Linux] [macOS]`  - The option is valid only for the indicated operating system.
+* `[Windows], [Linux], [macOS]` - The option is valid only for the indicated operating system.
 * `[Non-Windows]`               - The option is valid for all operating systems other than Windows.
 * `[HIDDEN PREF]`               - Option that must be enabled first, in order to change its default value or to be used.
 
 By the way these are the keywords used in the [arkenfox's user.js](https://github.com/arkenfox/user.js).
 
-**NOTE**: _Settings with default value "false" (`[Default: false]`) are not present (with some exceptions for clarity)._
+**NOTE**: _Settings with default values, like "default false" (`[Default: false]`) are not present (with some exceptions for clarity)._
 
 ### Index of Sections:
 
@@ -426,6 +426,10 @@ By the way these are the keywords used in the [arkenfox's user.js](https://githu
 
     `browser.shell.shortcutFavicons` = `false`
 
+* Disable page thumbnail collection:
+
+    `browser.pagethumbnails.capturing_disabled` = `true` [HIDDEN PREF]
+
 * Delete temporary files opened from non-Private Browsing windows with external apps:
 
     `browser.download.start_downloads_in_tmp_dir` = `true`
@@ -508,6 +512,11 @@ By the way these are the keywords used in the [arkenfox's user.js](https://githu
 
     `browser.download.manager.addToRecentDocs` = `false`
 
+* Enable user interaction for security by always asking how to handle new mimetypes:
+
+    `browser.download.always_ask_before_handling_new_types` = `true`
+
+
 ### Cookies
 
 * Enable ETP (Enhanced Tracking Protection), ETP strict mode enables Total Cookie Protection (TCP):
@@ -559,6 +568,10 @@ By the way these are the keywords used in the [arkenfox's user.js](https://githu
 
     `privacy.clearOnShutdown_v2.cookiesAndStorage` = `true` [Cookies, Site data, Active Logins]
 
+    `privacy.clearOnShutdown_v2.downloads` = `true`
+
+    `privacy.clearOnShutdown_v2.formdata` = `true`
+
 * Set Time range to clear for "Clear Data" and "Clear History":
     * 0 = everything
     * 1 = last hour
@@ -588,9 +601,20 @@ By the way these are the keywords used in the [arkenfox's user.js](https://githu
 
     `privacy.resistFingerprinting.block_mozAddonManager` = `true`
 
+* Disable RFP spoof english prompt:
+    * 0 = prompt
+    * 1 = disabled
+    * 2 = enabled
+
+    `privacy.spoof_english` = `1`
+
 * Disable using system colors:
 
-    `browser.display.use_system_colors` = `false` [Default: false] [Non-Windows]
+    `browser.display.use_system_colors` = `false` [Default: false Non-Windows]
+
+* Disable using system accent colors:
+
+    `widget.non-native-theme.use-theme-accent` `false` [Default: false Windows]
 
 * Set all open window methods to abide by "browser.link.open_newwindow":
 
