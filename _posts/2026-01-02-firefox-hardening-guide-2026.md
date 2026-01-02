@@ -609,7 +609,7 @@ For further information, please read here: [arkenfox's user.js](https://github.c
 
     `privacy.clearHistory.formdata` = `true`
 
-* Set "Time range to clear" for "Clear Data" (2820+) and "Clear History":
+* Set "Time range to clear" for "Clear Data" and "Clear History":
     * 0 = everything
     * 1 = last hour
     * 2 = last two hours
