@@ -574,8 +574,11 @@ For further information, please read here: [arkenfox's user.js](https://github.c
 * Ignores "Allow" site exceptions, set/enforce clearOnShutdown items:
 
     `privacy.clearOnShutdown_v2.historyFormDataAndDownloads` = `false` [DEFAULT: true]
+
     `privacy.clearOnShutdown_v2.browsingHistoryAndDownloads` = `false` [DEFAULT: true]
+
     `privacy.clearOnShutdown_v2.downloads` = `false` [HIDDEN PREF]
+
     `privacy.clearOnShutdown_v2.formdata` = `true`
 
 * Set "Cookies" and "Site Data" to clear on shutdown:
@@ -585,17 +588,25 @@ For further information, please read here: [arkenfox's user.js](https://github.c
 * Set manual "Clear Data" items:
 
     `privacy.clearSiteData.cache` = `true`
+
     `privacy.clearSiteData.cookiesAndStorage` = `false`
+
     `privacy.clearSiteData.historyFormDataAndDownloads` = `false`
+
     `privacy.clearSiteData.browsingHistoryAndDownloads` = `false`
+
     `privacy.clearSiteData.formdata` = `true`
 
 * Set manual "Clear History" items, also via Ctrl-Shift-Del:
 
     `privacy.clearHistory.cache` = `true`
+
     `privacy.clearHistory.cookiesAndStorage` = `false`
+
     `privacy.clearHistory.historyFormDataAndDownloads` = `false` [DEFAULT: true]
+
     `privacy.clearHistory.browsingHistoryAndDownloads` = `false` [DEFAULT: true]
+
     `privacy.clearHistory.formdata` = `true`
 
 * Set "Time range to clear" for "Clear Data" (2820+) and "Clear History":
