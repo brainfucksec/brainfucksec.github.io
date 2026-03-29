@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "A Good Privacy List"
-date: 2026-02-10
+date: 2026-03-29
 ---
 
 <br>
@@ -29,14 +29,14 @@ date: 2026-02-10
   * [Centralized](#centralized)
   * [Matrix Clients](#matrix-clients)
   * [XMPP Clients](#xmpp-clients)
-  * [P2P](#p2p)
-  * [Other Decentralized Implementations](#other-decentralized-implementations)
+  * [P2P/Tor](#p2p/tor)
+  * [Other Decentralized](#other-decentralized)
 * [Maps](#maps)
   * [Mobile](#mobile)
 * [Operating Systems](#operating-systems)
   * [GNU/Linux Operating Systems](#gnulinux-operating-systems)
   * [Security-Focused Operating Systems](#security-focused-operating-systems)
-  * [Android-based](#android-based)
+  * [Mobile Operating Systems](#mobile-operating-systems)
 * [Password Managers](#password-managers)
 * [Privacy Frontends](#privacy-frontends)
   * [Reddit](#reddit)
@@ -57,19 +57,22 @@ date: 2026-02-10
   * [Android](#android)
 * [Other Privacy and Security Resources](#other-privacy-and-security-resources)
   * [Notes](#notes)
+  * [Acknowledgments](#acknowledgments)
   * [Donations](#donations)
 
 <br>
 
 ## Introduction
 
-This is my list of Privacy Alternatives of not so good mainstream products who use your data to make money and collaborate with governments for mass surveillance.
+This is my list of Privacy Alternatives of "not so good" mainstream products, who use your data to make money and collaborate with governments for mass surveillance.
 The list is compiled in a simple way, privacy defence requires continuous research, so before using the apps on this list **do your own research**, and if you find something wrong, please [contact me](https://brainfucksec.github.io/contacts) so I can update it.
 
 I do not sponsor or get paid by any of the organizations of the products listed, and there are NO referrer URLs in the list, to verify the links you can check the source code of the page (i.e. _right click -> "View Page Source"_).
 When I choose to use a service, it means that I have search information before, and I have my own opinion about it that may not be the same as other people in this sector.
 I often read articles where an application is declared not private and insecure without consistent sources which confirm the claims, or where it's declared reliable and instead ..it is ad advertising company or a government agency.
-So if you don't see a lot of "well-known" products for privacy on this list, it is because, most likely, it falls into one of these categories.
+So, if you don't see a lot of "well-known" products for privacy on this list, it is because, most likely, it falls into one of these categories.
+
+You can see the various changes (additions and removals of elements, etc.) on the website's GitHub page: <https://github.com/brainfucksec/brainfucksec.github.io/commits/master/>
 
 Security is a process, so you cannot fully trust any application, organization, and the people behind it.
 Regarding this topic see:
@@ -78,12 +81,12 @@ Regarding this topic see:
 
 [Defence in depth](https://en.wikipedia.org/wiki/Defense_in_depth_(computing))
 
-I hope this modest work can help to defende you and fight the censorship and oppression we are experiencing especially in recent years, **knowledge is power**, so search, read, and think with your head!
+I hope this modest work can help to defende you, and fight the censorship and oppression we are experiencing especially in recent years, **knowledge is power**, so search, read, and think with your head!
 **In this sector it's very easy to meet organizations and projects that claim to defend privacy but in reality are just mousetraps.**
 
 ## Requirements
 
-### Only products and applications that meet the following requirements are included in the list:
+### I'm working on adding only products and applications that meet the following requirements:
 
 * **Security first**: services that are not a security risk (although this is a very long and complex topic), and that are not in the experimental phase (i.e. the software is in the [alpha phase](https://techterms.com/definition/alpha_software)).
 Applications that have had external audits take precedence in the list but isn't a fundamental requirement.
@@ -98,7 +101,7 @@ Applications that have had external audits take precedence in the list but isn't
 
 * **The project/application must be updated and actively maintained**: If a program is not actively maintained is not inserted in the list, with exceptions, some applications may be valid even if updated some time ago.
 
-* **The organization does not have a history of crime or controversy**: Shadows on the past such as disputes over data collection, or unethical behavior toward the environment other companies or people.
+* **The organization does not have a history of crime or controversy**: Shadows on the past such as disputes over data collection, or unethical behavior toward the environment, other companies, or people.
 Again, **do your own research**, it is very difficult sometimes to get clear and reliable information about organizations or people behind a software or a service.
 
 
@@ -155,7 +158,6 @@ Again, **do your own research**, it is very difficult sometimes to get clear and
 * [Proton Mail](https://proton.me/mail) - Secure email that protects your privacy
 * [Tuta](https://tuta.com/) - Secure Email: Private, Green & Ad-free.
 * [mailbox.org](https://mailbox.org/en/) - mailbox.org is the e-mail provider that puts data protection, freedom from advertising and independence first.
-* [Forward Email](https://forwardemail.net/en) - We're the only 100% open-source provider. (we're transparent and focused on privacy and security).
 * [Disroot Email](htps://disroot.org/en/services/email) - Disroot provides secure email accounts for your desktop or mobile email client, or via our webmail.
 * [Posteo](https://posteo.de/en) - Posteo is an independent email provider based in Berlin. We offer secure and sustainable email accounts with an address book, calendar and notes.
 
@@ -215,13 +217,12 @@ Again, **do your own research**, it is very difficult sometimes to get clear and
 * [Signal](https://www.signal.org/) - State-of-the-art end-to-end encryption (powered by the open source Signal Protocol) keeps your conversations secure.
 * [Molly](https://github.com/mollyim/mollyim-android) - Enhanced and security-focused fork of Signal.
 * [Threema](https://threema.ch/en/) - Secure Communication Swiss Made.
-* [Session](https://getsession.org/) - Session is an end-to-end encrypted messenger that minimises sensitive metadata.
 
 ### Matrix Clients
 
 * [Element](https://element.io/) - A sovereign and secure communications platform. Built by the creators of Matrix.
 * [FluffyChat](https://fluffy.chat/en/) - The cutest messenger in matrix.
-* [SchildiChat](https://schildi.chat/) - SchildiChat is a feature-rich messenger for Matrix based on Element with some extras and tweaks.
+* [SchildiChat Next](https://schildi.chat/next/) - SchildiChat Next is a Matrix Client based on Element X Android.
 
 ### XMPP Clients - Desktop
 
@@ -232,14 +233,15 @@ Again, **do your own research**, it is very difficult sometimes to get clear and
 
 * [Conversations](https://f-droid.org/en/packages/eu.siacs.conversations/) -  Encrypted, easy-to-use XMPP instant messenger for your mobile device.
 
-### P2P
+### P2P/Tor
 
 * [Briar](https://briarproject.org/) - Censorship-resistant peer-to-peer messaging that bypasses centralized servers.
-* [Berty](https://berty.tech/) - Unstoppable P2P Communication.
 * [Ricochet Refresh](https://www.ricochetrefresh.net/) - Ricochet Refresh is a peer-to-peer messenger app that uses Tor to connect clients.
+* [Berty](https://berty.tech/) - Unstoppable P2P Communication.
 
-### Other Decentralized Implementations
+### Other Decentralized
 
+* [Session](https://getsession.org/) - Session is an end-to-end encrypted messenger that minimises sensitive metadata.
 * [SimpleX Chat](https://simplex.chat/) - The first messenger
 without user IDs.
 
@@ -273,7 +275,7 @@ without user IDs.
 * [ParrotOS](https://www.parrotsec.org/) - Parrot Linux, is a full Debian-based operating system, that is geared towards security, privacy and development.
 * [Kicksecure](https://www.kicksecure.com/) - Security-Focused Operating System.
 
-### Android-based Operating Systems
+### Mobile Operating Systems
 
 * [LineageOS](https://lineageos.org/) - A free and open-source operating system for various devices, based on the Android mobile platform.
 * [GrapheneOS](https://grapheneos.org/) - The private and secure mobile operating system with Android app compatibility.
@@ -354,11 +356,10 @@ See also: [Android FOSS Apps List #Reddit Client](https://brainfucksec.github.io
 * [Nostr](https://github.com/nostr-protocol/nostr) - A truly censorship-resistant alternative to Twitter that has a chance of working.
 * [Pixelfed](https://pixelfed.org/) - Explore + Share beautiful photos and videos.
 * [Pleroma](https://pleroma.social/) - Pleroma is social networking software compatible with other Fediverse software such as Misskey, Pixelfed, Mastodon and many others.
-* [Aether](https://getaether.net/) - Peer-to-peer ephemeral pReddit Clientublic communities.
 
 ## Torrent Clients
 
-* [qBittorrent](https://www.qbittorrent.org/) - download link The qBittorrent project aims to provide an open-source software alternative to µTorrent.
+* [qBittorrent](https://www.qbittorrent.org/) - The qBittorrent project aims to provide an open-source software alternative to µTorrent.
 * [Transmission](https://transmissionbt.com/) -  A Fast, Easy and Free Bittorrent Client
 For macOS, Windows and Linux.
 * [WebTorrent](https://webtorrent.io/) - The streaming torrent client for Mac, Windows, & Linux.
@@ -404,6 +405,12 @@ See also: [Android FOSS Apps List #Browser](https://brainfucksec.github.io/andro
 **US based services:** In the post-Snowden era we all know the data collection and surveillance capabilities of the NSA, many are advising not to use services in US jurisdiction, this may be true for unencrypted services, such as email without OpenPGP encryption, IRC servers etc., but if the data is encrypted, then I think we can make an exception. On the other hand, the NSA's surveillance and storage capabilities it extend globally, So try to encrypt as much as possible, if the data is stored in some server in Nevada, China, or outer space ..it will be encrypted data, about this speech see: [Post-quantum_cryptography)](https://en.wikipedia.org/wiki/Post-quantum_cryptography).
 
 However, I generally tend to prefer services that have jurisdiction in countries with good privacy laws (i.e. Switzerland, Estonia, Iceland) or at least that they are not part of the Five Eyes, about this topic see: [The Five, Nine, and Fourteen Eyes agreements (Explained)](https://protonvpn.com/blog/5-eyes-global-surveillance/).
+
+### Acknowledgments
+
+This list, like many of my other projects, wouldn’t be possible without all the people who help me with their suggestions and advice.
+
+___Thank you so much, everyone.___
 
 ### Donations
 
