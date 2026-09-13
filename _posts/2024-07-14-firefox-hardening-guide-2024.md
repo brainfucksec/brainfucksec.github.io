@@ -230,7 +230,7 @@ NOTE: Settings with default value "false" are not present (with some exceptions 
     `app.shield.optoutstudies.enabled` = `false`
 
 * Disable normandy/shield (telemetry system)
-* See: [https://mozilla.github.io/normandy/](https://mozilla.github.io/normandy/hh,s)
+* See: [https://mozilla.github.io/normandy/](https://mozilla.github.io/normandy/)
 
     `app.normandy.enabled` = `false`
 
