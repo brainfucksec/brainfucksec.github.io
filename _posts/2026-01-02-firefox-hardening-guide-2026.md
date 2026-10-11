@@ -1,10 +1,11 @@
 ---
 layout: post
 title: "Firefox Hardening Guide 2026"
-date: 2026-01-02
+date: 2026-01-01
 ---
 
-Tested on Firefox 146.0.1
+Update: 11 October 2026
+Tested on Firefox 157.0.1
 
 ## Table of Contents
 
@@ -366,6 +367,10 @@ For further information, please read here: [arkenfox's user.js](https://github.c
 
     `browser.urlbar.amp.featureGate` = `false`
 
+    `browser.urlbar.importantDates.featureGate` = `false`
+
+    `browser.urlbar.market.featureGate` = `false`
+
     `browser.urlbar.mdn.featureGate` = `false`
 
     `browser.urlbar.weather.featureGate` = `false`
@@ -373,6 +378,8 @@ For further information, please read here: [arkenfox's user.js](https://github.c
     `browser.urlbar.wikipedia.featureGate` = `false`
 
     `browser.urlbar.yelp.featureGate` = `false`
+
+    `browser.urlbar.yelpRealtime.featureGate` = `false`
 
 * Disable search and form history:
 
